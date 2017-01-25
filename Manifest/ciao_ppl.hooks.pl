@@ -122,14 +122,14 @@ remove_all_substrings([], _String, []).
 ppl_version(Version) :-
 	foreign_config_version(ppl, Version).
 
-'$builder_hook'(prebuild_bin) :-
-	do_auto_install_ppl,
-	prebuild_ppl_bindings.
+'$builder_hook'(prepare_build_bin) :-
+	do_auto_install,
+	prepare_bindings.
 
 :- use_module(ciaobld(third_party_install), [auto_install/2]).
 :- use_module(ciaobld(builder_aux), [add_rpath/3]).
 
-do_auto_install_ppl :-
+do_auto_install :-
 	( auto_install_ppl(yes) -> 
 	    % TODO: add dependencies between PPL and GMP
 	    % normal_message("auto-installing M4 (third party)", []),
@@ -141,7 +141,7 @@ do_auto_install_ppl :-
 	; true
 	).
 
-prebuild_ppl_bindings :-
+prepare_bindings :-
 	( with_ppl(yes) ->
 	    normal_message("configuring PPL interface", []),
  	    foreign_config_var(ppl, 'cppflags', CompilerOpts1),
