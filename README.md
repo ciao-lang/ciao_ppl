@@ -9,7 +9,7 @@ copyrighted by PPL's authors and distributed under the GPL license.
 
 Usage (with auto-installation of PPL):
 ```
-$ ciao configure ciao_ppl --ciao_ppl:with_ppl=yes --ciao_ppl:auto_install_ppl=yes
+$ ciao configure ciao_ppl --ciao_ppl:enabled=yes --ciao_ppl:auto_install=yes
 $ ciao build ciao_ppl
 ```
 

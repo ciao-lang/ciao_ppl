@@ -13,7 +13,7 @@
 
 % ---------------------------------------------------------------------------
 
-:- bundle_flag(with_ppl, [
+:- bundle_flag(enabled, [
     comment("Enable PPL bindings"),
     details(
       % .....................................................................
@@ -46,9 +46,9 @@ m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
 %% 	).
 %% 
 %% ppl_version(Version, Str) :-
-%% 	foreign_config_version(ppl, Str).
+%% 	foreign_config_version(ciao_ppl, ppl, Str).
 
-:- bundle_flag(auto_install_ppl, [
+:- bundle_flag(auto_install, [
     comment("Auto-install PPL (third party)"),
     details(
       % .....................................................................
@@ -69,8 +69,8 @@ m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
 :- use_module(library(bundle/bundle_flags), [get_bundle_flag/2]).
 :- use_module(library(bundle/bundle_paths), [bundle_path/3]).
 :- use_module(ciaobld(third_party_config), [
-    foreign_config_var/3,
-    foreign_config_version/2
+    foreign_config_var/4,
+    foreign_config_version/3
 ]).
 
 % TODO: Look at PPL-related code in ciaopp/Manifest/ciaopp.hooks.pl
@@ -109,8 +109,8 @@ m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
 :- use_module(library(lists), [append/3]).
 :- use_module(library(llists), [flatten/2]).
 
-with_ppl := ~get_bundle_flag(ciao_ppl:with_ppl).
-auto_install_ppl := ~get_bundle_flag(ciao_ppl:auto_install_ppl).
+enabled := ~get_bundle_flag(ciao_ppl:enabled).
+auto_install := ~get_bundle_flag(ciao_ppl:auto_install).
 
 remove_all_substrings(Input, String, Output):-
 	append(String, Postfix, Input), !,
@@ -120,7 +120,7 @@ remove_all_substrings([H|T1], String, [H|T2]):-
 remove_all_substrings([], _String, []).
 
 ppl_version(Version) :-
-	foreign_config_version(ppl, Version).
+	foreign_config_version(ciao_ppl, ppl, Version).
 
 '$builder_hook'(prepare_build_bin) :-
 	do_auto_install,
@@ -130,7 +130,7 @@ ppl_version(Version) :-
 :- use_module(ciaobld(builder_aux), [add_rpath/3]).
 
 do_auto_install :-
-	( auto_install_ppl(yes) -> 
+	( auto_install(yes) -> 
 	    % TODO: add dependencies between PPL and GMP
 	    % normal_message("auto-installing M4 (third party)", []),
 	    % third_party_install:auto_install(ciao_ppl, m4),
@@ -142,15 +142,15 @@ do_auto_install :-
 	).
 
 prepare_bindings :-
-	( with_ppl(yes) ->
+	( enabled(yes) ->
 	    normal_message("configuring PPL interface", []),
- 	    foreign_config_var(ppl, 'cppflags', CompilerOpts1),
- 	    foreign_config_var(ppl, 'cxxflags', CompilerOpts2),
+ 	    foreign_config_var(ciao_ppl, ppl, 'cppflags', CompilerOpts1),
+ 	    foreign_config_var(ciao_ppl, ppl, 'cxxflags', CompilerOpts2),
 	    append(CompilerOpts1, " "||CompilerOpts2, CompilerOpts3),
- 	    foreign_config_var(ppl, 'ldflags', LinkerOpts1),
+ 	    foreign_config_var(ciao_ppl, ppl, 'ldflags', LinkerOpts1),
 	    patch_arch_opts(CompilerOpts3, LinkerOpts1, CompilerOpts4, LinkerOpts2),
 	    remove_all_substrings(CompilerOpts4, "-g ", CompilerOpts), % TODO: parse options and remove '-g' (it is safer)
-	    ( auto_install_ppl(yes) ->
+	    ( auto_install(yes) ->
 	        % If installed as a third party, add ./third-party/lib
 	        % to the runtime library search path
 	        add_rpath(local_third_party, LinkerOpts2, LinkerOpts3)
