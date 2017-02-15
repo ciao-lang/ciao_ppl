@@ -4,63 +4,13 @@
 
 % ===========================================================================
 
-%:- use_module(library(process), [process_call/3]).
-%:- use_module(library(system), [find_executable/2]).
-
 :- discontiguous(m_bundle_foreign_config_tool/3).
-
 % TODO: Share code for PPL, GMP, GSL.
 
 % ---------------------------------------------------------------------------
 
-:- bundle_flag(enabled, [
-    comment("Enable PPL bindings"),
-    details(
-      % .....................................................................
-      "Set to \"yes\" if you wish to interface with PPL"),
-    valid_values(['yes', 'no']),
-    %
-    rule_default('no'),
-    %
-    interactive([advanced])
-]).
-
-%  rule_default(verify_ppl(WithPPL), WithPPL),
-%  default_comment("PPL >= 0.9 available"),
-%  default_value_comment("PPL has not been detected."),
-
-m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
-
-% TODO: it should consider auto_install option!
-%% ppl_installed :-
-%% 	find_executable(~m_bundle_foreign_config_tool(ciao_ppl, ppl), _).
-%% 
-%% % TODO: not used... reactivate?
-%% verify_ppl(Value) :-
-%% %	( ppl_installed, ppl_version(V) ->
-%% %	    Value = yes
-%% %	    message([V])
-%% 	( ppl_installed, ppl_version(_) ->
-%% 	    Value = yes
-%% 	; Value = no
-%% 	).
-%% 
-%% ppl_version(Version, Str) :-
-%% 	foreign_config_version(ciao_ppl, ppl, Str).
-
-:- bundle_flag(auto_install, [
-    comment("Auto-install PPL (third party)"),
-    details(
-      % .....................................................................
-      "Set to \"yes\" if you want to auto-install PPL (third party)"),
-    valid_values(['yes', 'no']),
-    %
-    rule_default('no'),
-    %
-    interactive([advanced])
-]).
-
-% ---------------------------------------------------------------------------
+% TODO: Look at PPL-related code in ciaopp/Manifest/ciaopp.hooks.pl
+% TODO: Clean code is missing here
 
 :- use_module(ciaobld(messages_aux), [normal_message/2]).
 
@@ -72,9 +22,20 @@ m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
     foreign_config_var/4,
     foreign_config_version/3
 ]).
+:- use_module(library(system), [find_executable/2]).
 
-% TODO: Look at PPL-related code in ciaopp/Manifest/ciaopp.hooks.pl
-% TODO: Clean code is missing here
+m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
+
+% Config flags for PPL (third-party component)
+:- third_party_flags([
+    name("PPL (third party)"), 
+    bindings_name("PPL bindings"),
+    allow_auto_install, % allow auto-installation
+    allow_dummy % allow dummy bindings (if enabled=no)
+]).
+
+third_party_preinstalled(ciao_ppl) :-
+	find_executable(~m_bundle_foreign_config_tool(ciao_ppl, ppl), _).
 
 % Specification of M4 (third-party component)
 :- def_third_party(m4, [
