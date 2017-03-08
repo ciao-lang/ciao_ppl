@@ -12832,6 +12832,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 
 
 :- include(library(ppl/ppl_decl_auto)). 
+:- extra_compiler_opts(['-Wno-unused-local-typedef']). % (overwrite -Wall)
 :- use_foreign_source([ 
 	'1_0/ciao_efli.cc',
 	'1_0/ppl_prolog_Octagonal_Shape_mpz_class.cc',
