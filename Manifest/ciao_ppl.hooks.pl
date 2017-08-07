@@ -57,11 +57,16 @@ third_party_preinstalled(ciao_ppl) :-
 
 % Specification of PPL (third-party component)
 :- def_third_party(ppl, [
-    version('1.0'),
-    source_url(tar('http://bugseng.com/products/ppl/download/ftp/releases/1.0/ppl-1.0.tar.bz2')),
-    source_md5("8a90e0b0b3e9527609a6e5ed3616fab1"),
+%    version('1.0'),
+%    source_url(tar('http://bugseng.com/products/ppl/download/ftp/releases/1.0/ppl-1.0.tar.bz2')),
+%    source_md5("8a90e0b0b3e9527609a6e5ed3616fab1"),
+%    %
+%    patch('Manifest/patches/ppl_1_0.patch'),
     %
-    patch('Manifest/patches/ppl_1_0.patch'),
+    version('1.2'),
+    source_url(tar('http://bugseng.com/products/ppl/download/ftp/releases/1.2/ppl-1.2.tar.bz2')),
+    source_md5("50a757d37cced76e51b97709a4cf455a"),
+    %
     build_system(gnu_build_system),
     option2('enable-interfaces','c cxx')
 ]).
@@ -113,6 +118,7 @@ prepare_bindings :-
 	    add_rpath(executable_path, LinkerOpts3, LinkerOpts4),
 %	    LinkerOpts3 = LinkerOpts4,
 	    append(LinkerOpts4, ['-lstdc++'], LinkerOpts),
+%	    LinkerOpts = LinkerOpts4,
 	    % TODO: generalize, share with GSL
 	    update_file_from_clauses([
 		(:- extra_compiler_opts(CompilerOpts)),
@@ -123,9 +129,11 @@ prepare_bindings :-
 		fail
 	    ; Version @< [0, 10] ->
 		set_ppl_interface_version('0_9')
-	    ;  Version @< [1, 0] ->
+	    ; Version @< [1, 0] ->
 		set_ppl_interface_version('0_10')
-	    ; set_ppl_interface_version('1_0')
+	    ; Version @< [1, 2] ->
+		set_ppl_interface_version('1_0')
+	    ; set_ppl_interface_version('1_2')
 	    )
 	;
 	    update_file_from_clauses([
