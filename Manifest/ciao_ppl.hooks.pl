@@ -22,6 +22,7 @@
     foreign_config_atmlist/4
 ]).
 :- use_module(library(system), [find_executable/2]).
+:- use_module(engine(system_info), [get_platform/1]).
 
 m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
 
@@ -137,7 +138,7 @@ prepare_bindings :-
 	    )
 	;
 	    update_file_from_clauses([
-		(:- initialization(error('PPL library not installed')))
+		(:- initialization(message(error, ['PPL library not installed']))) % TODO: disable message?
 		], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _)
 	).
 
