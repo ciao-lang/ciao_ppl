@@ -1,6 +1,6 @@
 :- module(ppl, _, [assertions]).  
 
-:- doc(title, "Parma Polyhedra Library Interface").
+:- doc(title, "Parma Polyhedra Library interface").
 :- doc(author, "Roberto Bagnara").
 :- doc(author, "R@'{e}my Haemmerl@'{e}").
 
