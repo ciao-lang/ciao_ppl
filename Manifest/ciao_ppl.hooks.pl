@@ -138,6 +138,7 @@ prepare_bindings :-
 	    )
 	;
 	    update_file_from_clauses([
+                (:- use_module(engine(messages_basic), [message/2])),
 		(:- initialization(message(error, ['PPL library not installed']))) % TODO: disable message?
 		], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _)
 	).
