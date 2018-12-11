@@ -64,12 +64,20 @@ third_party_preinstalled(ciao_ppl) :-
 %    %
 %    patch('Manifest/patches/ppl_1_0.patch'),
     %
-    version('1.2'),
-    source_url(tar('http://bugseng.com/products/ppl/download/ftp/releases/1.2/ppl-1.2.tar.bz2')),
-    source_md5("50a757d37cced76e51b97709a4cf455a"),
+%    version('1.2'),
+%    source_url(tar('http://bugseng.com/products/ppl/download/ftp/releases/1.2/ppl-1.2.tar.bz2')),
+%    source_md5("50a757d37cced76e51b97709a4cf455a"),
+%    %
+%    build_system(gnu_build_system),
+%    option2('enable-interfaces','c cxx')
+    %
+    version('1.3'), % (not released yet, using clone)
+    source_url(tar('https://github.com/jfmc/ppl/archive/master.tar.gz', 'ppl-1.3.tar.gz')),
+    source_md5("d08e0f32b65a1f77a4cff11063e3f70c"),
     %
     build_system(gnu_build_system),
-    option2('enable-interfaces','c cxx')
+    option2('enable-interfaces','c cxx'),
+    option1('disable-documentation')
 ]).
 
 :- use_module(library(lists), [append/3]).
@@ -125,22 +133,23 @@ prepare_bindings :-
 		(:- extra_compiler_opts(CompilerOpts)),
 		(:- extra_linker_opts(LinkerOpts))
               ], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_decl_auto.pl'), _),
-	    ppl_version(Version),
-	    ( Version @< [0, 9] ->
-		fail
-	    ; Version @< [0, 10] ->
-		set_ppl_interface_version('0_9')
-	    ; Version @< [1, 0] ->
-		set_ppl_interface_version('0_10')
-	    ; Version @< [1, 2] ->
-		set_ppl_interface_version('1_0')
-	    ; set_ppl_interface_version('1_2')
-	    )
-	;
-	    update_file_from_clauses([
-                (:- use_module(engine(messages_basic), [message/2])),
-		(:- initialization(message(error, ['PPL library not installed']))) % TODO: disable message?
-		], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _)
+	    select_ppl_interface(VerDir),
+	    display(verdir(VerDir)), nl,
+	    set_ppl_interface_version(VerDir)
+	; set_ppl_interface_version(none)
+	).
+
+:- use_module(library(streams)).
+
+select_ppl_interface(VerDir) :-
+	ppl_version(Version),
+	display(ppl_version(Version)), nl,
+	( Version @< [0, 9] -> fail
+	; Version @< [0, 10] -> VerDir = '0_9'
+	; Version @< [1, 0] -> VerDir = '0_10'
+	; Version @< [1, 2] -> VerDir = '1_0'
+	; Version @< [1, 3] -> VerDir = '1_2'
+	; VerDir = '1_3'
 	).
 
 % Patch architecture specific options (for universal OSX binaries)
@@ -160,10 +169,10 @@ remove_all_sublists([H|T1], Sub, [H|T2]):-
 	remove_all_sublists(T1, Sub, T2).
 remove_all_sublists([], _Sub, []).
 
-% This selects one of the two versions
-% TODO: maybe we can use the package 'condcomp' to make this simpler?
+% This selects one of the versions
 set_ppl_interface_version(VerDir) :-
- 	update_file_from_clauses([
-            (:- include(library(ppl/VerDir/ppl_ciao)))
-	    ], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _).
+	( VerDir = none -> Cl = []
+	; Cl = [(:- include(library(ppl/VerDir/ppl_ciao)))]
+	),
+	update_file_from_clauses(Cl, ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _).
 
