@@ -134,16 +134,12 @@ prepare_bindings :-
 		(:- extra_linker_opts(LinkerOpts))
               ], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_decl_auto.pl'), _),
 	    select_ppl_interface(VerDir),
-	    display(verdir(VerDir)), nl,
 	    set_ppl_interface_version(VerDir)
 	; set_ppl_interface_version(none)
 	).
 
-:- use_module(library(streams)).
-
 select_ppl_interface(VerDir) :-
 	ppl_version(Version),
-	display(ppl_version(Version)), nl,
 	( Version @< [0, 9] -> fail
 	; Version @< [0, 10] -> VerDir = '0_9'
 	; Version @< [1, 0] -> VerDir = '0_10'
