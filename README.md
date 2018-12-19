@@ -12,3 +12,5 @@ Usage (this will install third-party code if missing):
 $ ciao get ciao_ppl
 ```
 
+Building PPL from source requires the following components: `libtool`,
+`automake`, `autoconf`, and a C++ compiler such as `g++` or `clang`.
