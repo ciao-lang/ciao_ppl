@@ -4566,289 +4566,289 @@ site: http://bugseng.com/products/ppl/ . */
 ]).
 
 
-:- true pred ppl_version_major_2(in(Term1), go(Success))
+:- trust pred ppl_version_major_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_version_major)).
 
 ppl_version_major(Term1) :-
    ppl_version_major_2(Term1, 1).
 
-:- true pred ppl_version_minor_2(in(Term1), go(Success))
+:- trust pred ppl_version_minor_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_version_minor)).
 
 ppl_version_minor(Term1) :-
    ppl_version_minor_2(Term1, 1).
 
-:- true pred ppl_version_revision_2(in(Term1), go(Success))
+:- trust pred ppl_version_revision_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_version_revision)).
 
 ppl_version_revision(Term1) :-
    ppl_version_revision_2(Term1, 1).
 
-:- true pred ppl_version_beta_2(in(Term1), go(Success))
+:- trust pred ppl_version_beta_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_version_beta)).
 
 ppl_version_beta(Term1) :-
    ppl_version_beta_2(Term1, 1).
 
-:- true pred ppl_version_2(in(Term1), go(Success))
+:- trust pred ppl_version_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_version)).
 
 ppl_version(Term1) :-
    ppl_version_2(Term1, 1).
 
-:- true pred ppl_banner_2(in(Term1), go(Success))
+:- trust pred ppl_banner_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_banner)).
 
 ppl_banner(Term1) :-
    ppl_banner_2(Term1, 1).
 
-:- true pred ppl_max_space_dimension_2(in(Term1), go(Success))
+:- trust pred ppl_max_space_dimension_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_max_space_dimension)).
 
 ppl_max_space_dimension(Term1) :-
    ppl_max_space_dimension_2(Term1, 1).
 
-:- true pred ppl_Coefficient_bits_2(in(Term1), go(Success))
+:- trust pred ppl_Coefficient_bits_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Coefficient_bits)).
 
 ppl_Coefficient_bits(Term1) :-
    ppl_Coefficient_bits_2(Term1, 1).
 
-:- true pred ppl_Coefficient_is_bounded_2(go(Success))
+:- trust pred ppl_Coefficient_is_bounded_2(go(Success))
           :: c_int
   + (returns(Success), foreign(ppl_Coefficient_is_bounded)).
 
 ppl_Coefficient_is_bounded :-
    ppl_Coefficient_is_bounded_2(1).
 
-:- true pred ppl_Coefficient_max_2(in(Term1), go(Success))
+:- trust pred ppl_Coefficient_max_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Coefficient_max)).
 
 ppl_Coefficient_max(Term1) :-
    ppl_Coefficient_max_2(Term1, 1).
 
-:- true pred ppl_Coefficient_min_2(in(Term1), go(Success))
+:- trust pred ppl_Coefficient_min_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Coefficient_min)).
 
 ppl_Coefficient_min(Term1) :-
    ppl_Coefficient_min_2(Term1, 1).
 
-:- true pred ppl_initialize +  foreign.
+:- trust pred ppl_initialize +  foreign.
 
-:- true pred ppl_finalize +  foreign.
+:- trust pred ppl_finalize +  foreign.
 
-:- true pred ppl_set_rounding_for_PPL +  foreign.
+:- trust pred ppl_set_rounding_for_PPL +  foreign.
 
-:- true pred ppl_restore_pre_PPL_rounding +  foreign.
+:- trust pred ppl_restore_pre_PPL_rounding +  foreign.
 
-:- true pred ppl_irrational_precision_2(in(Term1), go(Success))
+:- trust pred ppl_irrational_precision_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_irrational_precision)).
 
 ppl_irrational_precision(Term1) :-
    ppl_irrational_precision_2(Term1, 1).
 
-:- true pred ppl_set_irrational_precision_2(in(Term1), go(Success))
+:- trust pred ppl_set_irrational_precision_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_set_irrational_precision)).
 
 ppl_set_irrational_precision(Term1) :-
    ppl_set_irrational_precision_2(Term1, 1).
 
-:- true pred ppl_set_timeout_exception_atom(in(Term1))
+:- trust pred ppl_set_timeout_exception_atom(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_timeout_exception_atom_2(in(Term1), go(Success))
+:- trust pred ppl_timeout_exception_atom_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_timeout_exception_atom)).
 
 ppl_timeout_exception_atom(Term1) :-
    ppl_timeout_exception_atom_2(Term1, 1).
 
-:- true pred ppl_set_timeout(in(Term1))
+:- trust pred ppl_set_timeout(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_reset_timeout +  foreign.
+:- trust pred ppl_reset_timeout +  foreign.
 
-:- true pred ppl_set_deterministic_timeout(in(Term1), in(Term2))
+:- trust pred ppl_set_deterministic_timeout(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_reset_deterministic_timeout +  foreign.
+:- trust pred ppl_reset_deterministic_timeout +  foreign.
 
-:- true pred ppl_new_MIP_Problem_from_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_MIP_Problem_from_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_MIP_Problem_from_space_dimension)).
 
 ppl_new_MIP_Problem_from_space_dimension(Term1, Term2) :-
    ppl_new_MIP_Problem_from_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_new_MIP_Problem_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_new_MIP_Problem_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_MIP_Problem)).
 
 ppl_new_MIP_Problem(Term1, Term2, Term3, Term4, Term5) :-
    ppl_new_MIP_Problem_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_new_MIP_Problem_from_MIP_Problem_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_MIP_Problem_from_MIP_Problem_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_MIP_Problem_from_MIP_Problem)).
 
 ppl_new_MIP_Problem_from_MIP_Problem(Term1, Term2) :-
    ppl_new_MIP_Problem_from_MIP_Problem_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_swap(in(Term1), in(Term2))
+:- trust pred ppl_MIP_Problem_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_delete_MIP_Problem(in(Term1))
+:- trust pred ppl_delete_MIP_Problem(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_MIP_Problem_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_space_dimension)).
 
 ppl_MIP_Problem_space_dimension(Term1, Term2) :-
    ppl_MIP_Problem_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_integer_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_integer_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_integer_space_dimensions)).
 
 ppl_MIP_Problem_integer_space_dimensions(Term1, Term2) :-
    ppl_MIP_Problem_integer_space_dimensions_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_constraints)).
 
 ppl_MIP_Problem_constraints(Term1, Term2) :-
    ppl_MIP_Problem_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_objective_function_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_objective_function_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_objective_function)).
 
 ppl_MIP_Problem_objective_function(Term1, Term2) :-
    ppl_MIP_Problem_objective_function_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_optimization_mode_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_optimization_mode_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_optimization_mode)).
 
 ppl_MIP_Problem_optimization_mode(Term1, Term2) :-
    ppl_MIP_Problem_optimization_mode_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_clear_2(in(Term1), go(Success))
+:- trust pred ppl_MIP_Problem_clear_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_clear)).
 
 ppl_MIP_Problem_clear(Term1) :-
    ppl_MIP_Problem_clear_2(Term1, 1).
 
-:- true pred ppl_MIP_Problem_add_space_dimensions_and_embed_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_add_space_dimensions_and_embed_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_add_space_dimensions_and_embed)).
 
 ppl_MIP_Problem_add_space_dimensions_and_embed(Term1, Term2) :-
    ppl_MIP_Problem_add_space_dimensions_and_embed_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_add_to_integer_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_add_to_integer_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_add_to_integer_space_dimensions)).
 
 ppl_MIP_Problem_add_to_integer_space_dimensions(Term1, Term2) :-
    ppl_MIP_Problem_add_to_integer_space_dimensions_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_add_constraint_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_add_constraint_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_add_constraint)).
 
 ppl_MIP_Problem_add_constraint(Term1, Term2) :-
    ppl_MIP_Problem_add_constraint_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_add_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_add_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_add_constraints)).
 
 ppl_MIP_Problem_add_constraints(Term1, Term2) :-
    ppl_MIP_Problem_add_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_set_objective_function_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_set_objective_function_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_set_objective_function)).
 
 ppl_MIP_Problem_set_objective_function(Term1, Term2) :-
    ppl_MIP_Problem_set_objective_function_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_set_optimization_mode_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_set_optimization_mode_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_set_optimization_mode)).
 
 ppl_MIP_Problem_set_optimization_mode(Term1, Term2) :-
    ppl_MIP_Problem_set_optimization_mode_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_set_control_parameter(in(Term1), in(Term2))
+:- trust pred ppl_MIP_Problem_set_control_parameter(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_MIP_Problem_get_control_parameter_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_MIP_Problem_get_control_parameter_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_get_control_parameter)).
 
 ppl_MIP_Problem_get_control_parameter(Term1, Term2, Term3) :-
    ppl_MIP_Problem_get_control_parameter_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_MIP_Problem_is_satisfiable_2(in(Term1), go(Success))
+:- trust pred ppl_MIP_Problem_is_satisfiable_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_is_satisfiable)).
 
 ppl_MIP_Problem_is_satisfiable(Term1) :-
    ppl_MIP_Problem_is_satisfiable_2(Term1, 1).
 
-:- true pred ppl_MIP_Problem_solve_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_solve_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_solve)).
 
 ppl_MIP_Problem_solve(Term1, Term2) :-
    ppl_MIP_Problem_solve_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_feasible_point_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_feasible_point_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_feasible_point)).
 
 ppl_MIP_Problem_feasible_point(Term1, Term2) :-
    ppl_MIP_Problem_feasible_point_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_optimizing_point_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_MIP_Problem_optimizing_point_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_optimizing_point)).
 
 ppl_MIP_Problem_optimizing_point(Term1, Term2) :-
    ppl_MIP_Problem_optimizing_point_2(Term1, Term2, 1).
 
-:- true pred ppl_MIP_Problem_optimal_value_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_MIP_Problem_optimal_value_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_optimal_value)).
 
 ppl_MIP_Problem_optimal_value(Term1, Term2, Term3) :-
    ppl_MIP_Problem_optimal_value_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_MIP_Problem_evaluate_objective_function_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_MIP_Problem_evaluate_objective_function_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_evaluate_objective_function)).
 
 ppl_MIP_Problem_evaluate_objective_function(Term1, Term2, Term3, Term4) :-
    ppl_MIP_Problem_evaluate_objective_function_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_MIP_Problem_OK_2(in(Term1), go(Success))
+:- trust pred ppl_MIP_Problem_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_OK)).
 
@@ -4856,239 +4856,239 @@ ppl_MIP_Problem_OK(Term1) :-
    ppl_MIP_Problem_OK_2(Term1, 1).
 
 
-:- true pred ppl_MIP_Problem_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_MIP_Problem_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_MIP_Problem_ascii_dump)).
 
 ppl_MIP_Problem_ascii_dump(Term1) :-
    ppl_MIP_Problem_ascii_dump_2(Term1, 1).
 
-:- true pred ppl_new_PIP_Problem_from_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_PIP_Problem_from_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_PIP_Problem_from_space_dimension)).
 
 ppl_new_PIP_Problem_from_space_dimension(Term1, Term2) :-
    ppl_new_PIP_Problem_from_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_new_PIP_Problem_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_new_PIP_Problem_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_PIP_Problem)).
 
 ppl_new_PIP_Problem(Term1, Term2, Term3, Term4) :-
    ppl_new_PIP_Problem_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_new_PIP_Problem_from_PIP_Problem_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_PIP_Problem_from_PIP_Problem_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_PIP_Problem_from_PIP_Problem)).
 
 ppl_new_PIP_Problem_from_PIP_Problem(Term1, Term2) :-
    ppl_new_PIP_Problem_from_PIP_Problem_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_swap(in(Term1), in(Term2))
+:- trust pred ppl_PIP_Problem_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_delete_PIP_Problem(in(Term1))
+:- trust pred ppl_delete_PIP_Problem(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_PIP_Problem_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_space_dimension)).
 
 ppl_PIP_Problem_space_dimension(Term1, Term2) :-
    ppl_PIP_Problem_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_parameter_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_parameter_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_parameter_space_dimensions)).
 
 ppl_PIP_Problem_parameter_space_dimensions(Term1, Term2) :-
    ppl_PIP_Problem_parameter_space_dimensions_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_constraints)).
 
 ppl_PIP_Problem_constraints(Term1, Term2) :-
    ppl_PIP_Problem_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_clear_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Problem_clear_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_clear)).
 
 ppl_PIP_Problem_clear(Term1) :-
    ppl_PIP_Problem_clear_2(Term1, 1).
 
-:- true pred ppl_PIP_Problem_add_space_dimensions_and_embed_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_PIP_Problem_add_space_dimensions_and_embed_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_add_space_dimensions_and_embed)).
 
 ppl_PIP_Problem_add_space_dimensions_and_embed(Term1, Term2, Term3) :-
    ppl_PIP_Problem_add_space_dimensions_and_embed_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_PIP_Problem_add_to_parameter_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_add_to_parameter_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_add_to_parameter_space_dimensions)).
 
 ppl_PIP_Problem_add_to_parameter_space_dimensions(Term1, Term2) :-
    ppl_PIP_Problem_add_to_parameter_space_dimensions_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_add_constraint_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_add_constraint_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_add_constraint)).
 
 ppl_PIP_Problem_add_constraint(Term1, Term2) :-
    ppl_PIP_Problem_add_constraint_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_add_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_add_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_add_constraints)).
 
 ppl_PIP_Problem_add_constraints(Term1, Term2) :-
    ppl_PIP_Problem_add_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_set_control_parameter(in(Term1), in(Term2))
+:- trust pred ppl_PIP_Problem_set_control_parameter(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_PIP_Problem_get_control_parameter_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_PIP_Problem_get_control_parameter_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_get_control_parameter)).
 
 ppl_PIP_Problem_get_control_parameter(Term1, Term2, Term3) :-
    ppl_PIP_Problem_get_control_parameter_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_PIP_Problem_has_big_parameter_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_has_big_parameter_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_has_big_parameter_dimension)).
 
 ppl_PIP_Problem_has_big_parameter_dimension(Term1, Term2) :-
    ppl_PIP_Problem_has_big_parameter_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_set_big_parameter_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_set_big_parameter_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_set_big_parameter_dimension)).
 
 ppl_PIP_Problem_set_big_parameter_dimension(Term1, Term2) :-
    ppl_PIP_Problem_set_big_parameter_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_is_satisfiable_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Problem_is_satisfiable_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_is_satisfiable)).
 
 ppl_PIP_Problem_is_satisfiable(Term1) :-
    ppl_PIP_Problem_is_satisfiable_2(Term1, 1).
 
-:- true pred ppl_PIP_Problem_solve_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_solve_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_solve)).
 
 ppl_PIP_Problem_solve(Term1, Term2) :-
    ppl_PIP_Problem_solve_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_solution_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_solution_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_solution)).
 
 ppl_PIP_Problem_solution(Term1, Term2) :-
    ppl_PIP_Problem_solution_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_optimizing_solution_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Problem_optimizing_solution_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_optimizing_solution)).
 
 ppl_PIP_Problem_optimizing_solution(Term1, Term2) :-
    ppl_PIP_Problem_optimizing_solution_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Problem_OK_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Problem_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_OK)).
 
 ppl_PIP_Problem_OK(Term1) :-
    ppl_PIP_Problem_OK_2(Term1, 1).
 
-:- true pred ppl_PIP_Problem_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Problem_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Problem_ascii_dump)).
 
 ppl_PIP_Problem_ascii_dump(Term1) :-
    ppl_PIP_Problem_ascii_dump_2(Term1, 1).
 
-:- true pred ppl_PIP_Tree_Node_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Tree_Node_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_constraints)).
 
 ppl_PIP_Tree_Node_constraints(Term1, Term2) :-
    ppl_PIP_Tree_Node_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Tree_Node_is_solution_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Tree_Node_is_solution_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_is_solution)).
 
 ppl_PIP_Tree_Node_is_solution(Term1) :-
    ppl_PIP_Tree_Node_is_solution_2(Term1, 1).
 
-:- true pred ppl_PIP_Tree_Node_is_decision_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Tree_Node_is_decision_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_is_decision)).
 
 ppl_PIP_Tree_Node_is_decision(Term1) :-
    ppl_PIP_Tree_Node_is_decision_2(Term1, 1).
 
-:- true pred ppl_PIP_Tree_Node_is_bottom_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Tree_Node_is_bottom_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_is_bottom)).
 
 ppl_PIP_Tree_Node_is_bottom(Term1) :-
    ppl_PIP_Tree_Node_is_bottom_2(Term1, 1).
 
-:- true pred ppl_PIP_Tree_Node_artificials_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Tree_Node_artificials_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_artificials)).
 
 ppl_PIP_Tree_Node_artificials(Term1, Term2) :-
    ppl_PIP_Tree_Node_artificials_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Tree_Node_OK_2(in(Term1), go(Success))
+:- trust pred ppl_PIP_Tree_Node_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_OK)).
 
 ppl_PIP_Tree_Node_OK(Term1) :-
    ppl_PIP_Tree_Node_OK_2(Term1, 1).
 
-:- true pred ppl_PIP_Tree_Node_parametric_values_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_PIP_Tree_Node_parametric_values_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_parametric_values)).
 
 ppl_PIP_Tree_Node_parametric_values(Term1, Term2, Term3) :-
    ppl_PIP_Tree_Node_parametric_values_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_PIP_Tree_Node_true_child_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Tree_Node_true_child_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_true_child)).
 
 ppl_PIP_Tree_Node_true_child(Term1, Term2) :-
    ppl_PIP_Tree_Node_true_child_2(Term1, Term2, 1).
 
-:- true pred ppl_PIP_Tree_Node_false_child_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_PIP_Tree_Node_false_child_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_PIP_Tree_Node_false_child)).
 
 ppl_PIP_Tree_Node_false_child(Term1, Term2) :-
    ppl_PIP_Tree_Node_false_child_2(Term1, Term2, 1).
 
-:- true pred ppl_delete_Polyhedron(in(Term1))
+:- trust pred ppl_delete_Polyhedron(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_C_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_space_dimension)).
 
 ppl_new_C_Polyhedron_from_space_dimension(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_space_dimension_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_space_dimension)).
 
@@ -5099,154 +5099,154 @@ ppl_new_NNC_Polyhedron_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_C_Polyhedron_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_C_Polyhedron)).
 
 ppl_new_C_Polyhedron_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_C_Polyhedron)).
 
 ppl_new_NNC_Polyhedron_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_NNC_Polyhedron)).
 
 ppl_new_C_Polyhedron_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_NNC_Polyhedron)).
 
 ppl_new_NNC_Polyhedron_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Grid)).
 
 ppl_new_C_Polyhedron_from_Grid(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Grid)).
 
 ppl_new_NNC_Polyhedron_from_Grid(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Rational_Box)).
 
 ppl_new_C_Polyhedron_from_Rational_Box(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Rational_Box)).
 
 ppl_new_NNC_Polyhedron_from_Rational_Box(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_BD_Shape_mpz_class)).
 
 ppl_new_C_Polyhedron_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class)).
 
 ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_BD_Shape_mpq_class)).
 
 ppl_new_C_Polyhedron_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class)).
 
 ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_C_Polyhedron_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_C_Polyhedron_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Double_Box)).
 % 
 % ppl_new_C_Polyhedron_from_Double_Box(Term1, Term2) :-
 %    ppl_new_C_Polyhedron_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_NNC_Polyhedron_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_NNC_Polyhedron_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Double_Box)).
 % 
 % ppl_new_NNC_Polyhedron_from_Double_Box(Term1, Term2) :-
 %    ppl_new_NNC_Polyhedron_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_C_Polyhedron_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_C_Polyhedron_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_BD_Shape_double)).
 % 
 % ppl_new_C_Polyhedron_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_C_Polyhedron_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_NNC_Polyhedron_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_NNC_Polyhedron_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_BD_Shape_double)).
 % 
 % ppl_new_NNC_Polyhedron_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_NNC_Polyhedron_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_C_Polyhedron_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_C_Polyhedron_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Octagonal_Shape_double)).
 % 
 % ppl_new_C_Polyhedron_from_Octagonal_Shape_double(Term1, Term2) :-
 %    ppl_new_C_Polyhedron_from_Octagonal_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Octagonal_Shape_double)).
 % 
@@ -5258,154 +5258,154 @@ ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_C_Polyhedron_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_C_Polyhedron_with_complexity)).
 
 ppl_new_C_Polyhedron_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_C_Polyhedron_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_C_Polyhedron_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Grid_with_complexity)).
 
 ppl_new_C_Polyhedron_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Grid_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Rational_Box_with_complexity)).
 
 ppl_new_C_Polyhedron_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Rational_Box_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_C_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_C_Polyhedron_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_C_Polyhedron_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Double_Box_with_complexity)).
 % 
 % ppl_new_C_Polyhedron_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_C_Polyhedron_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_NNC_Polyhedron_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_NNC_Polyhedron_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Double_Box_with_complexity)).
 % 
 % ppl_new_NNC_Polyhedron_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_NNC_Polyhedron_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_C_Polyhedron_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_C_Polyhedron_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_C_Polyhedron_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_C_Polyhedron_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_NNC_Polyhedron_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_NNC_Polyhedron_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_NNC_Polyhedron_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_NNC_Polyhedron_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_C_Polyhedron_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_C_Polyhedron_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_Octagonal_Shape_double_with_complexity)).
 % 
 % ppl_new_C_Polyhedron_from_Octagonal_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_C_Polyhedron_from_Octagonal_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_NNC_Polyhedron_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -5417,42 +5417,42 @@ ppl_new_NNC_Polyhedron_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Ter
 
 
 
-:- true pred ppl_new_C_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_constraints)).
 
 ppl_new_C_Polyhedron_from_constraints(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_constraints)).
 
 ppl_new_NNC_Polyhedron_from_constraints(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_congruences)).
 
 ppl_new_C_Polyhedron_from_congruences(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_congruences)).
 
 ppl_new_NNC_Polyhedron_from_congruences(Term1, Term2) :-
    ppl_new_NNC_Polyhedron_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_C_Polyhedron_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_C_Polyhedron_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_C_Polyhedron_from_generators)).
 
 ppl_new_C_Polyhedron_from_generators(Term1, Term2) :-
    ppl_new_C_Polyhedron_from_generators_2(Term1, Term2, 1).
 
-:- true pred ppl_new_NNC_Polyhedron_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_NNC_Polyhedron_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_NNC_Polyhedron_from_generators)).
 
@@ -5464,20 +5464,20 @@ ppl_new_NNC_Polyhedron_from_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_swap(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Polyhedron_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_space_dimension)).
 
 ppl_Polyhedron_space_dimension(Term1, Term2) :-
    ppl_Polyhedron_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_affine_dimension)).
 
@@ -5488,21 +5488,21 @@ ppl_Polyhedron_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Polyhedron_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_relation_with_constraint)).
 
 ppl_Polyhedron_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Polyhedron_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Polyhedron_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Polyhedron_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_relation_with_generator)).
 
 ppl_Polyhedron_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Polyhedron_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Polyhedron_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Polyhedron_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_relation_with_congruence)).
 
@@ -5513,21 +5513,21 @@ ppl_Polyhedron_relation_with_congruence(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Polyhedron_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_get_constraints)).
 
 ppl_Polyhedron_get_constraints(Term1, Term2) :-
    ppl_Polyhedron_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_get_congruences)).
 
 ppl_Polyhedron_get_congruences(Term1, Term2) :-
    ppl_Polyhedron_get_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_get_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_get_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_get_generators)).
 
@@ -5538,21 +5538,21 @@ ppl_Polyhedron_get_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_get_minimized_constraints)).
 
 ppl_Polyhedron_get_minimized_constraints(Term1, Term2) :-
    ppl_Polyhedron_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_get_minimized_congruences)).
 
 ppl_Polyhedron_get_minimized_congruences(Term1, Term2) :-
    ppl_Polyhedron_get_minimized_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_get_minimized_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_get_minimized_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_get_minimized_generators)).
 
@@ -5563,42 +5563,42 @@ ppl_Polyhedron_get_minimized_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_is_empty)).
 
 ppl_Polyhedron_is_empty(Term1) :-
    ppl_Polyhedron_is_empty_2(Term1, 1).
 
-:- true pred ppl_Polyhedron_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_is_universe)).
 
 ppl_Polyhedron_is_universe(Term1) :-
    ppl_Polyhedron_is_universe_2(Term1, 1).
 
-:- true pred ppl_Polyhedron_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_is_bounded)).
 
 ppl_Polyhedron_is_bounded(Term1) :-
    ppl_Polyhedron_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Polyhedron_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_contains_integer_point)).
 
 ppl_Polyhedron_contains_integer_point(Term1) :-
    ppl_Polyhedron_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Polyhedron_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_is_topologically_closed)).
 
 ppl_Polyhedron_is_topologically_closed(Term1) :-
    ppl_Polyhedron_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Polyhedron_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_is_discrete)).
 
@@ -5609,21 +5609,21 @@ ppl_Polyhedron_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Polyhedron_topological_closure_assign(in(Term1))
+:- trust pred ppl_Polyhedron_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_bounds_from_above)).
 
 ppl_Polyhedron_bounds_from_above(Term1, Term2) :-
    ppl_Polyhedron_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_bounds_from_below)).
 
@@ -5634,14 +5634,14 @@ ppl_Polyhedron_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_maximize)).
 
 ppl_Polyhedron_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Polyhedron_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Polyhedron_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_minimize)).
 
@@ -5652,14 +5652,14 @@ ppl_Polyhedron_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Polyhedron_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Polyhedron_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_maximize_with_point)).
 
 ppl_Polyhedron_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Polyhedron_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Polyhedron_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Polyhedron_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_minimize_with_point)).
 
@@ -5670,7 +5670,7 @@ ppl_Polyhedron_minimize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_Polyhedron_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Polyhedron_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_frequency)).
 
@@ -5680,21 +5680,21 @@ ppl_Polyhedron_frequency(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_Polyhedron_contains_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_contains_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_contains_Polyhedron)).
 
 ppl_Polyhedron_contains_Polyhedron(Term1, Term2) :-
    ppl_Polyhedron_contains_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_strictly_contains_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_strictly_contains_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_strictly_contains_Polyhedron)).
 
 ppl_Polyhedron_strictly_contains_Polyhedron(Term1, Term2) :-
    ppl_Polyhedron_strictly_contains_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_is_disjoint_from_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_is_disjoint_from_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_is_disjoint_from_Polyhedron)).
 
@@ -5705,7 +5705,7 @@ ppl_Polyhedron_is_disjoint_from_Polyhedron(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_equals_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_equals_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_equals_Polyhedron)).
 
@@ -5715,7 +5715,7 @@ ppl_Polyhedron_equals_Polyhedron(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_OK)).
 
@@ -5725,85 +5725,85 @@ ppl_Polyhedron_OK(Term1) :-
 
 
 
-:- true pred ppl_Polyhedron_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_add_congruence(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_add_generator(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Polyhedron_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_add_congruences(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_add_generators(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_generator(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_refine_with_congruence(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-
-
-
-
-:- true pred ppl_Polyhedron_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_generators(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_time_elapse_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_poly_hull_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Polyhedron_poly_difference_assign(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Polyhedron_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_poly_hull_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Polyhedron_poly_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Polyhedron_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_upper_bound_assign_if_exact)).
 
 ppl_Polyhedron_upper_bound_assign_if_exact(Term1, Term2) :-
    ppl_Polyhedron_upper_bound_assign_if_exact_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_poly_hull_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_poly_hull_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_poly_hull_assign_if_exact)).
 
@@ -5814,13 +5814,13 @@ ppl_Polyhedron_poly_hull_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_positive_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_positive_time_elapse_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Polyhedron_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Polyhedron_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_simplify_using_context_assign)).
 
@@ -5830,7 +5830,7 @@ ppl_Polyhedron_simplify_using_context_assign(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Polyhedron_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_constrains)).
 
@@ -5840,7 +5840,7 @@ ppl_Polyhedron_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_unconstrain_space_dimension)).
 
@@ -5850,7 +5850,7 @@ ppl_Polyhedron_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_unconstrain_space_dimensions)).
 
@@ -5860,34 +5860,34 @@ ppl_Polyhedron_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Polyhedron_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Polyhedron_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Polyhedron_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Polyhedron_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_generalized_affine_image)).
 
 ppl_Polyhedron_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Polyhedron_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Polyhedron_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_generalized_affine_preimage)).
 
@@ -5898,14 +5898,14 @@ ppl_Polyhedron_generalized_affine_preimage(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Polyhedron_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Polyhedron_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_generalized_affine_image_lhs_rhs)).
 
 ppl_Polyhedron_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Polyhedron_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Polyhedron_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Polyhedron_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_generalized_affine_preimage_lhs_rhs)).
 
@@ -5916,17 +5916,17 @@ ppl_Polyhedron_generalized_affine_preimage_lhs_rhs(Term1, Term2, Term3, Term4) :
 
 
 
-:- true pred ppl_Polyhedron_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_remove_space_dimensions)).
 
@@ -5936,19 +5936,19 @@ ppl_Polyhedron_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Polyhedron_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Polyhedron_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Polyhedron_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Polyhedron_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_fold_space_dimensions)).
 
@@ -5958,7 +5958,7 @@ ppl_Polyhedron_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Polyhedron_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_map_space_dimensions)).
 
@@ -5968,7 +5968,7 @@ ppl_Polyhedron_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_drop_some_non_integer_points)).
 
@@ -5978,7 +5978,7 @@ ppl_Polyhedron_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Polyhedron_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_drop_some_non_integer_points_2)).
 
@@ -5988,7 +5988,7 @@ ppl_Polyhedron_drop_some_non_integer_points_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Polyhedron_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Polyhedron_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_ascii_dump)).
 
@@ -5998,14 +5998,14 @@ ppl_Polyhedron_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Polyhedron_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_external_memory_in_bytes)).
 
 ppl_Polyhedron_external_memory_in_bytes(Term1, Term2) :-
    ppl_Polyhedron_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Polyhedron_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Polyhedron_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_total_memory_in_bytes)).
 
@@ -6016,14 +6016,14 @@ ppl_Polyhedron_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_Polyhedron_BHRZ03_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Polyhedron_BHRZ03_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_BHRZ03_widening_assign_with_tokens)).
 
 ppl_Polyhedron_BHRZ03_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
    ppl_Polyhedron_BHRZ03_widening_assign_with_tokens_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Polyhedron_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Polyhedron_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_H79_widening_assign_with_tokens)).
 
@@ -6034,17 +6034,17 @@ ppl_Polyhedron_H79_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Polyhedron_BHRZ03_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_BHRZ03_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_H79_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_H79_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Polyhedron_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Polyhedron_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_widening_assign_with_tokens)).
 
@@ -6054,34 +6054,34 @@ ppl_Polyhedron_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Polyhedron_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Polyhedron_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Polyhedron_limited_BHRZ03_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_limited_BHRZ03_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_limited_BHRZ03_extrapolation_assign_with_tokens)).
 
 ppl_Polyhedron_limited_BHRZ03_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Polyhedron_limited_BHRZ03_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign_with_tokens)).
 
 ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Polyhedron_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_limited_H79_extrapolation_assign_with_tokens)).
 
 ppl_Polyhedron_limited_H79_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Polyhedron_limited_H79_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Polyhedron_bounded_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Polyhedron_bounded_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_bounded_H79_extrapolation_assign_with_tokens)).
 
@@ -6093,16 +6093,16 @@ ppl_Polyhedron_bounded_H79_extrapolation_assign_with_tokens(Term1, Term2, Term3,
 
 
 
-:- true pred ppl_Polyhedron_limited_BHRZ03_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Polyhedron_limited_BHRZ03_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Polyhedron_bounded_BHRZ03_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Polyhedron_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Polyhedron_bounded_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Polyhedron_bounded_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -6114,7 +6114,7 @@ ppl_Polyhedron_bounded_H79_extrapolation_assign_with_tokens(Term1, Term2, Term3,
 
 
 
-:- true pred ppl_Polyhedron_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Polyhedron_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_linear_partition)).
 
@@ -6125,7 +6125,7 @@ ppl_Polyhedron_linear_partition(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Polyhedron_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_Polyhedron_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Polyhedron_wrap_assign)).
 
@@ -6135,28 +6135,28 @@ ppl_Polyhedron_wrap_assign(Term1, Term2, Term3, Term4, Term5, Term6, Term7, Term
 
 
 
-:- true pred ppl_termination_test_MS_C_Polyhedron_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_C_Polyhedron_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_C_Polyhedron)).
 
 ppl_termination_test_MS_C_Polyhedron(Term1) :-
    ppl_termination_test_MS_C_Polyhedron_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_C_Polyhedron_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_C_Polyhedron_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_C_Polyhedron)).
 
 ppl_termination_test_PR_C_Polyhedron(Term1) :-
    ppl_termination_test_PR_C_Polyhedron_2(Term1, 1).
 
-:- true pred ppl_termination_test_MS_NNC_Polyhedron_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_NNC_Polyhedron_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_NNC_Polyhedron)).
 
 ppl_termination_test_MS_NNC_Polyhedron(Term1) :-
    ppl_termination_test_MS_NNC_Polyhedron_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_NNC_Polyhedron_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_NNC_Polyhedron_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_NNC_Polyhedron)).
 
@@ -6168,28 +6168,28 @@ ppl_termination_test_PR_NNC_Polyhedron(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_C_Polyhedron)).
 
 ppl_one_affine_ranking_function_MS_C_Polyhedron(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_C_Polyhedron)).
 
 ppl_one_affine_ranking_function_PR_C_Polyhedron(Term1, Term2) :-
    ppl_one_affine_ranking_function_PR_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_NNC_Polyhedron)).
 
 ppl_one_affine_ranking_function_MS_NNC_Polyhedron(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_NNC_Polyhedron)).
 
@@ -6201,28 +6201,28 @@ ppl_one_affine_ranking_function_PR_NNC_Polyhedron(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_C_Polyhedron)).
 
 ppl_all_affine_ranking_functions_MS_C_Polyhedron(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_C_Polyhedron)).
 
 ppl_all_affine_ranking_functions_PR_C_Polyhedron(Term1, Term2) :-
    ppl_all_affine_ranking_functions_PR_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_NNC_Polyhedron)).
 
 ppl_all_affine_ranking_functions_MS_NNC_Polyhedron(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_NNC_Polyhedron)).
 
@@ -6234,14 +6234,14 @@ ppl_all_affine_ranking_functions_PR_NNC_Polyhedron(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron)).
 
 ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron(Term1, Term2, Term3) :-
    ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron)).
 
@@ -6252,28 +6252,28 @@ ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_termination_test_MS_C_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_C_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_C_Polyhedron_2)).
 
 ppl_termination_test_MS_C_Polyhedron_2(Term1, Term2) :-
    ppl_termination_test_MS_C_Polyhedron_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_C_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_C_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_C_Polyhedron_2)).
 
 ppl_termination_test_PR_C_Polyhedron_2(Term1, Term2) :-
    ppl_termination_test_PR_C_Polyhedron_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_NNC_Polyhedron_2)).
 
 ppl_termination_test_MS_NNC_Polyhedron_2(Term1, Term2) :-
    ppl_termination_test_MS_NNC_Polyhedron_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_NNC_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_NNC_Polyhedron_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_NNC_Polyhedron_2)).
 
@@ -6285,28 +6285,28 @@ ppl_termination_test_PR_NNC_Polyhedron_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_C_Polyhedron_2)).
 
 ppl_one_affine_ranking_function_MS_C_Polyhedron_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_C_Polyhedron_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_C_Polyhedron_2)).
 
 ppl_one_affine_ranking_function_PR_C_Polyhedron_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_PR_C_Polyhedron_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2)).
 
 ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_NNC_Polyhedron_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_NNC_Polyhedron_2)).
 
@@ -6318,28 +6318,28 @@ ppl_one_affine_ranking_function_PR_NNC_Polyhedron_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_C_Polyhedron_2)).
 
 ppl_all_affine_ranking_functions_MS_C_Polyhedron_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_C_Polyhedron_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_C_Polyhedron_2)).
 
 ppl_all_affine_ranking_functions_PR_C_Polyhedron_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_PR_C_Polyhedron_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2)).
 
 ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_NNC_Polyhedron_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_NNC_Polyhedron_2)).
 
@@ -6351,14 +6351,14 @@ ppl_all_affine_ranking_functions_PR_NNC_Polyhedron_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2)).
 
 ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2(Term1, Term2, Term3, Term4) :-
    ppl_all_affine_quasi_ranking_functions_MS_C_Polyhedron_2_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron_2)).
 
@@ -6370,13 +6370,13 @@ ppl_all_affine_quasi_ranking_functions_MS_NNC_Polyhedron_2(Term1, Term2, Term3, 
 
 
 
-:- true pred ppl_delete_Grid(in(Term1))
+:- trust pred ppl_delete_Grid(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Grid_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_space_dimension)).
 
@@ -6387,77 +6387,77 @@ ppl_new_Grid_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_Grid_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_C_Polyhedron)).
 
 ppl_new_Grid_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_Grid_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_NNC_Polyhedron)).
 
 ppl_new_Grid_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_Grid_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Grid)).
 
 ppl_new_Grid_from_Grid(Term1, Term2) :-
    ppl_new_Grid_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Rational_Box)).
 
 ppl_new_Grid_from_Rational_Box(Term1, Term2) :-
    ppl_new_Grid_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_BD_Shape_mpz_class)).
 
 ppl_new_Grid_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Grid_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_BD_Shape_mpq_class)).
 
 ppl_new_Grid_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Grid_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_Grid_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Grid_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_Grid_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Grid_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_Grid_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Grid_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Grid_from_Double_Box)).
 % 
 % ppl_new_Grid_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Grid_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Grid_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Grid_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Grid_from_BD_Shape_double)).
 % 
 % ppl_new_Grid_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Grid_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Grid_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Grid_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Grid_from_Octagonal_Shape_double)).
 % 
@@ -6469,77 +6469,77 @@ ppl_new_Grid_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_Grid_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_C_Polyhedron_with_complexity)).
 
 ppl_new_Grid_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_Grid_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Grid_with_complexity)).
 
 ppl_new_Grid_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Rational_Box_with_complexity)).
 
 ppl_new_Grid_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_Grid_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_Grid_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_Grid_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Grid_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Grid_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_Grid_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Grid_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_Grid_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Grid_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Grid_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Grid_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Grid_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Grid_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Grid_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Grid_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Grid_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Grid_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Grid_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Grid_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Grid_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -6551,21 +6551,21 @@ ppl_new_Grid_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3)
 
 
 
-:- true pred ppl_new_Grid_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_constraints)).
 
 ppl_new_Grid_from_constraints(Term1, Term2) :-
    ppl_new_Grid_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_congruences)).
 
 ppl_new_Grid_from_congruences(Term1, Term2) :-
    ppl_new_Grid_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Grid_from_grid_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Grid_from_grid_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Grid_from_grid_generators)).
 
@@ -6577,20 +6577,20 @@ ppl_new_Grid_from_grid_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_swap(in(Term1), in(Term2))
+:- trust pred ppl_Grid_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Grid_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_space_dimension)).
 
 ppl_Grid_space_dimension(Term1, Term2) :-
    ppl_Grid_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_affine_dimension)).
 
@@ -6601,28 +6601,28 @@ ppl_Grid_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_relation_with_constraint)).
 
 ppl_Grid_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Grid_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Grid_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_relation_with_generator)).
 
 ppl_Grid_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Grid_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Grid_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_relation_with_congruence)).
 
 ppl_Grid_relation_with_congruence(Term1, Term2, Term3) :-
    ppl_Grid_relation_with_congruence_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Grid_relation_with_grid_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_relation_with_grid_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_relation_with_grid_generator)).
 
@@ -6633,21 +6633,21 @@ ppl_Grid_relation_with_grid_generator(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Grid_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_get_constraints)).
 
 ppl_Grid_get_constraints(Term1, Term2) :-
    ppl_Grid_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_get_congruences)).
 
 ppl_Grid_get_congruences(Term1, Term2) :-
    ppl_Grid_get_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_get_grid_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_get_grid_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_get_grid_generators)).
 
@@ -6658,21 +6658,21 @@ ppl_Grid_get_grid_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_get_minimized_constraints)).
 
 ppl_Grid_get_minimized_constraints(Term1, Term2) :-
    ppl_Grid_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_get_minimized_congruences)).
 
 ppl_Grid_get_minimized_congruences(Term1, Term2) :-
    ppl_Grid_get_minimized_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_get_minimized_grid_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_get_minimized_grid_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_get_minimized_grid_generators)).
 
@@ -6683,42 +6683,42 @@ ppl_Grid_get_minimized_grid_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_is_empty)).
 
 ppl_Grid_is_empty(Term1) :-
    ppl_Grid_is_empty_2(Term1, 1).
 
-:- true pred ppl_Grid_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_is_universe)).
 
 ppl_Grid_is_universe(Term1) :-
    ppl_Grid_is_universe_2(Term1, 1).
 
-:- true pred ppl_Grid_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_is_bounded)).
 
 ppl_Grid_is_bounded(Term1) :-
    ppl_Grid_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Grid_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_contains_integer_point)).
 
 ppl_Grid_contains_integer_point(Term1) :-
    ppl_Grid_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Grid_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_is_topologically_closed)).
 
 ppl_Grid_is_topologically_closed(Term1) :-
    ppl_Grid_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Grid_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_is_discrete)).
 
@@ -6729,21 +6729,21 @@ ppl_Grid_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Grid_topological_closure_assign(in(Term1))
+:- trust pred ppl_Grid_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_bounds_from_above)).
 
 ppl_Grid_bounds_from_above(Term1, Term2) :-
    ppl_Grid_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_bounds_from_below)).
 
@@ -6754,14 +6754,14 @@ ppl_Grid_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_maximize)).
 
 ppl_Grid_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Grid_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Grid_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_minimize)).
 
@@ -6772,14 +6772,14 @@ ppl_Grid_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Grid_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Grid_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_maximize_with_point)).
 
 ppl_Grid_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Grid_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Grid_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Grid_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_minimize_with_point)).
 
@@ -6790,7 +6790,7 @@ ppl_Grid_minimize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_Grid_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Grid_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_frequency)).
 
@@ -6800,21 +6800,21 @@ ppl_Grid_frequency(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_Grid_contains_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_contains_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_contains_Grid)).
 
 ppl_Grid_contains_Grid(Term1, Term2) :-
    ppl_Grid_contains_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_strictly_contains_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_strictly_contains_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_strictly_contains_Grid)).
 
 ppl_Grid_strictly_contains_Grid(Term1, Term2) :-
    ppl_Grid_strictly_contains_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_is_disjoint_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_is_disjoint_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_is_disjoint_from_Grid)).
 
@@ -6825,7 +6825,7 @@ ppl_Grid_is_disjoint_from_Grid(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_equals_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_equals_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_equals_Grid)).
 
@@ -6835,7 +6835,7 @@ ppl_Grid_equals_Grid(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_OK)).
 
@@ -6845,72 +6845,72 @@ ppl_Grid_OK(Term1) :-
 
 
 
-:- true pred ppl_Grid_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_add_congruence(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_add_grid_generator(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Grid_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Grid_add_congruences(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Grid_add_grid_generators(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_grid_generator(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_refine_with_congruence(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-
-
-
-
-:- true pred ppl_Grid_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Grid_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_grid_generators(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Grid_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Grid_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Grid_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Grid_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Grid_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Grid_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Grid_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Grid_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Grid_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Grid_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Grid_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Grid_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_upper_bound_assign_if_exact)).
 
@@ -6921,7 +6921,7 @@ ppl_Grid_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_simplify_using_context_assign)).
 
@@ -6931,7 +6931,7 @@ ppl_Grid_simplify_using_context_assign(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Grid_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_constrains)).
 
@@ -6941,7 +6941,7 @@ ppl_Grid_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_unconstrain_space_dimension)).
 
@@ -6951,7 +6951,7 @@ ppl_Grid_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_unconstrain_space_dimensions)).
 
@@ -6961,34 +6961,34 @@ ppl_Grid_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Grid_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Grid_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Grid_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Grid_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_image)).
 
 ppl_Grid_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Grid_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Grid_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_preimage)).
 
@@ -6999,14 +6999,14 @@ ppl_Grid_generalized_affine_preimage(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Grid_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Grid_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_image_lhs_rhs)).
 
 ppl_Grid_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Grid_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Grid_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Grid_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_preimage_lhs_rhs)).
 
@@ -7017,14 +7017,14 @@ ppl_Grid_generalized_affine_preimage_lhs_rhs(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Grid_generalized_affine_image_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Grid_generalized_affine_image_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_image_with_congruence)).
 
 ppl_Grid_generalized_affine_image_with_congruence(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Grid_generalized_affine_image_with_congruence_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Grid_generalized_affine_preimage_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Grid_generalized_affine_preimage_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_preimage_with_congruence)).
 
@@ -7035,14 +7035,14 @@ ppl_Grid_generalized_affine_preimage_with_congruence(Term1, Term2, Term3, Term4,
 
 
 
-:- true pred ppl_Grid_generalized_affine_image_lhs_rhs_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_generalized_affine_image_lhs_rhs_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_image_lhs_rhs_with_congruence)).
 
 ppl_Grid_generalized_affine_image_lhs_rhs_with_congruence(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Grid_generalized_affine_image_lhs_rhs_with_congruence_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Grid_generalized_affine_preimage_lhs_rhs_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_generalized_affine_preimage_lhs_rhs_with_congruence_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generalized_affine_preimage_lhs_rhs_with_congruence)).
 
@@ -7053,17 +7053,17 @@ ppl_Grid_generalized_affine_preimage_lhs_rhs_with_congruence(Term1, Term2, Term3
 
 
 
-:- true pred ppl_Grid_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Grid_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_remove_space_dimensions)).
 
@@ -7073,19 +7073,19 @@ ppl_Grid_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Grid_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Grid_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Grid_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Grid_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_fold_space_dimensions)).
 
@@ -7095,7 +7095,7 @@ ppl_Grid_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Grid_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_map_space_dimensions)).
 
@@ -7105,7 +7105,7 @@ ppl_Grid_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_drop_some_non_integer_points)).
 
@@ -7115,7 +7115,7 @@ ppl_Grid_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Grid_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_drop_some_non_integer_points_2)).
 
@@ -7125,7 +7125,7 @@ ppl_Grid_drop_some_non_integer_points_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Grid_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Grid_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Grid_ascii_dump)).
 
@@ -7135,14 +7135,14 @@ ppl_Grid_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Grid_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_external_memory_in_bytes)).
 
 ppl_Grid_external_memory_in_bytes(Term1, Term2) :-
    ppl_Grid_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Grid_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Grid_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_total_memory_in_bytes)).
 
@@ -7153,14 +7153,14 @@ ppl_Grid_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_Grid_congruence_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Grid_congruence_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_congruence_widening_assign_with_tokens)).
 
 ppl_Grid_congruence_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
    ppl_Grid_congruence_widening_assign_with_tokens_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Grid_generator_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Grid_generator_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_generator_widening_assign_with_tokens)).
 
@@ -7171,17 +7171,17 @@ ppl_Grid_generator_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Grid_congruence_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Grid_congruence_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_generator_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Grid_generator_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Grid_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Grid_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_widening_assign_with_tokens)).
 
@@ -7191,20 +7191,20 @@ ppl_Grid_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Grid_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Grid_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Grid_limited_congruence_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_limited_congruence_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_limited_congruence_extrapolation_assign_with_tokens)).
 
 ppl_Grid_limited_congruence_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Grid_limited_congruence_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Grid_limited_generator_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Grid_limited_generator_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_limited_generator_extrapolation_assign_with_tokens)).
 
@@ -7216,10 +7216,10 @@ ppl_Grid_limited_generator_extrapolation_assign_with_tokens(Term1, Term2, Term3,
 
 
 
-:- true pred ppl_Grid_limited_congruence_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Grid_limited_congruence_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Grid_limited_generator_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Grid_limited_generator_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -7231,7 +7231,7 @@ ppl_Grid_limited_generator_extrapolation_assign_with_tokens(Term1, Term2, Term3,
 
 
 
-:- true pred ppl_Grid_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_Grid_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Grid_wrap_assign)).
 
@@ -7241,14 +7241,14 @@ ppl_Grid_wrap_assign(Term1, Term2, Term3, Term4, Term5, Term6, Term7, Term8) :-
 
 
 
-:- true pred ppl_termination_test_MS_Grid_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_Grid_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Grid)).
 
 ppl_termination_test_MS_Grid(Term1) :-
    ppl_termination_test_MS_Grid_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_Grid_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_Grid_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Grid)).
 
@@ -7260,14 +7260,14 @@ ppl_termination_test_PR_Grid(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Grid)).
 
 ppl_one_affine_ranking_function_MS_Grid(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Grid)).
 
@@ -7279,14 +7279,14 @@ ppl_one_affine_ranking_function_PR_Grid(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Grid)).
 
 ppl_all_affine_ranking_functions_MS_Grid(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Grid)).
 
@@ -7298,7 +7298,7 @@ ppl_all_affine_ranking_functions_PR_Grid(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Grid_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Grid_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Grid)).
 
@@ -7309,14 +7309,14 @@ ppl_all_affine_quasi_ranking_functions_MS_Grid(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_termination_test_MS_Grid_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_Grid_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Grid_2)).
 
 ppl_termination_test_MS_Grid_2(Term1, Term2) :-
    ppl_termination_test_MS_Grid_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_Grid_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_Grid_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Grid_2)).
 
@@ -7328,14 +7328,14 @@ ppl_termination_test_PR_Grid_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Grid_2)).
 
 ppl_one_affine_ranking_function_MS_Grid_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_Grid_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Grid_2)).
 
@@ -7347,14 +7347,14 @@ ppl_one_affine_ranking_function_PR_Grid_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Grid_2)).
 
 ppl_all_affine_ranking_functions_MS_Grid_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_Grid_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Grid_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Grid_2)).
 
@@ -7366,7 +7366,7 @@ ppl_all_affine_ranking_functions_PR_Grid_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Grid_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Grid_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Grid_2)).
 
@@ -7378,13 +7378,13 @@ ppl_all_affine_quasi_ranking_functions_MS_Grid_2(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_delete_Rational_Box(in(Term1))
+:- trust pred ppl_delete_Rational_Box(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Rational_Box_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_space_dimension)).
 
@@ -7395,77 +7395,77 @@ ppl_new_Rational_Box_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_Rational_Box_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_C_Polyhedron)).
 
 ppl_new_Rational_Box_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_Rational_Box_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_NNC_Polyhedron)).
 
 ppl_new_Rational_Box_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_Rational_Box_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Grid)).
 
 ppl_new_Rational_Box_from_Grid(Term1, Term2) :-
    ppl_new_Rational_Box_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Rational_Box)).
 
 ppl_new_Rational_Box_from_Rational_Box(Term1, Term2) :-
    ppl_new_Rational_Box_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_BD_Shape_mpz_class)).
 
 ppl_new_Rational_Box_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Rational_Box_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_BD_Shape_mpq_class)).
 
 ppl_new_Rational_Box_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Rational_Box_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_Rational_Box_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Rational_Box_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Rational_Box_from_Double_Box)).
 % 
 % ppl_new_Rational_Box_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Rational_Box_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Rational_Box_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Rational_Box_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Rational_Box_from_BD_Shape_double)).
 % 
 % ppl_new_Rational_Box_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Rational_Box_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Rational_Box_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Rational_Box_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Rational_Box_from_Octagonal_Shape_double)).
 % 
@@ -7477,77 +7477,77 @@ ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_Rational_Box_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_C_Polyhedron_with_complexity)).
 
 ppl_new_Rational_Box_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_Rational_Box_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Grid_with_complexity)).
 
 ppl_new_Rational_Box_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Rational_Box_with_complexity)).
 
 ppl_new_Rational_Box_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_Rational_Box_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_Rational_Box_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_Rational_Box_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Rational_Box_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Rational_Box_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Rational_Box_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Rational_Box_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Rational_Box_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Rational_Box_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Rational_Box_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Rational_Box_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Rational_Box_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Rational_Box_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Rational_Box_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Rational_Box_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -7559,21 +7559,21 @@ ppl_new_Rational_Box_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2
 
 
 
-:- true pred ppl_new_Rational_Box_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_constraints)).
 
 ppl_new_Rational_Box_from_constraints(Term1, Term2) :-
    ppl_new_Rational_Box_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_congruences)).
 
 ppl_new_Rational_Box_from_congruences(Term1, Term2) :-
    ppl_new_Rational_Box_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Rational_Box_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Rational_Box_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Rational_Box_from_generators)).
 
@@ -7585,20 +7585,20 @@ ppl_new_Rational_Box_from_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_swap(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Rational_Box_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_space_dimension)).
 
 ppl_Rational_Box_space_dimension(Term1, Term2) :-
    ppl_Rational_Box_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_affine_dimension)).
 
@@ -7609,21 +7609,21 @@ ppl_Rational_Box_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Rational_Box_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_relation_with_constraint)).
 
 ppl_Rational_Box_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Rational_Box_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Rational_Box_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Rational_Box_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_relation_with_generator)).
 
 ppl_Rational_Box_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Rational_Box_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Rational_Box_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Rational_Box_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_relation_with_congruence)).
 
@@ -7634,14 +7634,14 @@ ppl_Rational_Box_relation_with_congruence(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Rational_Box_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_get_constraints)).
 
 ppl_Rational_Box_get_constraints(Term1, Term2) :-
    ppl_Rational_Box_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_get_congruences)).
 
@@ -7652,14 +7652,14 @@ ppl_Rational_Box_get_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_get_minimized_constraints)).
 
 ppl_Rational_Box_get_minimized_constraints(Term1, Term2) :-
    ppl_Rational_Box_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_get_minimized_congruences)).
 
@@ -7670,42 +7670,42 @@ ppl_Rational_Box_get_minimized_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_is_empty)).
 
 ppl_Rational_Box_is_empty(Term1) :-
    ppl_Rational_Box_is_empty_2(Term1, 1).
 
-:- true pred ppl_Rational_Box_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_is_universe)).
 
 ppl_Rational_Box_is_universe(Term1) :-
    ppl_Rational_Box_is_universe_2(Term1, 1).
 
-:- true pred ppl_Rational_Box_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_is_bounded)).
 
 ppl_Rational_Box_is_bounded(Term1) :-
    ppl_Rational_Box_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Rational_Box_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_contains_integer_point)).
 
 ppl_Rational_Box_contains_integer_point(Term1) :-
    ppl_Rational_Box_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Rational_Box_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_is_topologically_closed)).
 
 ppl_Rational_Box_is_topologically_closed(Term1) :-
    ppl_Rational_Box_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Rational_Box_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_is_discrete)).
 
@@ -7716,21 +7716,21 @@ ppl_Rational_Box_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Rational_Box_topological_closure_assign(in(Term1))
+:- trust pred ppl_Rational_Box_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_bounds_from_above)).
 
 ppl_Rational_Box_bounds_from_above(Term1, Term2) :-
    ppl_Rational_Box_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_bounds_from_below)).
 
@@ -7741,14 +7741,14 @@ ppl_Rational_Box_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_has_upper_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_has_upper_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_has_upper_bound)).
 
 ppl_Rational_Box_has_upper_bound(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Rational_Box_has_upper_bound_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Rational_Box_has_lower_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_has_lower_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_has_lower_bound)).
 
@@ -7759,14 +7759,14 @@ ppl_Rational_Box_has_lower_bound(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Rational_Box_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_maximize)).
 
 ppl_Rational_Box_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Rational_Box_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Rational_Box_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_minimize)).
 
@@ -7777,14 +7777,14 @@ ppl_Rational_Box_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Rational_Box_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Rational_Box_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_maximize_with_point)).
 
 ppl_Rational_Box_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Rational_Box_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Rational_Box_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Rational_Box_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_minimize_with_point)).
 
@@ -7795,7 +7795,7 @@ ppl_Rational_Box_minimize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :
 
 
 
-:- true pred ppl_Rational_Box_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Rational_Box_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_frequency)).
 
@@ -7805,21 +7805,21 @@ ppl_Rational_Box_frequency(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_Rational_Box_contains_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_contains_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_contains_Rational_Box)).
 
 ppl_Rational_Box_contains_Rational_Box(Term1, Term2) :-
    ppl_Rational_Box_contains_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_strictly_contains_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_strictly_contains_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_strictly_contains_Rational_Box)).
 
 ppl_Rational_Box_strictly_contains_Rational_Box(Term1, Term2) :-
    ppl_Rational_Box_strictly_contains_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_is_disjoint_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_is_disjoint_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_is_disjoint_from_Rational_Box)).
 
@@ -7830,7 +7830,7 @@ ppl_Rational_Box_is_disjoint_from_Rational_Box(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_equals_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_equals_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_equals_Rational_Box)).
 
@@ -7840,7 +7840,7 @@ ppl_Rational_Box_equals_Rational_Box(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_OK)).
 
@@ -7850,66 +7850,66 @@ ppl_Rational_Box_OK(Term1) :-
 
 
 
-:- true pred ppl_Rational_Box_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Rational_Box_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Rational_Box_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Rational_Box_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Rational_Box_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Rational_Box_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Rational_Box_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Rational_Box_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Rational_Box_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Rational_Box_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Rational_Box_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Rational_Box_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Rational_Box_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Rational_Box_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Rational_Box_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Rational_Box_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Rational_Box_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Rational_Box_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_upper_bound_assign_if_exact)).
 
@@ -7920,7 +7920,7 @@ ppl_Rational_Box_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Rational_Box_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_simplify_using_context_assign)).
 
@@ -7930,7 +7930,7 @@ ppl_Rational_Box_simplify_using_context_assign(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Rational_Box_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_constrains)).
 
@@ -7940,7 +7940,7 @@ ppl_Rational_Box_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_unconstrain_space_dimension)).
 
@@ -7950,7 +7950,7 @@ ppl_Rational_Box_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_unconstrain_space_dimensions)).
 
@@ -7960,34 +7960,34 @@ ppl_Rational_Box_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Rational_Box_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Rational_Box_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Rational_Box_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Rational_Box_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Rational_Box_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Rational_Box_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_generalized_affine_image)).
 
 ppl_Rational_Box_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Rational_Box_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Rational_Box_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_generalized_affine_preimage)).
 
@@ -7998,14 +7998,14 @@ ppl_Rational_Box_generalized_affine_preimage(Term1, Term2, Term3, Term4, Term5) 
 
 
 
-:- true pred ppl_Rational_Box_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Rational_Box_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_generalized_affine_image_lhs_rhs)).
 
 ppl_Rational_Box_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Rational_Box_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Rational_Box_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Rational_Box_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_generalized_affine_preimage_lhs_rhs)).
 
@@ -8016,17 +8016,17 @@ ppl_Rational_Box_generalized_affine_preimage_lhs_rhs(Term1, Term2, Term3, Term4)
 
 
 
-:- true pred ppl_Rational_Box_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Rational_Box_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_remove_space_dimensions)).
 
@@ -8036,19 +8036,19 @@ ppl_Rational_Box_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Rational_Box_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Rational_Box_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Rational_Box_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Rational_Box_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_fold_space_dimensions)).
 
@@ -8058,7 +8058,7 @@ ppl_Rational_Box_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Rational_Box_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_map_space_dimensions)).
 
@@ -8068,7 +8068,7 @@ ppl_Rational_Box_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_drop_some_non_integer_points)).
 
@@ -8078,7 +8078,7 @@ ppl_Rational_Box_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Rational_Box_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_drop_some_non_integer_points_2)).
 
@@ -8088,7 +8088,7 @@ ppl_Rational_Box_drop_some_non_integer_points_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Rational_Box_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Rational_Box_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_ascii_dump)).
 
@@ -8098,14 +8098,14 @@ ppl_Rational_Box_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Rational_Box_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_external_memory_in_bytes)).
 
 ppl_Rational_Box_external_memory_in_bytes(Term1, Term2) :-
    ppl_Rational_Box_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Rational_Box_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_total_memory_in_bytes)).
 
@@ -8116,7 +8116,7 @@ ppl_Rational_Box_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_CC76_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Rational_Box_CC76_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_CC76_widening_assign_with_tokens)).
 
@@ -8127,14 +8127,14 @@ ppl_Rational_Box_CC76_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Rational_Box_CC76_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_CC76_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Rational_Box_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Rational_Box_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_widening_assign_with_tokens)).
 
@@ -8144,13 +8144,13 @@ ppl_Rational_Box_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Rational_Box_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Rational_Box_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Rational_Box_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Rational_Box_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_limited_CC76_extrapolation_assign_with_tokens)).
 
@@ -8162,7 +8162,7 @@ ppl_Rational_Box_limited_CC76_extrapolation_assign_with_tokens(Term1, Term2, Ter
 
 
 
-:- true pred ppl_Rational_Box_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Rational_Box_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -8170,7 +8170,7 @@ ppl_Rational_Box_limited_CC76_extrapolation_assign_with_tokens(Term1, Term2, Ter
 
 
 
-:- true pred ppl_Rational_Box_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Rational_Box_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_CC76_narrowing_assign)).
 
@@ -8181,7 +8181,7 @@ ppl_Rational_Box_CC76_narrowing_assign(Term1, Term2) :-
 
 
 
-:- true pred ppl_Rational_Box_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Rational_Box_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_linear_partition)).
 
@@ -8192,7 +8192,7 @@ ppl_Rational_Box_linear_partition(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Rational_Box_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_Rational_Box_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Rational_Box_wrap_assign)).
 
@@ -8202,14 +8202,14 @@ ppl_Rational_Box_wrap_assign(Term1, Term2, Term3, Term4, Term5, Term6, Term7, Te
 
 
 
-:- true pred ppl_termination_test_MS_Rational_Box_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_Rational_Box_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Rational_Box)).
 
 ppl_termination_test_MS_Rational_Box(Term1) :-
    ppl_termination_test_MS_Rational_Box_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_Rational_Box_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_Rational_Box_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Rational_Box)).
 
@@ -8221,14 +8221,14 @@ ppl_termination_test_PR_Rational_Box(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Rational_Box)).
 
 ppl_one_affine_ranking_function_MS_Rational_Box(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Rational_Box)).
 
@@ -8240,14 +8240,14 @@ ppl_one_affine_ranking_function_PR_Rational_Box(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Rational_Box)).
 
 ppl_all_affine_ranking_functions_MS_Rational_Box(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Rational_Box)).
 
@@ -8259,7 +8259,7 @@ ppl_all_affine_ranking_functions_PR_Rational_Box(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Rational_Box_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Rational_Box_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Rational_Box)).
 
@@ -8270,14 +8270,14 @@ ppl_all_affine_quasi_ranking_functions_MS_Rational_Box(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_termination_test_MS_Rational_Box_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_Rational_Box_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Rational_Box_2)).
 
 ppl_termination_test_MS_Rational_Box_2(Term1, Term2) :-
    ppl_termination_test_MS_Rational_Box_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_Rational_Box_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_Rational_Box_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Rational_Box_2)).
 
@@ -8289,14 +8289,14 @@ ppl_termination_test_PR_Rational_Box_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Rational_Box_2)).
 
 ppl_one_affine_ranking_function_MS_Rational_Box_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_Rational_Box_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Rational_Box_2)).
 
@@ -8308,14 +8308,14 @@ ppl_one_affine_ranking_function_PR_Rational_Box_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Rational_Box_2)).
 
 ppl_all_affine_ranking_functions_MS_Rational_Box_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_Rational_Box_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Rational_Box_2)).
 
@@ -8327,7 +8327,7 @@ ppl_all_affine_ranking_functions_PR_Rational_Box_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Rational_Box_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Rational_Box_2)).
 
@@ -8339,13 +8339,13 @@ ppl_all_affine_quasi_ranking_functions_MS_Rational_Box_2(Term1, Term2, Term3, Te
 
 
 
-:- true pred ppl_delete_BD_Shape_mpz_class(in(Term1))
+:- trust pred ppl_delete_BD_Shape_mpz_class(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_space_dimension)).
 
@@ -8356,77 +8356,77 @@ ppl_new_BD_Shape_mpz_class_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_C_Polyhedron)).
 
 ppl_new_BD_Shape_mpz_class_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron)).
 
 ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Grid)).
 
 ppl_new_BD_Shape_mpz_class_from_Grid(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Rational_Box)).
 
 ppl_new_BD_Shape_mpz_class_from_Rational_Box(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class)).
 
 ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class)).
 
 ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_BD_Shape_mpz_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpz_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Double_Box)).
 % 
 % ppl_new_BD_Shape_mpz_class_from_Double_Box(Term1, Term2) :-
 %    ppl_new_BD_Shape_mpz_class_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_BD_Shape_double)).
 % 
 % ppl_new_BD_Shape_mpz_class_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_double)).
 % 
@@ -8438,77 +8438,77 @@ ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Grid_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Rational_Box_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_BD_Shape_mpz_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpz_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Double_Box_with_complexity)).
 % 
 % ppl_new_BD_Shape_mpz_class_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_mpz_class_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_mpz_class_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -8520,21 +8520,21 @@ ppl_new_BD_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity(Term1,
 
 
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_constraints)).
 
 ppl_new_BD_Shape_mpz_class_from_constraints(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_congruences)).
 
 ppl_new_BD_Shape_mpz_class_from_congruences(Term1, Term2) :-
    ppl_new_BD_Shape_mpz_class_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpz_class_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpz_class_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpz_class_from_generators)).
 
@@ -8546,20 +8546,20 @@ ppl_new_BD_Shape_mpz_class_from_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_swap(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_space_dimension)).
 
 ppl_BD_Shape_mpz_class_space_dimension(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_affine_dimension)).
 
@@ -8570,21 +8570,21 @@ ppl_BD_Shape_mpz_class_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_relation_with_constraint)).
 
 ppl_BD_Shape_mpz_class_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_BD_Shape_mpz_class_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_relation_with_generator)).
 
 ppl_BD_Shape_mpz_class_relation_with_generator(Term1, Term2, Term3) :-
    ppl_BD_Shape_mpz_class_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_relation_with_congruence)).
 
@@ -8595,14 +8595,14 @@ ppl_BD_Shape_mpz_class_relation_with_congruence(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_get_constraints)).
 
 ppl_BD_Shape_mpz_class_get_constraints(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_get_congruences)).
 
@@ -8613,14 +8613,14 @@ ppl_BD_Shape_mpz_class_get_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_get_minimized_constraints)).
 
 ppl_BD_Shape_mpz_class_get_minimized_constraints(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_get_minimized_congruences)).
 
@@ -8631,42 +8631,42 @@ ppl_BD_Shape_mpz_class_get_minimized_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_is_empty)).
 
 ppl_BD_Shape_mpz_class_is_empty(Term1) :-
    ppl_BD_Shape_mpz_class_is_empty_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_is_universe)).
 
 ppl_BD_Shape_mpz_class_is_universe(Term1) :-
    ppl_BD_Shape_mpz_class_is_universe_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_is_bounded)).
 
 ppl_BD_Shape_mpz_class_is_bounded(Term1) :-
    ppl_BD_Shape_mpz_class_is_bounded_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_contains_integer_point)).
 
 ppl_BD_Shape_mpz_class_contains_integer_point(Term1) :-
    ppl_BD_Shape_mpz_class_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_is_topologically_closed)).
 
 ppl_BD_Shape_mpz_class_is_topologically_closed(Term1) :-
    ppl_BD_Shape_mpz_class_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_is_discrete)).
 
@@ -8677,21 +8677,21 @@ ppl_BD_Shape_mpz_class_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_topological_closure_assign(in(Term1))
+:- trust pred ppl_BD_Shape_mpz_class_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_bounds_from_above)).
 
 ppl_BD_Shape_mpz_class_bounds_from_above(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_bounds_from_below)).
 
@@ -8702,14 +8702,14 @@ ppl_BD_Shape_mpz_class_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_maximize)).
 
 ppl_BD_Shape_mpz_class_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpz_class_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_minimize)).
 
@@ -8720,14 +8720,14 @@ ppl_BD_Shape_mpz_class_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_maximize_with_point)).
 
 ppl_BD_Shape_mpz_class_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_BD_Shape_mpz_class_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_minimize_with_point)).
 
@@ -8738,7 +8738,7 @@ ppl_BD_Shape_mpz_class_minimize_with_point(Term1, Term2, Term3, Term4, Term5, Te
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_frequency)).
 
@@ -8748,21 +8748,21 @@ ppl_BD_Shape_mpz_class_frequency(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_contains_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_contains_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_contains_BD_Shape_mpz_class)).
 
 ppl_BD_Shape_mpz_class_contains_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_contains_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_strictly_contains_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_strictly_contains_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_strictly_contains_BD_Shape_mpz_class)).
 
 ppl_BD_Shape_mpz_class_strictly_contains_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_strictly_contains_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_is_disjoint_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_is_disjoint_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_is_disjoint_from_BD_Shape_mpz_class)).
 
@@ -8773,7 +8773,7 @@ ppl_BD_Shape_mpz_class_is_disjoint_from_BD_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_equals_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_equals_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_equals_BD_Shape_mpz_class)).
 
@@ -8783,7 +8783,7 @@ ppl_BD_Shape_mpz_class_equals_BD_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_OK_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_OK)).
 
@@ -8793,66 +8793,66 @@ ppl_BD_Shape_mpz_class_OK(Term1) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_BD_Shape_mpz_class_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpz_class_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_BD_Shape_mpz_class_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpz_class_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpz_class_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpz_class_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpz_class_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpz_class_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_BD_Shape_mpz_class_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpz_class_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpz_class_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpz_class_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpz_class_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_BD_Shape_mpz_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_upper_bound_assign_if_exact)).
 
@@ -8863,7 +8863,7 @@ ppl_BD_Shape_mpz_class_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_simplify_using_context_assign)).
 
@@ -8873,7 +8873,7 @@ ppl_BD_Shape_mpz_class_simplify_using_context_assign(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_constrains)).
 
@@ -8883,7 +8883,7 @@ ppl_BD_Shape_mpz_class_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_unconstrain_space_dimension)).
 
@@ -8893,7 +8893,7 @@ ppl_BD_Shape_mpz_class_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_unconstrain_space_dimensions)).
 
@@ -8903,34 +8903,34 @@ ppl_BD_Shape_mpz_class_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_BD_Shape_mpz_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_BD_Shape_mpz_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_BD_Shape_mpz_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_BD_Shape_mpz_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_generalized_affine_image)).
 
 ppl_BD_Shape_mpz_class_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpz_class_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_generalized_affine_preimage)).
 
@@ -8941,14 +8941,14 @@ ppl_BD_Shape_mpz_class_generalized_affine_preimage(Term1, Term2, Term3, Term4, T
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_generalized_affine_image_lhs_rhs)).
 
 ppl_BD_Shape_mpz_class_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_BD_Shape_mpz_class_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_generalized_affine_preimage_lhs_rhs)).
 
@@ -8959,17 +8959,17 @@ ppl_BD_Shape_mpz_class_generalized_affine_preimage_lhs_rhs(Term1, Term2, Term3, 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_remove_space_dimensions)).
 
@@ -8979,19 +8979,19 @@ ppl_BD_Shape_mpz_class_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpz_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_fold_space_dimensions)).
 
@@ -9001,7 +9001,7 @@ ppl_BD_Shape_mpz_class_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_map_space_dimensions)).
 
@@ -9011,7 +9011,7 @@ ppl_BD_Shape_mpz_class_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_drop_some_non_integer_points)).
 
@@ -9021,7 +9021,7 @@ ppl_BD_Shape_mpz_class_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_drop_some_non_integer_points_2)).
 
@@ -9031,7 +9031,7 @@ ppl_BD_Shape_mpz_class_drop_some_non_integer_points_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_ascii_dump)).
 
@@ -9041,14 +9041,14 @@ ppl_BD_Shape_mpz_class_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_external_memory_in_bytes)).
 
 ppl_BD_Shape_mpz_class_external_memory_in_bytes(Term1, Term2) :-
    ppl_BD_Shape_mpz_class_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_total_memory_in_bytes)).
 
@@ -9059,14 +9059,14 @@ ppl_BD_Shape_mpz_class_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_BHMZ05_widening_assign_with_tokens)).
 
 ppl_BD_Shape_mpz_class_BHMZ05_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
    ppl_BD_Shape_mpz_class_BHMZ05_widening_assign_with_tokens_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_H79_widening_assign_with_tokens)).
 
@@ -9077,17 +9077,17 @@ ppl_BD_Shape_mpz_class_H79_widening_assign_with_tokens(Term1, Term2, Term3, Term
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_BHMZ05_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_BHMZ05_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_H79_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_H79_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_widening_assign_with_tokens)).
 
@@ -9097,27 +9097,27 @@ ppl_BD_Shape_mpz_class_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens)).
 
 ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign_with_tokens)).
 
 ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens)).
 
@@ -9129,13 +9129,13 @@ ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens(Term1, Term
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpz_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpz_class_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -9143,7 +9143,7 @@ ppl_BD_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens(Term1, Term
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_CC76_extrapolation_assign_with_tokens)).
 
@@ -9154,14 +9154,14 @@ ppl_BD_Shape_mpz_class_CC76_extrapolation_assign_with_tokens(Term1, Term2, Term3
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_CC76_extrapolation_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpz_class_CC76_extrapolation_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_CC76_narrowing_assign)).
 
@@ -9172,7 +9172,7 @@ ppl_BD_Shape_mpz_class_CC76_narrowing_assign(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_linear_partition)).
 
@@ -9183,7 +9183,7 @@ ppl_BD_Shape_mpz_class_linear_partition(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_BD_Shape_mpz_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_BD_Shape_mpz_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpz_class_wrap_assign)).
 
@@ -9193,14 +9193,14 @@ ppl_BD_Shape_mpz_class_wrap_assign(Term1, Term2, Term3, Term4, Term5, Term6, Ter
 
 
 
-:- true pred ppl_termination_test_MS_BD_Shape_mpz_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_BD_Shape_mpz_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_BD_Shape_mpz_class)).
 
 ppl_termination_test_MS_BD_Shape_mpz_class(Term1) :-
    ppl_termination_test_MS_BD_Shape_mpz_class_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_BD_Shape_mpz_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_BD_Shape_mpz_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_BD_Shape_mpz_class)).
 
@@ -9212,14 +9212,14 @@ ppl_termination_test_PR_BD_Shape_mpz_class(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class)).
 
 ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class)).
 
@@ -9231,14 +9231,14 @@ ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class)).
 
 ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class)).
 
@@ -9250,7 +9250,7 @@ ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class)).
 
@@ -9261,14 +9261,14 @@ ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class(Term1, Term2, Term3
 
 
 
-:- true pred ppl_termination_test_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_BD_Shape_mpz_class_2)).
 
 ppl_termination_test_MS_BD_Shape_mpz_class_2(Term1, Term2) :-
    ppl_termination_test_MS_BD_Shape_mpz_class_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_BD_Shape_mpz_class_2)).
 
@@ -9280,14 +9280,14 @@ ppl_termination_test_PR_BD_Shape_mpz_class_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2)).
 
 ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_BD_Shape_mpz_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class_2)).
 
@@ -9299,14 +9299,14 @@ ppl_one_affine_ranking_function_PR_BD_Shape_mpz_class_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2)).
 
 ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_BD_Shape_mpz_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class_2)).
 
@@ -9318,7 +9318,7 @@ ppl_all_affine_ranking_functions_PR_BD_Shape_mpz_class_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class_2)).
 
@@ -9330,13 +9330,13 @@ ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpz_class_2(Term1, Term2, Ter
 
 
 
-:- true pred ppl_delete_BD_Shape_mpq_class(in(Term1))
+:- trust pred ppl_delete_BD_Shape_mpq_class(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_space_dimension)).
 
@@ -9347,77 +9347,77 @@ ppl_new_BD_Shape_mpq_class_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_C_Polyhedron)).
 
 ppl_new_BD_Shape_mpq_class_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron)).
 
 ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Grid)).
 
 ppl_new_BD_Shape_mpq_class_from_Grid(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Rational_Box)).
 
 ppl_new_BD_Shape_mpq_class_from_Rational_Box(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class)).
 
 ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class)).
 
 ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_BD_Shape_mpq_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpq_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Double_Box)).
 % 
 % ppl_new_BD_Shape_mpq_class_from_Double_Box(Term1, Term2) :-
 %    ppl_new_BD_Shape_mpq_class_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_BD_Shape_double)).
 % 
 % ppl_new_BD_Shape_mpq_class_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_double)).
 % 
@@ -9429,77 +9429,77 @@ ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Grid_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Rational_Box_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_BD_Shape_mpq_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpq_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Double_Box_with_complexity)).
 % 
 % ppl_new_BD_Shape_mpq_class_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_mpq_class_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_mpq_class_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -9511,21 +9511,21 @@ ppl_new_BD_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity(Term1,
 
 
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_constraints)).
 
 ppl_new_BD_Shape_mpq_class_from_constraints(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_congruences)).
 
 ppl_new_BD_Shape_mpq_class_from_congruences(Term1, Term2) :-
    ppl_new_BD_Shape_mpq_class_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_BD_Shape_mpq_class_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_BD_Shape_mpq_class_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_BD_Shape_mpq_class_from_generators)).
 
@@ -9537,20 +9537,20 @@ ppl_new_BD_Shape_mpq_class_from_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_swap(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_space_dimension)).
 
 ppl_BD_Shape_mpq_class_space_dimension(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_affine_dimension)).
 
@@ -9561,21 +9561,21 @@ ppl_BD_Shape_mpq_class_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_relation_with_constraint)).
 
 ppl_BD_Shape_mpq_class_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_BD_Shape_mpq_class_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_relation_with_generator)).
 
 ppl_BD_Shape_mpq_class_relation_with_generator(Term1, Term2, Term3) :-
    ppl_BD_Shape_mpq_class_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_relation_with_congruence)).
 
@@ -9586,14 +9586,14 @@ ppl_BD_Shape_mpq_class_relation_with_congruence(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_get_constraints)).
 
 ppl_BD_Shape_mpq_class_get_constraints(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_get_congruences)).
 
@@ -9604,14 +9604,14 @@ ppl_BD_Shape_mpq_class_get_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_get_minimized_constraints)).
 
 ppl_BD_Shape_mpq_class_get_minimized_constraints(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_get_minimized_congruences)).
 
@@ -9622,42 +9622,42 @@ ppl_BD_Shape_mpq_class_get_minimized_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_is_empty)).
 
 ppl_BD_Shape_mpq_class_is_empty(Term1) :-
    ppl_BD_Shape_mpq_class_is_empty_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_is_universe)).
 
 ppl_BD_Shape_mpq_class_is_universe(Term1) :-
    ppl_BD_Shape_mpq_class_is_universe_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_is_bounded)).
 
 ppl_BD_Shape_mpq_class_is_bounded(Term1) :-
    ppl_BD_Shape_mpq_class_is_bounded_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_contains_integer_point)).
 
 ppl_BD_Shape_mpq_class_contains_integer_point(Term1) :-
    ppl_BD_Shape_mpq_class_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_is_topologically_closed)).
 
 ppl_BD_Shape_mpq_class_is_topologically_closed(Term1) :-
    ppl_BD_Shape_mpq_class_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_is_discrete)).
 
@@ -9668,21 +9668,21 @@ ppl_BD_Shape_mpq_class_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_topological_closure_assign(in(Term1))
+:- trust pred ppl_BD_Shape_mpq_class_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_bounds_from_above)).
 
 ppl_BD_Shape_mpq_class_bounds_from_above(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_bounds_from_below)).
 
@@ -9693,14 +9693,14 @@ ppl_BD_Shape_mpq_class_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_maximize)).
 
 ppl_BD_Shape_mpq_class_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpq_class_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_minimize)).
 
@@ -9711,14 +9711,14 @@ ppl_BD_Shape_mpq_class_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_maximize_with_point)).
 
 ppl_BD_Shape_mpq_class_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_BD_Shape_mpq_class_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_minimize_with_point)).
 
@@ -9729,7 +9729,7 @@ ppl_BD_Shape_mpq_class_minimize_with_point(Term1, Term2, Term3, Term4, Term5, Te
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_frequency)).
 
@@ -9739,21 +9739,21 @@ ppl_BD_Shape_mpq_class_frequency(Term1, Term2, Term3, Term4, Term5, Term6) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_contains_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_contains_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_contains_BD_Shape_mpq_class)).
 
 ppl_BD_Shape_mpq_class_contains_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_contains_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_strictly_contains_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_strictly_contains_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_strictly_contains_BD_Shape_mpq_class)).
 
 ppl_BD_Shape_mpq_class_strictly_contains_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_strictly_contains_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_is_disjoint_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_is_disjoint_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_is_disjoint_from_BD_Shape_mpq_class)).
 
@@ -9764,7 +9764,7 @@ ppl_BD_Shape_mpq_class_is_disjoint_from_BD_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_equals_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_equals_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_equals_BD_Shape_mpq_class)).
 
@@ -9774,7 +9774,7 @@ ppl_BD_Shape_mpq_class_equals_BD_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_OK_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_OK)).
 
@@ -9784,66 +9784,66 @@ ppl_BD_Shape_mpq_class_OK(Term1) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_BD_Shape_mpq_class_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpq_class_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_BD_Shape_mpq_class_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpq_class_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpq_class_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpq_class_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_BD_Shape_mpq_class_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpq_class_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_BD_Shape_mpq_class_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpq_class_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpq_class_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpq_class_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_BD_Shape_mpq_class_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_BD_Shape_mpq_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_upper_bound_assign_if_exact)).
 
@@ -9854,7 +9854,7 @@ ppl_BD_Shape_mpq_class_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_simplify_using_context_assign)).
 
@@ -9864,7 +9864,7 @@ ppl_BD_Shape_mpq_class_simplify_using_context_assign(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_constrains)).
 
@@ -9874,7 +9874,7 @@ ppl_BD_Shape_mpq_class_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_unconstrain_space_dimension)).
 
@@ -9884,7 +9884,7 @@ ppl_BD_Shape_mpq_class_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_unconstrain_space_dimensions)).
 
@@ -9894,34 +9894,34 @@ ppl_BD_Shape_mpq_class_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_BD_Shape_mpq_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_BD_Shape_mpq_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_BD_Shape_mpq_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_BD_Shape_mpq_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_generalized_affine_image)).
 
 ppl_BD_Shape_mpq_class_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpq_class_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_generalized_affine_preimage)).
 
@@ -9932,14 +9932,14 @@ ppl_BD_Shape_mpq_class_generalized_affine_preimage(Term1, Term2, Term3, Term4, T
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_generalized_affine_image_lhs_rhs)).
 
 ppl_BD_Shape_mpq_class_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_BD_Shape_mpq_class_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_generalized_affine_preimage_lhs_rhs)).
 
@@ -9950,17 +9950,17 @@ ppl_BD_Shape_mpq_class_generalized_affine_preimage_lhs_rhs(Term1, Term2, Term3, 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_remove_space_dimensions)).
 
@@ -9970,19 +9970,19 @@ ppl_BD_Shape_mpq_class_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpq_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_fold_space_dimensions)).
 
@@ -9992,7 +9992,7 @@ ppl_BD_Shape_mpq_class_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_map_space_dimensions)).
 
@@ -10002,7 +10002,7 @@ ppl_BD_Shape_mpq_class_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_drop_some_non_integer_points)).
 
@@ -10012,7 +10012,7 @@ ppl_BD_Shape_mpq_class_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_drop_some_non_integer_points_2)).
 
@@ -10022,7 +10022,7 @@ ppl_BD_Shape_mpq_class_drop_some_non_integer_points_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_ascii_dump)).
 
@@ -10032,14 +10032,14 @@ ppl_BD_Shape_mpq_class_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_external_memory_in_bytes)).
 
 ppl_BD_Shape_mpq_class_external_memory_in_bytes(Term1, Term2) :-
    ppl_BD_Shape_mpq_class_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_total_memory_in_bytes)).
 
@@ -10050,14 +10050,14 @@ ppl_BD_Shape_mpq_class_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_BHMZ05_widening_assign_with_tokens)).
 
 ppl_BD_Shape_mpq_class_BHMZ05_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
    ppl_BD_Shape_mpq_class_BHMZ05_widening_assign_with_tokens_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_H79_widening_assign_with_tokens)).
 
@@ -10068,17 +10068,17 @@ ppl_BD_Shape_mpq_class_H79_widening_assign_with_tokens(Term1, Term2, Term3, Term
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_BHMZ05_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_BHMZ05_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_H79_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_H79_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_widening_assign_with_tokens)).
 
@@ -10088,27 +10088,27 @@ ppl_BD_Shape_mpq_class_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens)).
 
 ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign_with_tokens)).
 
 ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens)).
 
@@ -10120,13 +10120,13 @@ ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens(Term1, Term
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpq_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpq_class_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -10134,7 +10134,7 @@ ppl_BD_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens(Term1, Term
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_CC76_extrapolation_assign_with_tokens)).
 
@@ -10145,14 +10145,14 @@ ppl_BD_Shape_mpq_class_CC76_extrapolation_assign_with_tokens(Term1, Term2, Term3
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_CC76_extrapolation_assign(in(Term1), in(Term2))
+:- trust pred ppl_BD_Shape_mpq_class_CC76_extrapolation_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_CC76_narrowing_assign)).
 
@@ -10163,7 +10163,7 @@ ppl_BD_Shape_mpq_class_CC76_narrowing_assign(Term1, Term2) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_linear_partition)).
 
@@ -10174,7 +10174,7 @@ ppl_BD_Shape_mpq_class_linear_partition(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_BD_Shape_mpq_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_BD_Shape_mpq_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_BD_Shape_mpq_class_wrap_assign)).
 
@@ -10184,14 +10184,14 @@ ppl_BD_Shape_mpq_class_wrap_assign(Term1, Term2, Term3, Term4, Term5, Term6, Ter
 
 
 
-:- true pred ppl_termination_test_MS_BD_Shape_mpq_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_BD_Shape_mpq_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_BD_Shape_mpq_class)).
 
 ppl_termination_test_MS_BD_Shape_mpq_class(Term1) :-
    ppl_termination_test_MS_BD_Shape_mpq_class_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_BD_Shape_mpq_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_BD_Shape_mpq_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_BD_Shape_mpq_class)).
 
@@ -10203,14 +10203,14 @@ ppl_termination_test_PR_BD_Shape_mpq_class(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class)).
 
 ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class)).
 
@@ -10222,14 +10222,14 @@ ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class)).
 
 ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class)).
 
@@ -10241,7 +10241,7 @@ ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class)).
 
@@ -10252,14 +10252,14 @@ ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class(Term1, Term2, Term3
 
 
 
-:- true pred ppl_termination_test_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_BD_Shape_mpq_class_2)).
 
 ppl_termination_test_MS_BD_Shape_mpq_class_2(Term1, Term2) :-
    ppl_termination_test_MS_BD_Shape_mpq_class_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_BD_Shape_mpq_class_2)).
 
@@ -10271,14 +10271,14 @@ ppl_termination_test_PR_BD_Shape_mpq_class_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2)).
 
 ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_BD_Shape_mpq_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class_2)).
 
@@ -10290,14 +10290,14 @@ ppl_one_affine_ranking_function_PR_BD_Shape_mpq_class_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2)).
 
 ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_BD_Shape_mpq_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class_2)).
 
@@ -10309,7 +10309,7 @@ ppl_all_affine_ranking_functions_PR_BD_Shape_mpq_class_2(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class_2)).
 
@@ -10321,13 +10321,13 @@ ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_mpq_class_2(Term1, Term2, Ter
 
 
 
-:- true pred ppl_delete_Octagonal_Shape_mpz_class(in(Term1))
+:- trust pred ppl_delete_Octagonal_Shape_mpz_class(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_space_dimension)).
 
@@ -10338,77 +10338,77 @@ ppl_new_Octagonal_Shape_mpz_class_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Grid)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Grid(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Double_Box)).
 % 
 % ppl_new_Octagonal_Shape_mpz_class_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double)).
 % 
 % ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_double)).
 % 
@@ -10420,77 +10420,77 @@ ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Grid_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_mpz_class_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_mpz_class_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -10502,21 +10502,21 @@ ppl_new_Octagonal_Shape_mpz_class_from_Octagonal_Shape_mpq_class_with_complexity
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_constraints)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_constraints(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_congruences)).
 
 ppl_new_Octagonal_Shape_mpz_class_from_congruences(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpz_class_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpz_class_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpz_class_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpz_class_from_generators)).
 
@@ -10528,20 +10528,20 @@ ppl_new_Octagonal_Shape_mpz_class_from_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_swap(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_space_dimension)).
 
 ppl_Octagonal_Shape_mpz_class_space_dimension(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_affine_dimension)).
 
@@ -10552,21 +10552,21 @@ ppl_Octagonal_Shape_mpz_class_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_relation_with_constraint)).
 
 ppl_Octagonal_Shape_mpz_class_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Octagonal_Shape_mpz_class_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_relation_with_generator)).
 
 ppl_Octagonal_Shape_mpz_class_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Octagonal_Shape_mpz_class_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_relation_with_congruence)).
 
@@ -10577,14 +10577,14 @@ ppl_Octagonal_Shape_mpz_class_relation_with_congruence(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_get_constraints)).
 
 ppl_Octagonal_Shape_mpz_class_get_constraints(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_get_congruences)).
 
@@ -10595,14 +10595,14 @@ ppl_Octagonal_Shape_mpz_class_get_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_get_minimized_constraints)).
 
 ppl_Octagonal_Shape_mpz_class_get_minimized_constraints(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_get_minimized_congruences)).
 
@@ -10613,42 +10613,42 @@ ppl_Octagonal_Shape_mpz_class_get_minimized_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_is_empty)).
 
 ppl_Octagonal_Shape_mpz_class_is_empty(Term1) :-
    ppl_Octagonal_Shape_mpz_class_is_empty_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_is_universe)).
 
 ppl_Octagonal_Shape_mpz_class_is_universe(Term1) :-
    ppl_Octagonal_Shape_mpz_class_is_universe_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_is_bounded)).
 
 ppl_Octagonal_Shape_mpz_class_is_bounded(Term1) :-
    ppl_Octagonal_Shape_mpz_class_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_contains_integer_point)).
 
 ppl_Octagonal_Shape_mpz_class_contains_integer_point(Term1) :-
    ppl_Octagonal_Shape_mpz_class_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_is_topologically_closed)).
 
 ppl_Octagonal_Shape_mpz_class_is_topologically_closed(Term1) :-
    ppl_Octagonal_Shape_mpz_class_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_is_discrete)).
 
@@ -10659,21 +10659,21 @@ ppl_Octagonal_Shape_mpz_class_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_topological_closure_assign(in(Term1))
+:- trust pred ppl_Octagonal_Shape_mpz_class_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_bounds_from_above)).
 
 ppl_Octagonal_Shape_mpz_class_bounds_from_above(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_bounds_from_below)).
 
@@ -10684,14 +10684,14 @@ ppl_Octagonal_Shape_mpz_class_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_maximize)).
 
 ppl_Octagonal_Shape_mpz_class_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Octagonal_Shape_mpz_class_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_minimize)).
 
@@ -10702,14 +10702,14 @@ ppl_Octagonal_Shape_mpz_class_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_maximize_with_point)).
 
 ppl_Octagonal_Shape_mpz_class_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Octagonal_Shape_mpz_class_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_minimize_with_point)).
 
@@ -10720,7 +10720,7 @@ ppl_Octagonal_Shape_mpz_class_minimize_with_point(Term1, Term2, Term3, Term4, Te
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_frequency)).
 
@@ -10730,21 +10730,21 @@ ppl_Octagonal_Shape_mpz_class_frequency(Term1, Term2, Term3, Term4, Term5, Term6
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_contains_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_contains_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_contains_Octagonal_Shape_mpz_class)).
 
 ppl_Octagonal_Shape_mpz_class_contains_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_contains_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_strictly_contains_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_strictly_contains_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_strictly_contains_Octagonal_Shape_mpz_class)).
 
 ppl_Octagonal_Shape_mpz_class_strictly_contains_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_strictly_contains_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_is_disjoint_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_is_disjoint_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_is_disjoint_from_Octagonal_Shape_mpz_class)).
 
@@ -10755,7 +10755,7 @@ ppl_Octagonal_Shape_mpz_class_is_disjoint_from_Octagonal_Shape_mpz_class(Term1, 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_equals_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_equals_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_equals_Octagonal_Shape_mpz_class)).
 
@@ -10765,7 +10765,7 @@ ppl_Octagonal_Shape_mpz_class_equals_Octagonal_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_OK)).
 
@@ -10775,66 +10775,66 @@ ppl_Octagonal_Shape_mpz_class_OK(Term1) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Octagonal_Shape_mpz_class_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpz_class_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Octagonal_Shape_mpz_class_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpz_class_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpz_class_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpz_class_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpz_class_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Octagonal_Shape_mpz_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_upper_bound_assign_if_exact)).
 
@@ -10845,7 +10845,7 @@ ppl_Octagonal_Shape_mpz_class_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_simplify_using_context_assign)).
 
@@ -10855,7 +10855,7 @@ ppl_Octagonal_Shape_mpz_class_simplify_using_context_assign(Term1, Term2, Term3)
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_constrains)).
 
@@ -10865,7 +10865,7 @@ ppl_Octagonal_Shape_mpz_class_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimension)).
 
@@ -10875,7 +10875,7 @@ ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimensions)).
 
@@ -10885,34 +10885,34 @@ ppl_Octagonal_Shape_mpz_class_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Octagonal_Shape_mpz_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Octagonal_Shape_mpz_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Octagonal_Shape_mpz_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Octagonal_Shape_mpz_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_generalized_affine_image)).
 
 ppl_Octagonal_Shape_mpz_class_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Octagonal_Shape_mpz_class_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage)).
 
@@ -10923,14 +10923,14 @@ ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage(Term1, Term2, Term3, T
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_generalized_affine_image_lhs_rhs)).
 
 ppl_Octagonal_Shape_mpz_class_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Octagonal_Shape_mpz_class_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage_lhs_rhs)).
 
@@ -10941,17 +10941,17 @@ ppl_Octagonal_Shape_mpz_class_generalized_affine_preimage_lhs_rhs(Term1, Term2, 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_remove_space_dimensions)).
 
@@ -10961,19 +10961,19 @@ ppl_Octagonal_Shape_mpz_class_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Octagonal_Shape_mpz_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_fold_space_dimensions)).
 
@@ -10983,7 +10983,7 @@ ppl_Octagonal_Shape_mpz_class_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_map_space_dimensions)).
 
@@ -10993,7 +10993,7 @@ ppl_Octagonal_Shape_mpz_class_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points)).
 
@@ -11003,7 +11003,7 @@ ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points_2)).
 
@@ -11013,7 +11013,7 @@ ppl_Octagonal_Shape_mpz_class_drop_some_non_integer_points_2(Term1, Term2, Term3
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_ascii_dump)).
 
@@ -11023,14 +11023,14 @@ ppl_Octagonal_Shape_mpz_class_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_external_memory_in_bytes)).
 
 ppl_Octagonal_Shape_mpz_class_external_memory_in_bytes(Term1, Term2) :-
    ppl_Octagonal_Shape_mpz_class_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_total_memory_in_bytes)).
 
@@ -11041,7 +11041,7 @@ ppl_Octagonal_Shape_mpz_class_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_BHMZ05_widening_assign_with_tokens)).
 
@@ -11052,14 +11052,14 @@ ppl_Octagonal_Shape_mpz_class_BHMZ05_widening_assign_with_tokens(Term1, Term2, T
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_BHMZ05_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_BHMZ05_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_widening_assign_with_tokens)).
 
@@ -11069,20 +11069,20 @@ ppl_Octagonal_Shape_mpz_class_widening_assign_with_tokens(Term1, Term2, Term3, T
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens)).
 
 ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens)).
 
@@ -11094,10 +11094,10 @@ ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens(Term
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Octagonal_Shape_mpz_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -11105,7 +11105,7 @@ ppl_Octagonal_Shape_mpz_class_limited_CC76_extrapolation_assign_with_tokens(Term
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_CC76_extrapolation_assign_with_tokens)).
 
@@ -11116,14 +11116,14 @@ ppl_Octagonal_Shape_mpz_class_CC76_extrapolation_assign_with_tokens(Term1, Term2
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_CC76_extrapolation_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpz_class_CC76_extrapolation_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_CC76_narrowing_assign)).
 
@@ -11134,7 +11134,7 @@ ppl_Octagonal_Shape_mpz_class_CC76_narrowing_assign(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_linear_partition)).
 
@@ -11145,7 +11145,7 @@ ppl_Octagonal_Shape_mpz_class_linear_partition(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpz_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpz_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpz_class_wrap_assign)).
 
@@ -11155,14 +11155,14 @@ ppl_Octagonal_Shape_mpz_class_wrap_assign(Term1, Term2, Term3, Term4, Term5, Ter
 
 
 
-:- true pred ppl_termination_test_MS_Octagonal_Shape_mpz_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_Octagonal_Shape_mpz_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Octagonal_Shape_mpz_class)).
 
 ppl_termination_test_MS_Octagonal_Shape_mpz_class(Term1) :-
    ppl_termination_test_MS_Octagonal_Shape_mpz_class_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_Octagonal_Shape_mpz_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_Octagonal_Shape_mpz_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Octagonal_Shape_mpz_class)).
 
@@ -11174,14 +11174,14 @@ ppl_termination_test_PR_Octagonal_Shape_mpz_class(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class)).
 
 ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class)).
 
@@ -11193,14 +11193,14 @@ ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class)).
 
 ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class)).
 
@@ -11212,7 +11212,7 @@ ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class)).
 
@@ -11223,14 +11223,14 @@ ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class(Term1, Term2
 
 
 
-:- true pred ppl_termination_test_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Octagonal_Shape_mpz_class_2)).
 
 ppl_termination_test_MS_Octagonal_Shape_mpz_class_2(Term1, Term2) :-
    ppl_termination_test_MS_Octagonal_Shape_mpz_class_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Octagonal_Shape_mpz_class_2)).
 
@@ -11242,14 +11242,14 @@ ppl_termination_test_PR_Octagonal_Shape_mpz_class_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2)).
 
 ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpz_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class_2)).
 
@@ -11261,14 +11261,14 @@ ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpz_class_2(Term1, Term2, Ter
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2)).
 
 ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpz_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class_2)).
 
@@ -11280,7 +11280,7 @@ ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpz_class_2(Term1, Term2, Te
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class_2)).
 
@@ -11292,13 +11292,13 @@ ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpz_class_2(Term1, Ter
 
 
 
-:- true pred ppl_delete_Octagonal_Shape_mpq_class(in(Term1))
+:- trust pred ppl_delete_Octagonal_Shape_mpq_class(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_space_dimension)).
 
@@ -11309,77 +11309,77 @@ ppl_new_Octagonal_Shape_mpq_class_from_space_dimension(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Grid)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Grid(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Double_Box)).
 % 
 % ppl_new_Octagonal_Shape_mpq_class_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double)).
 % 
 % ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_double)).
 % 
@@ -11391,77 +11391,77 @@ ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class(Term1, Term2) :
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Grid_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_mpq_class_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_mpq_class_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -11473,21 +11473,21 @@ ppl_new_Octagonal_Shape_mpq_class_from_Octagonal_Shape_mpq_class_with_complexity
 
 
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_constraints)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_constraints(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_congruences)).
 
 ppl_new_Octagonal_Shape_mpq_class_from_congruences(Term1, Term2) :-
    ppl_new_Octagonal_Shape_mpq_class_from_congruences_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Octagonal_Shape_mpq_class_from_generators_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Octagonal_Shape_mpq_class_from_generators_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Octagonal_Shape_mpq_class_from_generators)).
 
@@ -11499,20 +11499,20 @@ ppl_new_Octagonal_Shape_mpq_class_from_generators(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_swap(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_space_dimension)).
 
 ppl_Octagonal_Shape_mpq_class_space_dimension(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_affine_dimension)).
 
@@ -11523,21 +11523,21 @@ ppl_Octagonal_Shape_mpq_class_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_relation_with_constraint)).
 
 ppl_Octagonal_Shape_mpq_class_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Octagonal_Shape_mpq_class_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_relation_with_generator)).
 
 ppl_Octagonal_Shape_mpq_class_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Octagonal_Shape_mpq_class_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_relation_with_congruence)).
 
@@ -11548,14 +11548,14 @@ ppl_Octagonal_Shape_mpq_class_relation_with_congruence(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_get_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_get_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_get_constraints)).
 
 ppl_Octagonal_Shape_mpq_class_get_constraints(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_get_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_get_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_get_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_get_congruences)).
 
@@ -11566,14 +11566,14 @@ ppl_Octagonal_Shape_mpq_class_get_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_get_minimized_constraints)).
 
 ppl_Octagonal_Shape_mpq_class_get_minimized_constraints(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_get_minimized_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_get_minimized_congruences)).
 
@@ -11584,42 +11584,42 @@ ppl_Octagonal_Shape_mpq_class_get_minimized_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_is_empty)).
 
 ppl_Octagonal_Shape_mpq_class_is_empty(Term1) :-
    ppl_Octagonal_Shape_mpq_class_is_empty_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_is_universe)).
 
 ppl_Octagonal_Shape_mpq_class_is_universe(Term1) :-
    ppl_Octagonal_Shape_mpq_class_is_universe_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_is_bounded)).
 
 ppl_Octagonal_Shape_mpq_class_is_bounded(Term1) :-
    ppl_Octagonal_Shape_mpq_class_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_contains_integer_point)).
 
 ppl_Octagonal_Shape_mpq_class_contains_integer_point(Term1) :-
    ppl_Octagonal_Shape_mpq_class_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_is_topologically_closed)).
 
 ppl_Octagonal_Shape_mpq_class_is_topologically_closed(Term1) :-
    ppl_Octagonal_Shape_mpq_class_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_is_discrete)).
 
@@ -11630,21 +11630,21 @@ ppl_Octagonal_Shape_mpq_class_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_topological_closure_assign(in(Term1))
+:- trust pred ppl_Octagonal_Shape_mpq_class_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_bounds_from_above)).
 
 ppl_Octagonal_Shape_mpq_class_bounds_from_above(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_bounds_from_below)).
 
@@ -11655,14 +11655,14 @@ ppl_Octagonal_Shape_mpq_class_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_maximize)).
 
 ppl_Octagonal_Shape_mpq_class_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Octagonal_Shape_mpq_class_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_minimize)).
 
@@ -11673,14 +11673,14 @@ ppl_Octagonal_Shape_mpq_class_minimize(Term1, Term2, Term3, Term4, Term5) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_maximize_with_point)).
 
 ppl_Octagonal_Shape_mpq_class_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Octagonal_Shape_mpq_class_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_minimize_with_point)).
 
@@ -11691,7 +11691,7 @@ ppl_Octagonal_Shape_mpq_class_minimize_with_point(Term1, Term2, Term3, Term4, Te
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_frequency)).
 
@@ -11701,21 +11701,21 @@ ppl_Octagonal_Shape_mpq_class_frequency(Term1, Term2, Term3, Term4, Term5, Term6
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_contains_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_contains_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_contains_Octagonal_Shape_mpq_class)).
 
 ppl_Octagonal_Shape_mpq_class_contains_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_contains_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_strictly_contains_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_strictly_contains_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_strictly_contains_Octagonal_Shape_mpq_class)).
 
 ppl_Octagonal_Shape_mpq_class_strictly_contains_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_strictly_contains_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_is_disjoint_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_is_disjoint_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_is_disjoint_from_Octagonal_Shape_mpq_class)).
 
@@ -11726,7 +11726,7 @@ ppl_Octagonal_Shape_mpq_class_is_disjoint_from_Octagonal_Shape_mpq_class(Term1, 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_equals_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_equals_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_equals_Octagonal_Shape_mpq_class)).
 
@@ -11736,7 +11736,7 @@ ppl_Octagonal_Shape_mpq_class_equals_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_OK)).
 
@@ -11746,66 +11746,66 @@ ppl_Octagonal_Shape_mpq_class_OK(Term1) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Octagonal_Shape_mpq_class_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpq_class_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Octagonal_Shape_mpq_class_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpq_class_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpq_class_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpq_class_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Octagonal_Shape_mpq_class_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Octagonal_Shape_mpq_class_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_upper_bound_assign_if_exact)).
 
@@ -11816,7 +11816,7 @@ ppl_Octagonal_Shape_mpq_class_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_simplify_using_context_assign)).
 
@@ -11826,7 +11826,7 @@ ppl_Octagonal_Shape_mpq_class_simplify_using_context_assign(Term1, Term2, Term3)
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_constrains)).
 
@@ -11836,7 +11836,7 @@ ppl_Octagonal_Shape_mpq_class_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimension)).
 
@@ -11846,7 +11846,7 @@ ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimensions)).
 
@@ -11856,34 +11856,34 @@ ppl_Octagonal_Shape_mpq_class_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Octagonal_Shape_mpq_class_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Octagonal_Shape_mpq_class_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Octagonal_Shape_mpq_class_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Octagonal_Shape_mpq_class_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_generalized_affine_image)).
 
 ppl_Octagonal_Shape_mpq_class_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Octagonal_Shape_mpq_class_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage)).
 
@@ -11894,14 +11894,14 @@ ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage(Term1, Term2, Term3, T
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_generalized_affine_image_lhs_rhs)).
 
 ppl_Octagonal_Shape_mpq_class_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Octagonal_Shape_mpq_class_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage_lhs_rhs)).
 
@@ -11912,17 +11912,17 @@ ppl_Octagonal_Shape_mpq_class_generalized_affine_preimage_lhs_rhs(Term1, Term2, 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_remove_space_dimensions)).
 
@@ -11932,19 +11932,19 @@ ppl_Octagonal_Shape_mpq_class_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Octagonal_Shape_mpq_class_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_fold_space_dimensions)).
 
@@ -11954,7 +11954,7 @@ ppl_Octagonal_Shape_mpq_class_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_map_space_dimensions)).
 
@@ -11964,7 +11964,7 @@ ppl_Octagonal_Shape_mpq_class_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points)).
 
@@ -11974,7 +11974,7 @@ ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points_2)).
 
@@ -11984,7 +11984,7 @@ ppl_Octagonal_Shape_mpq_class_drop_some_non_integer_points_2(Term1, Term2, Term3
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_ascii_dump)).
 
@@ -11994,14 +11994,14 @@ ppl_Octagonal_Shape_mpq_class_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_external_memory_in_bytes)).
 
 ppl_Octagonal_Shape_mpq_class_external_memory_in_bytes(Term1, Term2) :-
    ppl_Octagonal_Shape_mpq_class_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_total_memory_in_bytes)).
 
@@ -12012,7 +12012,7 @@ ppl_Octagonal_Shape_mpq_class_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_BHMZ05_widening_assign_with_tokens)).
 
@@ -12023,14 +12023,14 @@ ppl_Octagonal_Shape_mpq_class_BHMZ05_widening_assign_with_tokens(Term1, Term2, T
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_BHMZ05_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_BHMZ05_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_widening_assign_with_tokens)).
 
@@ -12040,20 +12040,20 @@ ppl_Octagonal_Shape_mpq_class_widening_assign_with_tokens(Term1, Term2, Term3, T
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens)).
 
 ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens)).
 
@@ -12065,10 +12065,10 @@ ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens(Term
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Octagonal_Shape_mpq_class_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
@@ -12076,7 +12076,7 @@ ppl_Octagonal_Shape_mpq_class_limited_CC76_extrapolation_assign_with_tokens(Term
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_CC76_extrapolation_assign_with_tokens)).
 
@@ -12087,14 +12087,14 @@ ppl_Octagonal_Shape_mpq_class_CC76_extrapolation_assign_with_tokens(Term1, Term2
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_CC76_extrapolation_assign(in(Term1), in(Term2))
+:- trust pred ppl_Octagonal_Shape_mpq_class_CC76_extrapolation_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_CC76_narrowing_assign)).
 
@@ -12105,7 +12105,7 @@ ppl_Octagonal_Shape_mpq_class_CC76_narrowing_assign(Term1, Term2) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_linear_partition)).
 
@@ -12116,7 +12116,7 @@ ppl_Octagonal_Shape_mpq_class_linear_partition(Term1, Term2, Term3, Term4) :-
 
 
 
-:- true pred ppl_Octagonal_Shape_mpq_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+:- trust pred ppl_Octagonal_Shape_mpq_class_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Octagonal_Shape_mpq_class_wrap_assign)).
 
@@ -12126,14 +12126,14 @@ ppl_Octagonal_Shape_mpq_class_wrap_assign(Term1, Term2, Term3, Term4, Term5, Ter
 
 
 
-:- true pred ppl_termination_test_MS_Octagonal_Shape_mpq_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_MS_Octagonal_Shape_mpq_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Octagonal_Shape_mpq_class)).
 
 ppl_termination_test_MS_Octagonal_Shape_mpq_class(Term1) :-
    ppl_termination_test_MS_Octagonal_Shape_mpq_class_2(Term1, 1).
 
-:- true pred ppl_termination_test_PR_Octagonal_Shape_mpq_class_2(in(Term1), go(Success))
+:- trust pred ppl_termination_test_PR_Octagonal_Shape_mpq_class_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Octagonal_Shape_mpq_class)).
 
@@ -12145,14 +12145,14 @@ ppl_termination_test_PR_Octagonal_Shape_mpq_class(Term1) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class)).
 
 ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class)).
 
@@ -12164,14 +12164,14 @@ ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class)).
 
 ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class)).
 
@@ -12183,7 +12183,7 @@ ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class(Term1, Term2) :-
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class)).
 
@@ -12194,14 +12194,14 @@ ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class(Term1, Term2
 
 
 
-:- true pred ppl_termination_test_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_MS_Octagonal_Shape_mpq_class_2)).
 
 ppl_termination_test_MS_Octagonal_Shape_mpq_class_2(Term1, Term2) :-
    ppl_termination_test_MS_Octagonal_Shape_mpq_class_2_2(Term1, Term2, 1).
 
-:- true pred ppl_termination_test_PR_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_termination_test_PR_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_termination_test_PR_Octagonal_Shape_mpq_class_2)).
 
@@ -12213,14 +12213,14 @@ ppl_termination_test_PR_Octagonal_Shape_mpq_class_2(Term1, Term2) :-
 
 
 
-:- true pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2)).
 
 ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2(Term1, Term2, Term3) :-
    ppl_one_affine_ranking_function_MS_Octagonal_Shape_mpq_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class_2)).
 
@@ -12232,14 +12232,14 @@ ppl_one_affine_ranking_function_PR_Octagonal_Shape_mpq_class_2(Term1, Term2, Ter
 
 
 
-:- true pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2)).
 
 ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2(Term1, Term2, Term3) :-
    ppl_all_affine_ranking_functions_MS_Octagonal_Shape_mpq_class_2_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class_2)).
 
@@ -12251,7 +12251,7 @@ ppl_all_affine_ranking_functions_PR_Octagonal_Shape_mpq_class_2(Term1, Term2, Te
 
 
 
-:- true pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class_2)).
 
@@ -12263,13 +12263,13 @@ ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_mpq_class_2(Term1, Ter
 
 
 
-:- true pred ppl_delete_Constraints_Product_C_Polyhedron_Grid(in(Term1))
+:- trust pred ppl_delete_Constraints_Product_C_Polyhedron_Grid(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_space_dimension)).
 
@@ -12280,84 +12280,84 @@ ppl_new_Constraints_Product_C_Polyhedron_Grid_from_space_dimension(Term1, Term2,
 
 
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 
-% :- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box)).
 % 
 % ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double)).
 % 
 % ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double)).
 % 
 % ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double(Term1, Term2) :-
 %    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhedron_Grid)).
 
@@ -12369,84 +12369,84 @@ ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhed
 
 
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_with_complexity)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 
-% :- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_with_complexity)).
 % 
 % ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Octagonal_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhedron_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhedron_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhedron_Grid_with_complexity)).
 
@@ -12458,14 +12458,14 @@ ppl_new_Constraints_Product_C_Polyhedron_Grid_from_Constraints_Product_C_Polyhed
 
 
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_constraints)).
 
 ppl_new_Constraints_Product_C_Polyhedron_Grid_from_constraints(Term1, Term2) :-
    ppl_new_Constraints_Product_C_Polyhedron_Grid_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Constraints_Product_C_Polyhedron_Grid_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Constraints_Product_C_Polyhedron_Grid_from_congruences)).
 
@@ -12477,20 +12477,20 @@ ppl_new_Constraints_Product_C_Polyhedron_Grid_from_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_swap(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_space_dimension)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_space_dimension(Term1, Term2) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_affine_dimension)).
 
@@ -12501,21 +12501,21 @@ ppl_Constraints_Product_C_Polyhedron_Grid_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_constraint)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_generator)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_congruence)).
 
@@ -12526,35 +12526,35 @@ ppl_Constraints_Product_C_Polyhedron_Grid_relation_with_congruence(Term1, Term2,
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_is_empty)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_is_empty(Term1) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_is_empty_2(Term1, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_is_universe)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_is_universe(Term1) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_is_universe_2(Term1, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_is_bounded)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_is_bounded(Term1) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_is_topologically_closed)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_is_topologically_closed(Term1) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_is_discrete)).
 
@@ -12565,21 +12565,21 @@ ppl_Constraints_Product_C_Polyhedron_Grid_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_topological_closure_assign(in(Term1))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_above)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_above(Term1, Term2) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_below)).
 
@@ -12590,14 +12590,14 @@ ppl_Constraints_Product_C_Polyhedron_Grid_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_maximize)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_minimize)).
 
@@ -12608,14 +12608,14 @@ ppl_Constraints_Product_C_Polyhedron_Grid_minimize(Term1, Term2, Term3, Term4, T
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_maximize_with_point)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_minimize_with_point)).
 
@@ -12626,21 +12626,21 @@ ppl_Constraints_Product_C_Polyhedron_Grid_minimize_with_point(Term1, Term2, Term
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_contains_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_contains_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_contains_Constraints_Product_C_Polyhedron_Grid)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_contains_Constraints_Product_C_Polyhedron_Grid(Term1, Term2) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_contains_Constraints_Product_C_Polyhedron_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_strictly_contains_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_strictly_contains_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_strictly_contains_Constraints_Product_C_Polyhedron_Grid)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_strictly_contains_Constraints_Product_C_Polyhedron_Grid(Term1, Term2) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_strictly_contains_Constraints_Product_C_Polyhedron_Grid_2(Term1, Term2, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_is_disjoint_from_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_is_disjoint_from_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_is_disjoint_from_Constraints_Product_C_Polyhedron_Grid)).
 
@@ -12651,7 +12651,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_is_disjoint_from_Constraints_Product_C
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_equals_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_equals_Constraints_Product_C_Polyhedron_Grid_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_equals_Constraints_Product_C_Polyhedron_Grid)).
 
@@ -12661,7 +12661,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_equals_Constraints_Product_C_Polyhedro
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_OK)).
 
@@ -12671,66 +12671,66 @@ ppl_Constraints_Product_C_Polyhedron_Grid_OK(Term1) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_upper_bound_assign_if_exact)).
 
@@ -12741,7 +12741,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_upper_bound_assign_if_exact(Term1, Ter
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_constrains)).
 
@@ -12751,7 +12751,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimension)).
 
@@ -12761,7 +12761,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimension(Term1, Ter
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimensions)).
 
@@ -12771,34 +12771,34 @@ ppl_Constraints_Product_C_Polyhedron_Grid_unconstrain_space_dimensions(Term1, Te
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage)).
 
@@ -12809,14 +12809,14 @@ ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage(Term1, Ter
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_lhs_rhs)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage_lhs_rhs)).
 
@@ -12827,17 +12827,17 @@ ppl_Constraints_Product_C_Polyhedron_Grid_generalized_affine_preimage_lhs_rhs(Te
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_remove_space_dimensions)).
 
@@ -12847,19 +12847,19 @@ ppl_Constraints_Product_C_Polyhedron_Grid_remove_space_dimensions(Term1, Term2) 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_fold_space_dimensions)).
 
@@ -12869,7 +12869,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_fold_space_dimensions(Term1, Term2, Te
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_map_space_dimensions)).
 
@@ -12879,7 +12879,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points)).
 
@@ -12889,7 +12889,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points(Term1, Te
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points_2)).
 
@@ -12899,7 +12899,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_drop_some_non_integer_points_2(Term1, 
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_ascii_dump)).
 
@@ -12909,14 +12909,14 @@ ppl_Constraints_Product_C_Polyhedron_Grid_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_external_memory_in_bytes)).
 
 ppl_Constraints_Product_C_Polyhedron_Grid_external_memory_in_bytes(Term1, Term2) :-
    ppl_Constraints_Product_C_Polyhedron_Grid_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_total_memory_in_bytes)).
 
@@ -12927,7 +12927,7 @@ ppl_Constraints_Product_C_Polyhedron_Grid_total_memory_in_bytes(Term1, Term2) :-
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Constraints_Product_C_Polyhedron_Grid_widening_assign_with_tokens)).
 
@@ -12937,20 +12937,20 @@ ppl_Constraints_Product_C_Polyhedron_Grid_widening_assign_with_tokens(Term1, Ter
 
 
 
-:- true pred ppl_Constraints_Product_C_Polyhedron_Grid_widening_assign(in(Term1), in(Term2))
+:- trust pred ppl_Constraints_Product_C_Polyhedron_Grid_widening_assign(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_delete_Pointset_Powerset_C_Polyhedron(in(Term1))
+:- trust pred ppl_delete_Pointset_Powerset_C_Polyhedron(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_space_dimension)).
 
@@ -12961,14 +12961,14 @@ ppl_new_Pointset_Powerset_C_Polyhedron_from_space_dimension(Term1, Term2, Term3)
 
 
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron)).
 
 ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron(Term1, Term2) :-
    ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron)).
 
@@ -12980,14 +12980,14 @@ ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_with_complexity)).
 
 ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Pointset_Powerset_C_Polyhedron_from_Pointset_Powerset_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron_with_complexity)).
 
@@ -12999,14 +12999,14 @@ ppl_new_Pointset_Powerset_C_Polyhedron_from_C_Polyhedron_with_complexity(Term1, 
 
 
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_constraints)).
 
 ppl_new_Pointset_Powerset_C_Polyhedron_from_constraints(Term1, Term2) :-
    ppl_new_Pointset_Powerset_C_Polyhedron_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_from_congruences)).
 
@@ -13018,20 +13018,20 @@ ppl_new_Pointset_Powerset_C_Polyhedron_from_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_swap(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_space_dimension)).
 
 ppl_Pointset_Powerset_C_Polyhedron_space_dimension(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_affine_dimension)).
 
@@ -13042,21 +13042,21 @@ ppl_Pointset_Powerset_C_Polyhedron_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_relation_with_constraint)).
 
 ppl_Pointset_Powerset_C_Polyhedron_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Pointset_Powerset_C_Polyhedron_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_relation_with_generator)).
 
 ppl_Pointset_Powerset_C_Polyhedron_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Pointset_Powerset_C_Polyhedron_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_relation_with_congruence)).
 
@@ -13067,42 +13067,42 @@ ppl_Pointset_Powerset_C_Polyhedron_relation_with_congruence(Term1, Term2, Term3)
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_is_empty)).
 
 ppl_Pointset_Powerset_C_Polyhedron_is_empty(Term1) :-
    ppl_Pointset_Powerset_C_Polyhedron_is_empty_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_is_universe)).
 
 ppl_Pointset_Powerset_C_Polyhedron_is_universe(Term1) :-
    ppl_Pointset_Powerset_C_Polyhedron_is_universe_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_is_bounded)).
 
 ppl_Pointset_Powerset_C_Polyhedron_is_bounded(Term1) :-
    ppl_Pointset_Powerset_C_Polyhedron_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_contains_integer_point)).
 
 ppl_Pointset_Powerset_C_Polyhedron_contains_integer_point(Term1) :-
    ppl_Pointset_Powerset_C_Polyhedron_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_is_topologically_closed)).
 
 ppl_Pointset_Powerset_C_Polyhedron_is_topologically_closed(Term1) :-
    ppl_Pointset_Powerset_C_Polyhedron_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_is_discrete)).
 
@@ -13113,27 +13113,27 @@ ppl_Pointset_Powerset_C_Polyhedron_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_topological_closure_assign(in(Term1))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_pairwise_reduce(in(Term1))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_pairwise_reduce(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_omega_reduce(in(Term1))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_omega_reduce(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_bounds_from_above)).
 
 ppl_Pointset_Powerset_C_Polyhedron_bounds_from_above(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_bounds_from_below)).
 
@@ -13144,14 +13144,14 @@ ppl_Pointset_Powerset_C_Polyhedron_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_maximize)).
 
 ppl_Pointset_Powerset_C_Polyhedron_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Pointset_Powerset_C_Polyhedron_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_minimize)).
 
@@ -13162,14 +13162,14 @@ ppl_Pointset_Powerset_C_Polyhedron_minimize(Term1, Term2, Term3, Term4, Term5) :
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_maximize_with_point)).
 
 ppl_Pointset_Powerset_C_Polyhedron_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Pointset_Powerset_C_Polyhedron_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_minimize_with_point)).
 
@@ -13180,35 +13180,35 @@ ppl_Pointset_Powerset_C_Polyhedron_minimize_with_point(Term1, Term2, Term3, Term
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_contains_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_contains_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_contains_Pointset_Powerset_C_Polyhedron)).
 
 ppl_Pointset_Powerset_C_Polyhedron_contains_Pointset_Powerset_C_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_contains_Pointset_Powerset_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_strictly_contains_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_strictly_contains_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_strictly_contains_Pointset_Powerset_C_Polyhedron)).
 
 ppl_Pointset_Powerset_C_Polyhedron_strictly_contains_Pointset_Powerset_C_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_strictly_contains_Pointset_Powerset_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_is_disjoint_from_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_is_disjoint_from_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_is_disjoint_from_Pointset_Powerset_C_Polyhedron)).
 
 ppl_Pointset_Powerset_C_Polyhedron_is_disjoint_from_Pointset_Powerset_C_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_is_disjoint_from_Pointset_Powerset_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_geometrically_covers_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_geometrically_covers_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_geometrically_covers_Pointset_Powerset_C_Polyhedron)).
 
 ppl_Pointset_Powerset_C_Polyhedron_geometrically_covers_Pointset_Powerset_C_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_geometrically_covers_Pointset_Powerset_C_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_geometrically_equals_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_geometrically_equals_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_geometrically_equals_Pointset_Powerset_C_Polyhedron)).
 
@@ -13219,7 +13219,7 @@ ppl_Pointset_Powerset_C_Polyhedron_geometrically_equals_Pointset_Powerset_C_Poly
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_equals_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_equals_Pointset_Powerset_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_equals_Pointset_Powerset_C_Polyhedron)).
 
@@ -13229,7 +13229,7 @@ ppl_Pointset_Powerset_C_Polyhedron_equals_Pointset_Powerset_C_Polyhedron(Term1, 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_OK)).
 
@@ -13239,66 +13239,66 @@ ppl_Pointset_Powerset_C_Polyhedron_OK(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_upper_bound_assign_if_exact)).
 
@@ -13309,7 +13309,7 @@ ppl_Pointset_Powerset_C_Polyhedron_upper_bound_assign_if_exact(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_simplify_using_context_assign)).
 
@@ -13319,7 +13319,7 @@ ppl_Pointset_Powerset_C_Polyhedron_simplify_using_context_assign(Term1, Term2, T
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_constrains)).
 
@@ -13329,7 +13329,7 @@ ppl_Pointset_Powerset_C_Polyhedron_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimension)).
 
@@ -13339,7 +13339,7 @@ ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimensions)).
 
@@ -13349,34 +13349,34 @@ ppl_Pointset_Powerset_C_Polyhedron_unconstrain_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image)).
 
 ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage)).
 
@@ -13387,14 +13387,14 @@ ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage(Term1, Term2, Ter
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_lhs_rhs)).
 
 ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage_lhs_rhs)).
 
@@ -13405,17 +13405,17 @@ ppl_Pointset_Powerset_C_Polyhedron_generalized_affine_preimage_lhs_rhs(Term1, Te
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_remove_space_dimensions)).
 
@@ -13425,19 +13425,19 @@ ppl_Pointset_Powerset_C_Polyhedron_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_fold_space_dimensions)).
 
@@ -13447,7 +13447,7 @@ ppl_Pointset_Powerset_C_Polyhedron_fold_space_dimensions(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_map_space_dimensions)).
 
@@ -13457,7 +13457,7 @@ ppl_Pointset_Powerset_C_Polyhedron_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points)).
 
@@ -13467,7 +13467,7 @@ ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points_2)).
 
@@ -13477,7 +13477,7 @@ ppl_Pointset_Powerset_C_Polyhedron_drop_some_non_integer_points_2(Term1, Term2, 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_ascii_dump)).
 
@@ -13487,21 +13487,21 @@ ppl_Pointset_Powerset_C_Polyhedron_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_external_memory_in_bytes)).
 
 ppl_Pointset_Powerset_C_Polyhedron_external_memory_in_bytes(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_total_memory_in_bytes)).
 
 ppl_Pointset_Powerset_C_Polyhedron_total_memory_in_bytes(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_total_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_size_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_size_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_size)).
 
@@ -13512,7 +13512,7 @@ ppl_Pointset_Powerset_C_Polyhedron_size(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_Pointset_Powerset_C_Polyhedron_iterator_from_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_C_Polyhedron_iterator_from_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_C_Polyhedron_iterator_from_iterator)).
 
@@ -13522,14 +13522,14 @@ ppl_new_Pointset_Powerset_C_Polyhedron_iterator_from_iterator(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_begin_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_begin_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_begin_iterator)).
 
 ppl_Pointset_Powerset_C_Polyhedron_begin_iterator(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_begin_iterator_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_end_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_end_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_end_iterator)).
 
@@ -13540,7 +13540,7 @@ ppl_Pointset_Powerset_C_Polyhedron_end_iterator(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_iterator_equals_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_iterator_equals_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_iterator_equals_iterator)).
 
@@ -13550,14 +13550,14 @@ ppl_Pointset_Powerset_C_Polyhedron_iterator_equals_iterator(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_increment_iterator_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_increment_iterator_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_increment_iterator)).
 
 ppl_Pointset_Powerset_C_Polyhedron_increment_iterator(Term1) :-
    ppl_Pointset_Powerset_C_Polyhedron_increment_iterator_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_decrement_iterator_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_decrement_iterator_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_decrement_iterator)).
 
@@ -13568,7 +13568,7 @@ ppl_Pointset_Powerset_C_Polyhedron_decrement_iterator(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_get_disjunct_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_get_disjunct_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_get_disjunct)).
 
@@ -13578,7 +13578,7 @@ ppl_Pointset_Powerset_C_Polyhedron_get_disjunct(Term1, Term2) :-
 
 
 
-:- true pred ppl_delete_Pointset_Powerset_C_Polyhedron_iterator_2(in(Term1), go(Success))
+:- trust pred ppl_delete_Pointset_Powerset_C_Polyhedron_iterator_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_delete_Pointset_Powerset_C_Polyhedron_iterator)).
 
@@ -13588,13 +13588,13 @@ ppl_delete_Pointset_Powerset_C_Polyhedron_iterator(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_add_disjunct(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_add_disjunct(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_drop_disjunct_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_drop_disjunct_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_drop_disjunct)).
 
@@ -13604,7 +13604,7 @@ ppl_Pointset_Powerset_C_Polyhedron_drop_disjunct(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_drop_disjuncts_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_drop_disjuncts_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_drop_disjuncts)).
 
@@ -13614,14 +13614,14 @@ ppl_Pointset_Powerset_C_Polyhedron_drop_disjuncts(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign)).
 
 ppl_Pointset_Powerset_C_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign(Term1, Term2) :-
    ppl_Pointset_Powerset_C_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_BHZ03_H79_H79_widening_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_BHZ03_H79_H79_widening_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_BHZ03_H79_H79_widening_assign)).
 
@@ -13632,14 +13632,14 @@ ppl_Pointset_Powerset_C_Polyhedron_BHZ03_H79_H79_widening_assign(Term1, Term2) :
 
 
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_BGP99_BHRZ03_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_BGP99_BHRZ03_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_BGP99_BHRZ03_extrapolation_assign)).
 
 ppl_Pointset_Powerset_C_Polyhedron_BGP99_BHRZ03_extrapolation_assign(Term1, Term2, Term3) :-
    ppl_Pointset_Powerset_C_Polyhedron_BGP99_BHRZ03_extrapolation_assign_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Pointset_Powerset_C_Polyhedron_BGP99_H79_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_C_Polyhedron_BGP99_H79_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_C_Polyhedron_BGP99_H79_extrapolation_assign)).
 
@@ -13651,13 +13651,13 @@ ppl_Pointset_Powerset_C_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2, 
 
 
 
-:- true pred ppl_delete_Pointset_Powerset_NNC_Polyhedron(in(Term1))
+:- trust pred ppl_delete_Pointset_Powerset_NNC_Polyhedron(in(Term1))
           :: any_term +  foreign.
 
 
 
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_space_dimension)).
 
@@ -13668,14 +13668,14 @@ ppl_new_Pointset_Powerset_NNC_Polyhedron_from_space_dimension(Term1, Term2, Term
 
 
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron)).
 
 ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron(Term1, Term2) :-
    ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron)).
 
@@ -13687,14 +13687,14 @@ ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_with_complexity)).
 
 ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
    ppl_new_Pointset_Powerset_NNC_Polyhedron_from_Pointset_Powerset_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity)).
 
@@ -13706,14 +13706,14 @@ ppl_new_Pointset_Powerset_NNC_Polyhedron_from_NNC_Polyhedron_with_complexity(Ter
 
 
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_constraints_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_constraints)).
 
 ppl_new_Pointset_Powerset_NNC_Polyhedron_from_constraints(Term1, Term2) :-
    ppl_new_Pointset_Powerset_NNC_Polyhedron_from_constraints_2(Term1, Term2, 1).
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_from_congruences_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_from_congruences)).
 
@@ -13725,20 +13725,20 @@ ppl_new_Pointset_Powerset_NNC_Polyhedron_from_congruences(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_swap(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_swap(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_space_dimension)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_space_dimension(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_space_dimension_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_affine_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_affine_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_affine_dimension)).
 
@@ -13749,21 +13749,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_affine_dimension(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_constraint)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_constraint(Term1, Term2, Term3) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_constraint_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_generator)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_generator(Term1, Term2, Term3) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_generator_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_congruence)).
 
@@ -13774,42 +13774,42 @@ ppl_Pointset_Powerset_NNC_Polyhedron_relation_with_congruence(Term1, Term2, Term
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_is_empty_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_is_empty_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_is_empty)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_is_empty(Term1) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_is_empty_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_is_universe_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_is_universe_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_is_universe)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_is_universe(Term1) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_is_universe_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_is_bounded_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_is_bounded_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_is_bounded)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_is_bounded(Term1) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_is_bounded_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_contains_integer_point_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_contains_integer_point_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_contains_integer_point)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_contains_integer_point(Term1) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_contains_integer_point_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_is_topologically_closed_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_is_topologically_closed_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_is_topologically_closed)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_is_topologically_closed(Term1) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_is_topologically_closed_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_is_discrete_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_is_discrete_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_is_discrete)).
 
@@ -13820,27 +13820,27 @@ ppl_Pointset_Powerset_NNC_Polyhedron_is_discrete(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_topological_closure_assign(in(Term1))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_topological_closure_assign(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_pairwise_reduce(in(Term1))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_pairwise_reduce(in(Term1))
           :: any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_omega_reduce(in(Term1))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_omega_reduce(in(Term1))
           :: any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_above_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_above)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_above(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_above_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_below_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_below)).
 
@@ -13851,14 +13851,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_bounds_from_below(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_maximize)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_maximize(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_minimize)).
 
@@ -13869,14 +13869,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_minimize(Term1, Term2, Term3, Term4, Term5)
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_maximize_with_point)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_minimize_with_point)).
 
@@ -13887,35 +13887,35 @@ ppl_Pointset_Powerset_NNC_Polyhedron_minimize_with_point(Term1, Term2, Term3, Te
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_contains_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_contains_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_contains_Pointset_Powerset_NNC_Polyhedron)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_contains_Pointset_Powerset_NNC_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_contains_Pointset_Powerset_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_strictly_contains_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_strictly_contains_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_strictly_contains_Pointset_Powerset_NNC_Polyhedron)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_strictly_contains_Pointset_Powerset_NNC_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_strictly_contains_Pointset_Powerset_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_is_disjoint_from_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_is_disjoint_from_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_is_disjoint_from_Pointset_Powerset_NNC_Polyhedron)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_is_disjoint_from_Pointset_Powerset_NNC_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_is_disjoint_from_Pointset_Powerset_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_covers_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_covers_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_covers_Pointset_Powerset_NNC_Polyhedron)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_covers_Pointset_Powerset_NNC_Polyhedron(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_covers_Pointset_Powerset_NNC_Polyhedron_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_equals_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_equals_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_equals_Pointset_Powerset_NNC_Polyhedron)).
 
@@ -13926,7 +13926,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_geometrically_equals_Pointset_Powerset_NNC_
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_equals_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_equals_Pointset_Powerset_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_equals_Pointset_Powerset_NNC_Polyhedron)).
 
@@ -13936,7 +13936,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_equals_Pointset_Powerset_NNC_Polyhedron(Ter
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_OK_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_OK_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_OK)).
 
@@ -13946,66 +13946,66 @@ ppl_Pointset_Powerset_NNC_Polyhedron_OK(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_constraint(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_constraints(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_congruence(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-
-
-
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_constraints(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_congruences(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_congruences(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_intersection_assign(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_constraint(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_upper_bound_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_difference_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_concatenate_assign(in(Term1), in(Term2))
-          :: any_term * any_term +  foreign.
-
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_time_elapse_assign(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_congruence(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_constraints(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_refine_with_congruences(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_intersection_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_upper_bound_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_difference_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_concatenate_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_time_elapse_assign(in(Term1), in(Term2))
+          :: any_term * any_term +  foreign.
+
+
+
+
+
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_upper_bound_assign_if_exact)).
 
@@ -14016,7 +14016,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_upper_bound_assign_if_exact(Term1, Term2) :
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_simplify_using_context_assign)).
 
@@ -14026,7 +14026,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_simplify_using_context_assign(Term1, Term2,
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_constrains_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_constrains_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_constrains)).
 
@@ -14036,7 +14036,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_constrains(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimension)).
 
@@ -14046,7 +14046,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimension(Term1, Term2) :
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimensions)).
 
@@ -14056,34 +14056,34 @@ ppl_Pointset_Powerset_NNC_Polyhedron_unconstrain_space_dimensions(Term1, Term2) 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
           :: any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
           :: any_term * any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage)).
 
@@ -14094,14 +14094,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage(Term1, Term2, T
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_lhs_rhs)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
           :: any_term * any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage_lhs_rhs)).
 
@@ -14112,17 +14112,17 @@ ppl_Pointset_Powerset_NNC_Polyhedron_generalized_affine_preimage_lhs_rhs(Term1, 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_space_dimensions_and_embed(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_space_dimensions_and_embed(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_space_dimensions_and_project(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_space_dimensions_and_project(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_remove_space_dimensions)).
 
@@ -14132,19 +14132,19 @@ ppl_Pointset_Powerset_NNC_Polyhedron_remove_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_remove_higher_space_dimensions(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_remove_higher_space_dimensions(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_expand_space_dimension(in(Term1), in(Term2), in(Term3))
           :: any_term * any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_fold_space_dimensions)).
 
@@ -14154,7 +14154,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_fold_space_dimensions(Term1, Term2, Term3) 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_map_space_dimensions)).
 
@@ -14164,7 +14164,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_map_space_dimensions(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points)).
 
@@ -14174,7 +14174,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points(Term1, Term2) 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points_2)).
 
@@ -14184,7 +14184,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_drop_some_non_integer_points_2(Term1, Term2
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_ascii_dump_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_ascii_dump_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_ascii_dump)).
 
@@ -14194,21 +14194,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_ascii_dump(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_external_memory_in_bytes)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_external_memory_in_bytes(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_external_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_total_memory_in_bytes)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_total_memory_in_bytes(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_total_memory_in_bytes_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_size_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_size_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_size)).
 
@@ -14219,7 +14219,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_size(Term1, Term2) :-
 
 
 
-:- true pred ppl_new_Pointset_Powerset_NNC_Polyhedron_iterator_from_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_new_Pointset_Powerset_NNC_Polyhedron_iterator_from_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_new_Pointset_Powerset_NNC_Polyhedron_iterator_from_iterator)).
 
@@ -14229,14 +14229,14 @@ ppl_new_Pointset_Powerset_NNC_Polyhedron_iterator_from_iterator(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_begin_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_begin_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_begin_iterator)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_begin_iterator(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_begin_iterator_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_end_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_end_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_end_iterator)).
 
@@ -14247,7 +14247,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_end_iterator(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_iterator_equals_iterator_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_iterator_equals_iterator_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_iterator_equals_iterator)).
 
@@ -14257,14 +14257,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_iterator_equals_iterator(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_increment_iterator_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_increment_iterator_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_increment_iterator)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_increment_iterator(Term1) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_increment_iterator_2(Term1, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_decrement_iterator_2(in(Term1), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_decrement_iterator_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_decrement_iterator)).
 
@@ -14275,7 +14275,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_decrement_iterator(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_get_disjunct_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_get_disjunct_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_get_disjunct)).
 
@@ -14285,7 +14285,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_get_disjunct(Term1, Term2) :-
 
 
 
-:- true pred ppl_delete_Pointset_Powerset_NNC_Polyhedron_iterator_2(in(Term1), go(Success))
+:- trust pred ppl_delete_Pointset_Powerset_NNC_Polyhedron_iterator_2(in(Term1), go(Success))
           :: any_term * c_int
   + (returns(Success), foreign(ppl_delete_Pointset_Powerset_NNC_Polyhedron_iterator)).
 
@@ -14295,13 +14295,13 @@ ppl_delete_Pointset_Powerset_NNC_Polyhedron_iterator(Term1) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_add_disjunct(in(Term1), in(Term2))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_add_disjunct(in(Term1), in(Term2))
           :: any_term * any_term +  foreign.
 
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjunct_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjunct_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjunct)).
 
@@ -14311,7 +14311,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjunct(Term1, Term2) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjuncts_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjuncts_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjuncts)).
 
@@ -14321,14 +14321,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_drop_disjuncts(Term1, Term2, Term3) :-
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign(Term1, Term2) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_BHRZ03_BHRZ03_widening_assign_2(Term1, Term2, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_H79_H79_widening_assign_2(in(Term1), in(Term2), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_H79_H79_widening_assign_2(in(Term1), in(Term2), go(Success))
           :: any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_H79_H79_widening_assign)).
 
@@ -14339,14 +14339,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BHZ03_H79_H79_widening_assign(Term1, Term2)
 
 
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_BHRZ03_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_BHRZ03_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_BHRZ03_extrapolation_assign)).
 
 ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_BHRZ03_extrapolation_assign(Term1, Term2, Term3) :-
    ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_BHRZ03_extrapolation_assign_2(Term1, Term2, Term3, 1).
 
-:- true pred ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+:- trust pred ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
           :: any_term * any_term * any_term * c_int
   + (returns(Success), foreign(ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign)).
 
@@ -14358,13 +14358,13 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 
 
 
-% :- true pred ppl_delete_Double_Box(in(Term1))
+% :- trust pred ppl_delete_Double_Box(in(Term1))
 %           :: any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_new_Double_Box_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_space_dimension)).
 % 
@@ -14375,77 +14375,77 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_Double_Box_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_C_Polyhedron)).
 % 
 % ppl_new_Double_Box_from_C_Polyhedron(Term1, Term2) :-
 %    ppl_new_Double_Box_from_C_Polyhedron_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_NNC_Polyhedron)).
 % 
 % ppl_new_Double_Box_from_NNC_Polyhedron(Term1, Term2) :-
 %    ppl_new_Double_Box_from_NNC_Polyhedron_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Grid_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Grid_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Grid)).
 % 
 % ppl_new_Double_Box_from_Grid(Term1, Term2) :-
 %    ppl_new_Double_Box_from_Grid_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Rational_Box)).
 % 
 % ppl_new_Double_Box_from_Rational_Box(Term1, Term2) :-
 %    ppl_new_Double_Box_from_Rational_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_BD_Shape_mpz_class)).
 % 
 % ppl_new_Double_Box_from_BD_Shape_mpz_class(Term1, Term2) :-
 %    ppl_new_Double_Box_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_BD_Shape_mpq_class)).
 % 
 % ppl_new_Double_Box_from_BD_Shape_mpq_class(Term1, Term2) :-
 %    ppl_new_Double_Box_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Octagonal_Shape_mpz_class)).
 % 
 % ppl_new_Double_Box_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
 %    ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Octagonal_Shape_mpq_class)).
 % 
 % ppl_new_Double_Box_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 %    ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Double_Box)).
 % 
 % ppl_new_Double_Box_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Double_Box_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_BD_Shape_double)).
 % 
 % ppl_new_Double_Box_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Double_Box_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Octagonal_Shape_double)).
 % 
@@ -14457,77 +14457,77 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_Double_Box_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_C_Polyhedron_with_complexity)).
 % 
 % ppl_new_Double_Box_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_NNC_Polyhedron_with_complexity)).
 % 
 % ppl_new_Double_Box_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Grid_with_complexity)).
 % 
 % ppl_new_Double_Box_from_Grid_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Rational_Box_with_complexity)).
 % 
 % ppl_new_Double_Box_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_BD_Shape_mpz_class_with_complexity)).
 % 
 % ppl_new_Double_Box_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_BD_Shape_mpq_class_with_complexity)).
 % 
 % ppl_new_Double_Box_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_with_complexity)).
 % 
 % ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_with_complexity)).
 % 
 % ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Double_Box_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Double_Box_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Double_Box_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Double_Box_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -14539,21 +14539,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_Double_Box_from_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_constraints)).
 % 
 % ppl_new_Double_Box_from_constraints(Term1, Term2) :-
 %    ppl_new_Double_Box_from_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_congruences)).
 % 
 % ppl_new_Double_Box_from_congruences(Term1, Term2) :-
 %    ppl_new_Double_Box_from_congruences_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Double_Box_from_generators_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Double_Box_from_generators_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Double_Box_from_generators)).
 % 
@@ -14565,20 +14565,20 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_swap(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_swap(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_space_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_space_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_space_dimension)).
 % 
 % ppl_Double_Box_space_dimension(Term1, Term2) :-
 %    ppl_Double_Box_space_dimension_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_affine_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_affine_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_affine_dimension)).
 % 
@@ -14589,21 +14589,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Double_Box_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_relation_with_constraint)).
 % 
 % ppl_Double_Box_relation_with_constraint(Term1, Term2, Term3) :-
 %    ppl_Double_Box_relation_with_constraint_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_Double_Box_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Double_Box_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_relation_with_generator)).
 % 
 % ppl_Double_Box_relation_with_generator(Term1, Term2, Term3) :-
 %    ppl_Double_Box_relation_with_generator_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_Double_Box_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Double_Box_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_relation_with_congruence)).
 % 
@@ -14614,14 +14614,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_get_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_get_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_get_constraints)).
 % 
 % ppl_Double_Box_get_constraints(Term1, Term2) :-
 %    ppl_Double_Box_get_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_get_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_get_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_get_congruences)).
 % 
@@ -14632,14 +14632,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_get_minimized_constraints)).
 % 
 % ppl_Double_Box_get_minimized_constraints(Term1, Term2) :-
 %    ppl_Double_Box_get_minimized_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_get_minimized_congruences)).
 % 
@@ -14650,42 +14650,42 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_is_empty_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_is_empty_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_is_empty)).
 % 
 % ppl_Double_Box_is_empty(Term1) :-
 %    ppl_Double_Box_is_empty_2(Term1, 1).
 % 
-% :- true pred ppl_Double_Box_is_universe_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_is_universe_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_is_universe)).
 % 
 % ppl_Double_Box_is_universe(Term1) :-
 %    ppl_Double_Box_is_universe_2(Term1, 1).
 % 
-% :- true pred ppl_Double_Box_is_bounded_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_is_bounded_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_is_bounded)).
 % 
 % ppl_Double_Box_is_bounded(Term1) :-
 %    ppl_Double_Box_is_bounded_2(Term1, 1).
 % 
-% :- true pred ppl_Double_Box_contains_integer_point_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_contains_integer_point_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_contains_integer_point)).
 % 
 % ppl_Double_Box_contains_integer_point(Term1) :-
 %    ppl_Double_Box_contains_integer_point_2(Term1, 1).
 % 
-% :- true pred ppl_Double_Box_is_topologically_closed_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_is_topologically_closed_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_is_topologically_closed)).
 % 
 % ppl_Double_Box_is_topologically_closed(Term1) :-
 %    ppl_Double_Box_is_topologically_closed_2(Term1, 1).
 % 
-% :- true pred ppl_Double_Box_is_discrete_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_is_discrete_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_is_discrete)).
 % 
@@ -14696,21 +14696,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_topological_closure_assign(in(Term1))
+% :- trust pred ppl_Double_Box_topological_closure_assign(in(Term1))
 %           :: any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_bounds_from_above_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_bounds_from_above)).
 % 
 % ppl_Double_Box_bounds_from_above(Term1, Term2) :-
 %    ppl_Double_Box_bounds_from_above_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_bounds_from_below_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_bounds_from_below)).
 % 
@@ -14721,14 +14721,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_has_upper_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_has_upper_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_has_upper_bound)).
 % 
 % ppl_Double_Box_has_upper_bound(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_Double_Box_has_upper_bound_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_Double_Box_has_lower_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_has_lower_bound_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_has_lower_bound)).
 % 
@@ -14739,14 +14739,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_maximize)).
 % 
 % ppl_Double_Box_maximize(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_Double_Box_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_Double_Box_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_minimize)).
 % 
@@ -14757,14 +14757,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_Double_Box_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_maximize_with_point)).
 % 
 % ppl_Double_Box_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
 %    ppl_Double_Box_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 % 
-% :- true pred ppl_Double_Box_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_Double_Box_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_minimize_with_point)).
 % 
@@ -14775,7 +14775,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_Double_Box_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_frequency)).
 % 
@@ -14785,21 +14785,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_contains_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_contains_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_contains_Double_Box)).
 % 
 % ppl_Double_Box_contains_Double_Box(Term1, Term2) :-
 %    ppl_Double_Box_contains_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_strictly_contains_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_strictly_contains_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_strictly_contains_Double_Box)).
 % 
 % ppl_Double_Box_strictly_contains_Double_Box(Term1, Term2) :-
 %    ppl_Double_Box_strictly_contains_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_is_disjoint_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_is_disjoint_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_is_disjoint_from_Double_Box)).
 % 
@@ -14810,7 +14810,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_equals_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_equals_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_equals_Double_Box)).
 % 
@@ -14820,7 +14820,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_OK_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_OK_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_OK)).
 % 
@@ -14830,66 +14830,66 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_add_constraint(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_add_constraint(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Double_Box_add_congruence(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% 
-% 
-% 
-% 
-% :- true pred ppl_Double_Box_add_constraints(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Double_Box_add_congruences(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_add_congruence(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_refine_with_constraint(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_add_constraints(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Double_Box_refine_with_congruence(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% 
-% 
-% 
-% 
-% :- true pred ppl_Double_Box_refine_with_constraints(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Double_Box_refine_with_congruences(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_add_congruences(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_intersection_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_refine_with_constraint(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Double_Box_upper_bound_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Double_Box_difference_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Double_Box_concatenate_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Double_Box_time_elapse_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_refine_with_congruence(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_refine_with_constraints(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Double_Box_refine_with_congruences(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% 
+% 
+% 
+% 
+% :- trust pred ppl_Double_Box_intersection_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Double_Box_upper_bound_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Double_Box_difference_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Double_Box_concatenate_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Double_Box_time_elapse_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% 
+% 
+% 
+% 
+% :- trust pred ppl_Double_Box_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_upper_bound_assign_if_exact)).
 % 
@@ -14900,7 +14900,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Double_Box_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_simplify_using_context_assign)).
 % 
@@ -14910,7 +14910,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_constrains_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_constrains_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_constrains)).
 % 
@@ -14920,7 +14920,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_unconstrain_space_dimension)).
 % 
@@ -14930,7 +14930,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_unconstrain_space_dimensions)).
 % 
@@ -14940,34 +14940,34 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+% :- trust pred ppl_Double_Box_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
 %           :: any_term * any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Double_Box_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+% :- trust pred ppl_Double_Box_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
 %           :: any_term * any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+% :- trust pred ppl_Double_Box_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
 %           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Double_Box_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+% :- trust pred ppl_Double_Box_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
 %           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_generalized_affine_image)).
 % 
 % ppl_Double_Box_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_Double_Box_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_Double_Box_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_generalized_affine_preimage)).
 % 
@@ -14978,14 +14978,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Double_Box_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_generalized_affine_image_lhs_rhs)).
 % 
 % ppl_Double_Box_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
 %    ppl_Double_Box_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 % 
-% :- true pred ppl_Double_Box_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Double_Box_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_generalized_affine_preimage_lhs_rhs)).
 % 
@@ -14996,17 +14996,17 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_add_space_dimensions_and_embed(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_add_space_dimensions_and_embed(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Double_Box_add_space_dimensions_and_project(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_add_space_dimensions_and_project(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_remove_space_dimensions)).
 % 
@@ -15016,19 +15016,19 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_remove_higher_space_dimensions(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_remove_higher_space_dimensions(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_Double_Box_expand_space_dimension(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Double_Box_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_fold_space_dimensions)).
 % 
@@ -15038,7 +15038,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_map_space_dimensions)).
 % 
@@ -15048,7 +15048,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_drop_some_non_integer_points)).
 % 
@@ -15058,7 +15058,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Double_Box_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_drop_some_non_integer_points_2)).
 % 
@@ -15068,7 +15068,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_ascii_dump_2(in(Term1), go(Success))
+% :- trust pred ppl_Double_Box_ascii_dump_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_ascii_dump)).
 % 
@@ -15078,14 +15078,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_external_memory_in_bytes)).
 % 
 % ppl_Double_Box_external_memory_in_bytes(Term1, Term2) :-
 %    ppl_Double_Box_external_memory_in_bytes_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Double_Box_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_total_memory_in_bytes)).
 % 
@@ -15096,7 +15096,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_CC76_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Double_Box_CC76_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_CC76_widening_assign_with_tokens)).
 % 
@@ -15107,14 +15107,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_CC76_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_CC76_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Double_Box_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_widening_assign_with_tokens)).
 % 
@@ -15124,13 +15124,13 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Double_Box_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Double_Box_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_limited_CC76_extrapolation_assign_with_tokens)).
 % 
@@ -15142,7 +15142,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_Double_Box_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
 % 
@@ -15150,7 +15150,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Double_Box_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_CC76_narrowing_assign)).
 % 
@@ -15161,7 +15161,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Double_Box_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_linear_partition)).
 % 
@@ -15172,7 +15172,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Double_Box_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+% :- trust pred ppl_Double_Box_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Double_Box_wrap_assign)).
 % 
@@ -15182,14 +15182,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 
 
 
-% :- true pred ppl_termination_test_MS_Double_Box_2(in(Term1), go(Success))
+% :- trust pred ppl_termination_test_MS_Double_Box_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_MS_Double_Box)).
 % 
 % ppl_termination_test_MS_Double_Box(Term1) :-
 %    ppl_termination_test_MS_Double_Box_2(Term1, 1).
 % 
-% :- true pred ppl_termination_test_PR_Double_Box_2(in(Term1), go(Success))
+% :- trust pred ppl_termination_test_PR_Double_Box_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_PR_Double_Box)).
 % 
@@ -15201,14 +15201,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 
 
 
-% :- true pred ppl_one_affine_ranking_function_MS_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_MS_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Double_Box)).
 % 
 % ppl_one_affine_ranking_function_MS_Double_Box(Term1, Term2) :-
 %    ppl_one_affine_ranking_function_MS_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_one_affine_ranking_function_PR_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_PR_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Double_Box)).
 % 
@@ -15220,14 +15220,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_ranking_functions_MS_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_MS_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Double_Box)).
 % 
 % ppl_all_affine_ranking_functions_MS_Double_Box(Term1, Term2) :-
 %    ppl_all_affine_ranking_functions_MS_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_all_affine_ranking_functions_PR_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_PR_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Double_Box)).
 % 
@@ -15239,7 +15239,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_quasi_ranking_functions_MS_Double_Box_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_quasi_ranking_functions_MS_Double_Box_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Double_Box)).
 % 
@@ -15250,14 +15250,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_termination_test_MS_Double_Box_2_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_termination_test_MS_Double_Box_2_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_MS_Double_Box_2)).
 % 
 % ppl_termination_test_MS_Double_Box_2(Term1, Term2) :-
 %    ppl_termination_test_MS_Double_Box_2_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_termination_test_PR_Double_Box_2_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_termination_test_PR_Double_Box_2_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_PR_Double_Box_2)).
 % 
@@ -15269,14 +15269,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_one_affine_ranking_function_MS_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_MS_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Double_Box_2)).
 % 
 % ppl_one_affine_ranking_function_MS_Double_Box_2(Term1, Term2, Term3) :-
 %    ppl_one_affine_ranking_function_MS_Double_Box_2_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_one_affine_ranking_function_PR_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_PR_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Double_Box_2)).
 % 
@@ -15288,14 +15288,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_ranking_functions_MS_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_MS_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Double_Box_2)).
 % 
 % ppl_all_affine_ranking_functions_MS_Double_Box_2(Term1, Term2, Term3) :-
 %    ppl_all_affine_ranking_functions_MS_Double_Box_2_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_all_affine_ranking_functions_PR_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_PR_Double_Box_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Double_Box_2)).
 % 
@@ -15307,7 +15307,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_quasi_ranking_functions_MS_Double_Box_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_all_affine_quasi_ranking_functions_MS_Double_Box_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Double_Box_2)).
 % 
@@ -15319,13 +15319,13 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_delete_BD_Shape_double(in(Term1))
+% :- trust pred ppl_delete_BD_Shape_double(in(Term1))
 %           :: any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_new_BD_Shape_double_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_space_dimension)).
 % 
@@ -15336,77 +15336,77 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_BD_Shape_double_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_C_Polyhedron)).
 % 
 % ppl_new_BD_Shape_double_from_C_Polyhedron(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_C_Polyhedron_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_NNC_Polyhedron)).
 % 
 % ppl_new_BD_Shape_double_from_NNC_Polyhedron(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_NNC_Polyhedron_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Grid_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Grid_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Grid)).
 % 
 % ppl_new_BD_Shape_double_from_Grid(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_Grid_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Rational_Box)).
 % 
 % ppl_new_BD_Shape_double_from_Rational_Box(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_Rational_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_BD_Shape_mpz_class)).
 % 
 % ppl_new_BD_Shape_double_from_BD_Shape_mpz_class(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_BD_Shape_mpq_class)).
 % 
 % ppl_new_BD_Shape_double_from_BD_Shape_mpq_class(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class)).
 % 
 % ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class)).
 % 
 % ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Double_Box)).
 % 
 % ppl_new_BD_Shape_double_from_Double_Box(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_BD_Shape_double)).
 % 
 % ppl_new_BD_Shape_double_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Octagonal_Shape_double)).
 % 
@@ -15418,77 +15418,77 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_BD_Shape_double_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_C_Polyhedron_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_NNC_Polyhedron_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Grid_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_Grid_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Rational_Box_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Double_Box_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_BD_Shape_double_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_BD_Shape_double_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -15500,21 +15500,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_BD_Shape_double_from_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_constraints)).
 % 
 % ppl_new_BD_Shape_double_from_constraints(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_congruences)).
 % 
 % ppl_new_BD_Shape_double_from_congruences(Term1, Term2) :-
 %    ppl_new_BD_Shape_double_from_congruences_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_BD_Shape_double_from_generators_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_BD_Shape_double_from_generators_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_BD_Shape_double_from_generators)).
 % 
@@ -15526,20 +15526,20 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_swap(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_swap(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_space_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_space_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_space_dimension)).
 % 
 % ppl_BD_Shape_double_space_dimension(Term1, Term2) :-
 %    ppl_BD_Shape_double_space_dimension_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_affine_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_affine_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_affine_dimension)).
 % 
@@ -15550,21 +15550,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_BD_Shape_double_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_relation_with_constraint)).
 % 
 % ppl_BD_Shape_double_relation_with_constraint(Term1, Term2, Term3) :-
 %    ppl_BD_Shape_double_relation_with_constraint_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_BD_Shape_double_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_BD_Shape_double_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_relation_with_generator)).
 % 
 % ppl_BD_Shape_double_relation_with_generator(Term1, Term2, Term3) :-
 %    ppl_BD_Shape_double_relation_with_generator_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_BD_Shape_double_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_BD_Shape_double_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_relation_with_congruence)).
 % 
@@ -15575,14 +15575,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_get_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_get_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_get_constraints)).
 % 
 % ppl_BD_Shape_double_get_constraints(Term1, Term2) :-
 %    ppl_BD_Shape_double_get_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_get_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_get_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_get_congruences)).
 % 
@@ -15593,14 +15593,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_get_minimized_constraints)).
 % 
 % ppl_BD_Shape_double_get_minimized_constraints(Term1, Term2) :-
 %    ppl_BD_Shape_double_get_minimized_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_get_minimized_congruences)).
 % 
@@ -15611,42 +15611,42 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_is_empty_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_is_empty_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_is_empty)).
 % 
 % ppl_BD_Shape_double_is_empty(Term1) :-
 %    ppl_BD_Shape_double_is_empty_2(Term1, 1).
 % 
-% :- true pred ppl_BD_Shape_double_is_universe_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_is_universe_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_is_universe)).
 % 
 % ppl_BD_Shape_double_is_universe(Term1) :-
 %    ppl_BD_Shape_double_is_universe_2(Term1, 1).
 % 
-% :- true pred ppl_BD_Shape_double_is_bounded_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_is_bounded_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_is_bounded)).
 % 
 % ppl_BD_Shape_double_is_bounded(Term1) :-
 %    ppl_BD_Shape_double_is_bounded_2(Term1, 1).
 % 
-% :- true pred ppl_BD_Shape_double_contains_integer_point_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_contains_integer_point_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_contains_integer_point)).
 % 
 % ppl_BD_Shape_double_contains_integer_point(Term1) :-
 %    ppl_BD_Shape_double_contains_integer_point_2(Term1, 1).
 % 
-% :- true pred ppl_BD_Shape_double_is_topologically_closed_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_is_topologically_closed_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_is_topologically_closed)).
 % 
 % ppl_BD_Shape_double_is_topologically_closed(Term1) :-
 %    ppl_BD_Shape_double_is_topologically_closed_2(Term1, 1).
 % 
-% :- true pred ppl_BD_Shape_double_is_discrete_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_is_discrete_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_is_discrete)).
 % 
@@ -15657,21 +15657,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_topological_closure_assign(in(Term1))
+% :- trust pred ppl_BD_Shape_double_topological_closure_assign(in(Term1))
 %           :: any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_bounds_from_above_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_bounds_from_above)).
 % 
 % ppl_BD_Shape_double_bounds_from_above(Term1, Term2) :-
 %    ppl_BD_Shape_double_bounds_from_above_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_bounds_from_below_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_bounds_from_below)).
 % 
@@ -15682,14 +15682,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_maximize)).
 % 
 % ppl_BD_Shape_double_maximize(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_BD_Shape_double_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_BD_Shape_double_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_minimize)).
 % 
@@ -15700,14 +15700,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_BD_Shape_double_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_maximize_with_point)).
 % 
 % ppl_BD_Shape_double_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
 %    ppl_BD_Shape_double_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 % 
-% :- true pred ppl_BD_Shape_double_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_BD_Shape_double_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_minimize_with_point)).
 % 
@@ -15718,7 +15718,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_BD_Shape_double_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_frequency)).
 % 
@@ -15728,21 +15728,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_contains_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_contains_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_contains_BD_Shape_double)).
 % 
 % ppl_BD_Shape_double_contains_BD_Shape_double(Term1, Term2) :-
 %    ppl_BD_Shape_double_contains_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_strictly_contains_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_strictly_contains_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_strictly_contains_BD_Shape_double)).
 % 
 % ppl_BD_Shape_double_strictly_contains_BD_Shape_double(Term1, Term2) :-
 %    ppl_BD_Shape_double_strictly_contains_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_is_disjoint_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_is_disjoint_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_is_disjoint_from_BD_Shape_double)).
 % 
@@ -15753,7 +15753,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_equals_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_equals_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_equals_BD_Shape_double)).
 % 
@@ -15763,7 +15763,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_OK_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_OK_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_OK)).
 % 
@@ -15773,66 +15773,66 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_add_constraint(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_add_constraint(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_add_congruence(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% 
-% 
-% 
-% 
-% :- true pred ppl_BD_Shape_double_add_constraints(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_BD_Shape_double_add_congruences(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_add_congruence(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_refine_with_constraint(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_add_constraints(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_refine_with_congruence(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% 
-% 
-% 
-% 
-% :- true pred ppl_BD_Shape_double_refine_with_constraints(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_BD_Shape_double_refine_with_congruences(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_add_congruences(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_intersection_assign(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_refine_with_constraint(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_upper_bound_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_BD_Shape_double_difference_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_BD_Shape_double_concatenate_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_BD_Shape_double_time_elapse_assign(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_refine_with_congruence(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_refine_with_constraints(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_BD_Shape_double_refine_with_congruences(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% 
+% 
+% 
+% 
+% :- trust pred ppl_BD_Shape_double_intersection_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_BD_Shape_double_upper_bound_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_BD_Shape_double_difference_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_BD_Shape_double_concatenate_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_BD_Shape_double_time_elapse_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% 
+% 
+% 
+% 
+% :- trust pred ppl_BD_Shape_double_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_upper_bound_assign_if_exact)).
 % 
@@ -15843,7 +15843,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_BD_Shape_double_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_simplify_using_context_assign)).
 % 
@@ -15853,7 +15853,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_constrains_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_constrains_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_constrains)).
 % 
@@ -15863,7 +15863,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_unconstrain_space_dimension)).
 % 
@@ -15873,7 +15873,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_unconstrain_space_dimensions)).
 % 
@@ -15883,34 +15883,34 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+% :- trust pred ppl_BD_Shape_double_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
 %           :: any_term * any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+% :- trust pred ppl_BD_Shape_double_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
 %           :: any_term * any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+% :- trust pred ppl_BD_Shape_double_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
 %           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+% :- trust pred ppl_BD_Shape_double_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
 %           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_generalized_affine_image)).
 % 
 % ppl_BD_Shape_double_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_BD_Shape_double_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_BD_Shape_double_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_generalized_affine_preimage)).
 % 
@@ -15921,14 +15921,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_generalized_affine_image_lhs_rhs)).
 % 
 % ppl_BD_Shape_double_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
 %    ppl_BD_Shape_double_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 % 
-% :- true pred ppl_BD_Shape_double_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_generalized_affine_preimage_lhs_rhs)).
 % 
@@ -15939,17 +15939,17 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_add_space_dimensions_and_embed(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_add_space_dimensions_and_embed(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_add_space_dimensions_and_project(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_add_space_dimensions_and_project(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_remove_space_dimensions)).
 % 
@@ -15959,19 +15959,19 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_remove_higher_space_dimensions(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_remove_higher_space_dimensions(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_BD_Shape_double_expand_space_dimension(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_BD_Shape_double_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_fold_space_dimensions)).
 % 
@@ -15981,7 +15981,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_map_space_dimensions)).
 % 
@@ -15991,7 +15991,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_drop_some_non_integer_points)).
 % 
@@ -16001,7 +16001,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_BD_Shape_double_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_drop_some_non_integer_points_2)).
 % 
@@ -16011,7 +16011,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_ascii_dump_2(in(Term1), go(Success))
+% :- trust pred ppl_BD_Shape_double_ascii_dump_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_ascii_dump)).
 % 
@@ -16021,14 +16021,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_external_memory_in_bytes)).
 % 
 % ppl_BD_Shape_double_external_memory_in_bytes(Term1, Term2) :-
 %    ppl_BD_Shape_double_external_memory_in_bytes_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_BD_Shape_double_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_total_memory_in_bytes)).
 % 
@@ -16039,14 +16039,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_BHMZ05_widening_assign_with_tokens)).
 % 
 % ppl_BD_Shape_double_BHMZ05_widening_assign_with_tokens(Term1, Term2, Term3, Term4) :-
 %    ppl_BD_Shape_double_BHMZ05_widening_assign_with_tokens_2(Term1, Term2, Term3, Term4, 1).
 % 
-% :- true pred ppl_BD_Shape_double_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_H79_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_H79_widening_assign_with_tokens)).
 % 
@@ -16057,17 +16057,17 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_BHMZ05_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_BHMZ05_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_H79_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_H79_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_widening_assign_with_tokens)).
 % 
@@ -16077,27 +16077,27 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens)).
 % 
 % ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_BD_Shape_double_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_limited_H79_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_limited_H79_extrapolation_assign_with_tokens)).
 % 
 % ppl_BD_Shape_double_limited_H79_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_BD_Shape_double_limited_H79_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_BD_Shape_double_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_BD_Shape_double_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_limited_CC76_extrapolation_assign_with_tokens)).
 % 
@@ -16109,13 +16109,13 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_BD_Shape_double_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_BD_Shape_double_limited_H79_extrapolation_assign(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_BD_Shape_double_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_BD_Shape_double_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
 % 
@@ -16123,7 +16123,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_CC76_extrapolation_assign_with_tokens)).
 % 
@@ -16134,14 +16134,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_CC76_extrapolation_assign(in(Term1), in(Term2))
+% :- trust pred ppl_BD_Shape_double_CC76_extrapolation_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_BD_Shape_double_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_CC76_narrowing_assign)).
 % 
@@ -16152,7 +16152,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_BD_Shape_double_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_linear_partition)).
 % 
@@ -16163,7 +16163,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_BD_Shape_double_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+% :- trust pred ppl_BD_Shape_double_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_BD_Shape_double_wrap_assign)).
 % 
@@ -16173,14 +16173,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_termination_test_MS_BD_Shape_double_2(in(Term1), go(Success))
+% :- trust pred ppl_termination_test_MS_BD_Shape_double_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_MS_BD_Shape_double)).
 % 
 % ppl_termination_test_MS_BD_Shape_double(Term1) :-
 %    ppl_termination_test_MS_BD_Shape_double_2(Term1, 1).
 % 
-% :- true pred ppl_termination_test_PR_BD_Shape_double_2(in(Term1), go(Success))
+% :- trust pred ppl_termination_test_PR_BD_Shape_double_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_PR_BD_Shape_double)).
 % 
@@ -16192,14 +16192,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_one_affine_ranking_function_MS_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_MS_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_BD_Shape_double)).
 % 
 % ppl_one_affine_ranking_function_MS_BD_Shape_double(Term1, Term2) :-
 %    ppl_one_affine_ranking_function_MS_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_one_affine_ranking_function_PR_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_PR_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_BD_Shape_double)).
 % 
@@ -16211,14 +16211,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_ranking_functions_MS_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_MS_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_BD_Shape_double)).
 % 
 % ppl_all_affine_ranking_functions_MS_BD_Shape_double(Term1, Term2) :-
 %    ppl_all_affine_ranking_functions_MS_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_all_affine_ranking_functions_PR_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_PR_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_BD_Shape_double)).
 % 
@@ -16230,7 +16230,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_double_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_double_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_double)).
 % 
@@ -16241,14 +16241,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_termination_test_MS_BD_Shape_double_2_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_termination_test_MS_BD_Shape_double_2_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_MS_BD_Shape_double_2)).
 % 
 % ppl_termination_test_MS_BD_Shape_double_2(Term1, Term2) :-
 %    ppl_termination_test_MS_BD_Shape_double_2_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_termination_test_PR_BD_Shape_double_2_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_termination_test_PR_BD_Shape_double_2_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_PR_BD_Shape_double_2)).
 % 
@@ -16260,14 +16260,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_one_affine_ranking_function_MS_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_MS_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_BD_Shape_double_2)).
 % 
 % ppl_one_affine_ranking_function_MS_BD_Shape_double_2(Term1, Term2, Term3) :-
 %    ppl_one_affine_ranking_function_MS_BD_Shape_double_2_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_one_affine_ranking_function_PR_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_PR_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_BD_Shape_double_2)).
 % 
@@ -16279,14 +16279,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_ranking_functions_MS_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_MS_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_BD_Shape_double_2)).
 % 
 % ppl_all_affine_ranking_functions_MS_BD_Shape_double_2(Term1, Term2, Term3) :-
 %    ppl_all_affine_ranking_functions_MS_BD_Shape_double_2_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_all_affine_ranking_functions_PR_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_PR_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_BD_Shape_double_2)).
 % 
@@ -16298,7 +16298,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_double_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_BD_Shape_double_2)).
 % 
@@ -16310,13 +16310,13 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_delete_Octagonal_Shape_double(in(Term1))
+% :- trust pred ppl_delete_Octagonal_Shape_double(in(Term1))
 %           :: any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_space_dimension_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_space_dimension)).
 % 
@@ -16327,77 +16327,77 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_C_Polyhedron_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_C_Polyhedron)).
 % 
 % ppl_new_Octagonal_Shape_double_from_C_Polyhedron(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_C_Polyhedron_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron)).
 % 
 % ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Grid_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Grid_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Grid)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Grid(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_Grid_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Rational_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Rational_Box)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Rational_Box(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_Rational_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class)).
 % 
 % ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class)).
 % 
 % ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Double_Box_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Double_Box_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Double_Box)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Double_Box(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_Double_Box_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_BD_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_BD_Shape_double)).
 % 
 % ppl_new_Octagonal_Shape_double_from_BD_Shape_double(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_BD_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_double)).
 % 
@@ -16409,77 +16409,77 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_C_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_C_Polyhedron_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_C_Polyhedron_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_C_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_NNC_Polyhedron_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Grid_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Grid_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Grid_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_Grid_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Rational_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Rational_Box_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Rational_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_Rational_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_BD_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_BD_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpz_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_mpq_class_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Double_Box_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Double_Box_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_Double_Box_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_Double_Box_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_BD_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_BD_Shape_double_with_complexity)).
 % 
 % ppl_new_Octagonal_Shape_double_from_BD_Shape_double_with_complexity(Term1, Term2, Term3) :-
 %    ppl_new_Octagonal_Shape_double_from_BD_Shape_double_with_complexity_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_double_with_complexity_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_Octagonal_Shape_double_with_complexity)).
 % 
@@ -16491,21 +16491,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_constraints)).
 % 
 % ppl_new_Octagonal_Shape_double_from_constraints(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_congruences)).
 % 
 % ppl_new_Octagonal_Shape_double_from_congruences(Term1, Term2) :-
 %    ppl_new_Octagonal_Shape_double_from_congruences_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_new_Octagonal_Shape_double_from_generators_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_new_Octagonal_Shape_double_from_generators_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_new_Octagonal_Shape_double_from_generators)).
 % 
@@ -16517,20 +16517,20 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_swap(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_swap(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_space_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_space_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_space_dimension)).
 % 
 % ppl_Octagonal_Shape_double_space_dimension(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_space_dimension_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_affine_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_affine_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_affine_dimension)).
 % 
@@ -16541,21 +16541,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_relation_with_constraint_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_relation_with_constraint)).
 % 
 % ppl_Octagonal_Shape_double_relation_with_constraint(Term1, Term2, Term3) :-
 %    ppl_Octagonal_Shape_double_relation_with_constraint_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_relation_with_generator_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_relation_with_generator)).
 % 
 % ppl_Octagonal_Shape_double_relation_with_generator(Term1, Term2, Term3) :-
 %    ppl_Octagonal_Shape_double_relation_with_generator_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_relation_with_congruence_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_relation_with_congruence)).
 % 
@@ -16566,14 +16566,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_get_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_get_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_get_constraints)).
 % 
 % ppl_Octagonal_Shape_double_get_constraints(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_get_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_get_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_get_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_get_congruences)).
 % 
@@ -16584,14 +16584,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_get_minimized_constraints_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_get_minimized_constraints)).
 % 
 % ppl_Octagonal_Shape_double_get_minimized_constraints(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_get_minimized_constraints_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_get_minimized_congruences_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_get_minimized_congruences)).
 % 
@@ -16602,42 +16602,42 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_is_empty_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_is_empty_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_is_empty)).
 % 
 % ppl_Octagonal_Shape_double_is_empty(Term1) :-
 %    ppl_Octagonal_Shape_double_is_empty_2(Term1, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_is_universe_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_is_universe_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_is_universe)).
 % 
 % ppl_Octagonal_Shape_double_is_universe(Term1) :-
 %    ppl_Octagonal_Shape_double_is_universe_2(Term1, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_is_bounded_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_is_bounded_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_is_bounded)).
 % 
 % ppl_Octagonal_Shape_double_is_bounded(Term1) :-
 %    ppl_Octagonal_Shape_double_is_bounded_2(Term1, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_contains_integer_point_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_contains_integer_point_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_contains_integer_point)).
 % 
 % ppl_Octagonal_Shape_double_contains_integer_point(Term1) :-
 %    ppl_Octagonal_Shape_double_contains_integer_point_2(Term1, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_is_topologically_closed_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_is_topologically_closed_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_is_topologically_closed)).
 % 
 % ppl_Octagonal_Shape_double_is_topologically_closed(Term1) :-
 %    ppl_Octagonal_Shape_double_is_topologically_closed_2(Term1, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_is_discrete_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_is_discrete_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_is_discrete)).
 % 
@@ -16648,21 +16648,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_topological_closure_assign(in(Term1))
+% :- trust pred ppl_Octagonal_Shape_double_topological_closure_assign(in(Term1))
 %           :: any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_bounds_from_above_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_bounds_from_above_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_bounds_from_above)).
 % 
 % ppl_Octagonal_Shape_double_bounds_from_above(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_bounds_from_above_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_bounds_from_below_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_bounds_from_below_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_bounds_from_below)).
 % 
@@ -16673,14 +16673,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_maximize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_maximize)).
 % 
 % ppl_Octagonal_Shape_double_maximize(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_Octagonal_Shape_double_maximize_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_minimize_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_minimize)).
 % 
@@ -16691,14 +16691,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_maximize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_maximize_with_point)).
 % 
 % ppl_Octagonal_Shape_double_maximize_with_point(Term1, Term2, Term3, Term4, Term5, Term6) :-
 %    ppl_Octagonal_Shape_double_maximize_with_point_2(Term1, Term2, Term3, Term4, Term5, Term6, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_minimize_with_point_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_minimize_with_point)).
 % 
@@ -16709,7 +16709,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_frequency_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_frequency)).
 % 
@@ -16719,21 +16719,21 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_contains_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_contains_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_contains_Octagonal_Shape_double)).
 % 
 % ppl_Octagonal_Shape_double_contains_Octagonal_Shape_double(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_contains_Octagonal_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_strictly_contains_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_strictly_contains_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_strictly_contains_Octagonal_Shape_double)).
 % 
 % ppl_Octagonal_Shape_double_strictly_contains_Octagonal_Shape_double(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_strictly_contains_Octagonal_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_is_disjoint_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_is_disjoint_from_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_is_disjoint_from_Octagonal_Shape_double)).
 % 
@@ -16744,7 +16744,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_equals_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_equals_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_equals_Octagonal_Shape_double)).
 % 
@@ -16754,7 +16754,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_OK_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_OK_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_OK)).
 % 
@@ -16764,66 +16764,66 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_add_constraint(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_add_constraint(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_add_congruence(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% 
-% 
-% 
-% 
-% :- true pred ppl_Octagonal_Shape_double_add_constraints(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Octagonal_Shape_double_add_congruences(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_add_congruence(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_refine_with_constraint(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_add_constraints(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_refine_with_congruence(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% 
-% 
-% 
-% 
-% :- true pred ppl_Octagonal_Shape_double_refine_with_constraints(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Octagonal_Shape_double_refine_with_congruences(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_add_congruences(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_intersection_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_refine_with_constraint(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_upper_bound_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Octagonal_Shape_double_difference_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Octagonal_Shape_double_concatenate_assign(in(Term1), in(Term2))
-%           :: any_term * any_term +  foreign.
-% 
-% :- true pred ppl_Octagonal_Shape_double_time_elapse_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_refine_with_congruence(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_refine_with_constraints(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Octagonal_Shape_double_refine_with_congruences(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% 
+% 
+% 
+% 
+% :- trust pred ppl_Octagonal_Shape_double_intersection_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Octagonal_Shape_double_upper_bound_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Octagonal_Shape_double_difference_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Octagonal_Shape_double_concatenate_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% :- trust pred ppl_Octagonal_Shape_double_time_elapse_assign(in(Term1), in(Term2))
+%           :: any_term * any_term +  foreign.
+% 
+% 
+% 
+% 
+% 
+% :- trust pred ppl_Octagonal_Shape_double_upper_bound_assign_if_exact_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_upper_bound_assign_if_exact)).
 % 
@@ -16834,7 +16834,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_simplify_using_context_assign_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_simplify_using_context_assign)).
 % 
@@ -16844,7 +16844,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_constrains_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_constrains_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_constrains)).
 % 
@@ -16854,7 +16854,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_unconstrain_space_dimension_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_unconstrain_space_dimension)).
 % 
@@ -16864,7 +16864,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_unconstrain_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_unconstrain_space_dimensions)).
 % 
@@ -16874,34 +16874,34 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
+% :- trust pred ppl_Octagonal_Shape_double_affine_image(in(Term1), in(Term2), in(Term3), in(Term4))
 %           :: any_term * any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
+% :- trust pred ppl_Octagonal_Shape_double_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4))
 %           :: any_term * any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+% :- trust pred ppl_Octagonal_Shape_double_bounded_affine_image(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
 %           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
+% :- trust pred ppl_Octagonal_Shape_double_bounded_affine_preimage(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5))
 %           :: any_term * any_term * any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_generalized_affine_image_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_generalized_affine_image)).
 % 
 % ppl_Octagonal_Shape_double_generalized_affine_image(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_Octagonal_Shape_double_generalized_affine_image_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_generalized_affine_preimage_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_generalized_affine_preimage)).
 % 
@@ -16912,14 +16912,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_generalized_affine_image_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_generalized_affine_image_lhs_rhs)).
 % 
 % ppl_Octagonal_Shape_double_generalized_affine_image_lhs_rhs(Term1, Term2, Term3, Term4) :-
 %    ppl_Octagonal_Shape_double_generalized_affine_image_lhs_rhs_2(Term1, Term2, Term3, Term4, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_generalized_affine_preimage_lhs_rhs_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_generalized_affine_preimage_lhs_rhs)).
 % 
@@ -16930,17 +16930,17 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_add_space_dimensions_and_embed(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_add_space_dimensions_and_embed(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_add_space_dimensions_and_project(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_add_space_dimensions_and_project(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_remove_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_remove_space_dimensions)).
 % 
@@ -16950,19 +16950,19 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_remove_higher_space_dimensions(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_remove_higher_space_dimensions(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_expand_space_dimension(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_Octagonal_Shape_double_expand_space_dimension(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_fold_space_dimensions_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_fold_space_dimensions)).
 % 
@@ -16972,7 +16972,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_map_space_dimensions_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_map_space_dimensions)).
 % 
@@ -16982,7 +16982,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_drop_some_non_integer_points_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_drop_some_non_integer_points)).
 % 
@@ -16992,7 +16992,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_drop_some_non_integer_points_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_drop_some_non_integer_points_2)).
 % 
@@ -17002,7 +17002,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_ascii_dump_2(in(Term1), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_ascii_dump_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_ascii_dump)).
 % 
@@ -17012,14 +17012,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_external_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_external_memory_in_bytes)).
 % 
 % ppl_Octagonal_Shape_double_external_memory_in_bytes(Term1, Term2) :-
 %    ppl_Octagonal_Shape_double_external_memory_in_bytes_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_total_memory_in_bytes_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_total_memory_in_bytes)).
 % 
@@ -17030,7 +17030,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_BHMZ05_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_BHMZ05_widening_assign_with_tokens)).
 % 
@@ -17041,14 +17041,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_BHMZ05_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_BHMZ05_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_widening_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_widening_assign_with_tokens)).
 % 
@@ -17058,20 +17058,20 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_widening_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_widening_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens)).
 % 
 % ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens(Term1, Term2, Term3, Term4, Term5) :-
 %    ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign_with_tokens_2(Term1, Term2, Term3, Term4, Term5, 1).
 % 
-% :- true pred ppl_Octagonal_Shape_double_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_limited_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_limited_CC76_extrapolation_assign_with_tokens)).
 % 
@@ -17083,10 +17083,10 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_Octagonal_Shape_double_limited_BHMZ05_extrapolation_assign(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
-% :- true pred ppl_Octagonal_Shape_double_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
+% :- trust pred ppl_Octagonal_Shape_double_limited_CC76_extrapolation_assign(in(Term1), in(Term2), in(Term3))
 %           :: any_term * any_term * any_term +  foreign.
 % 
 % 
@@ -17094,7 +17094,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_CC76_extrapolation_assign_with_tokens_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_CC76_extrapolation_assign_with_tokens)).
 % 
@@ -17105,14 +17105,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_CC76_extrapolation_assign(in(Term1), in(Term2))
+% :- trust pred ppl_Octagonal_Shape_double_CC76_extrapolation_assign(in(Term1), in(Term2))
 %           :: any_term * any_term +  foreign.
 % 
 % 
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_CC76_narrowing_assign_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_CC76_narrowing_assign)).
 % 
@@ -17123,7 +17123,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_linear_partition_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_linear_partition)).
 % 
@@ -17134,7 +17134,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_Octagonal_Shape_double_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
+% :- trust pred ppl_Octagonal_Shape_double_wrap_assign_2(in(Term1), in(Term2), in(Term3), in(Term4), in(Term5), in(Term6), in(Term7), in(Term8), go(Success))
 %           :: any_term * any_term * any_term * any_term * any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_Octagonal_Shape_double_wrap_assign)).
 % 
@@ -17144,14 +17144,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_termination_test_MS_Octagonal_Shape_double_2(in(Term1), go(Success))
+% :- trust pred ppl_termination_test_MS_Octagonal_Shape_double_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_MS_Octagonal_Shape_double)).
 % 
 % ppl_termination_test_MS_Octagonal_Shape_double(Term1) :-
 %    ppl_termination_test_MS_Octagonal_Shape_double_2(Term1, 1).
 % 
-% :- true pred ppl_termination_test_PR_Octagonal_Shape_double_2(in(Term1), go(Success))
+% :- trust pred ppl_termination_test_PR_Octagonal_Shape_double_2(in(Term1), go(Success))
 %           :: any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_PR_Octagonal_Shape_double)).
 % 
@@ -17163,14 +17163,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Octagonal_Shape_double)).
 % 
 % ppl_one_affine_ranking_function_MS_Octagonal_Shape_double(Term1, Term2) :-
 %    ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Octagonal_Shape_double)).
 % 
@@ -17182,14 +17182,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double)).
 % 
 % ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double(Term1, Term2) :-
 %    ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_double_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Octagonal_Shape_double)).
 % 
@@ -17201,7 +17201,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_double_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_double_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_double)).
 % 
@@ -17212,14 +17212,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_termination_test_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_termination_test_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_MS_Octagonal_Shape_double_2)).
 % 
 % ppl_termination_test_MS_Octagonal_Shape_double_2(Term1, Term2) :-
 %    ppl_termination_test_MS_Octagonal_Shape_double_2_2(Term1, Term2, 1).
 % 
-% :- true pred ppl_termination_test_PR_Octagonal_Shape_double_2_2(in(Term1), in(Term2), go(Success))
+% :- trust pred ppl_termination_test_PR_Octagonal_Shape_double_2_2(in(Term1), in(Term2), go(Success))
 %           :: any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_termination_test_PR_Octagonal_Shape_double_2)).
 % 
@@ -17231,14 +17231,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2)).
 % 
 % ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2(Term1, Term2, Term3) :-
 %    ppl_one_affine_ranking_function_MS_Octagonal_Shape_double_2_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_one_affine_ranking_function_PR_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_one_affine_ranking_function_PR_Octagonal_Shape_double_2)).
 % 
@@ -17250,14 +17250,14 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2)).
 % 
 % ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2(Term1, Term2, Term3) :-
 %    ppl_all_affine_ranking_functions_MS_Octagonal_Shape_double_2_2(Term1, Term2, Term3, 1).
 % 
-% :- true pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
+% :- trust pred ppl_all_affine_ranking_functions_PR_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), go(Success))
 %           :: any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_ranking_functions_PR_Octagonal_Shape_double_2)).
 % 
@@ -17269,7 +17269,7 @@ ppl_Pointset_Powerset_NNC_Polyhedron_BGP99_H79_extrapolation_assign(Term1, Term2
 % 
 % 
 % 
-% :- true pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
+% :- trust pred ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_double_2_2(in(Term1), in(Term2), in(Term3), in(Term4), go(Success))
 %           :: any_term * any_term * any_term * any_term * c_int
 %   + (returns(Success), foreign(ppl_all_affine_quasi_ranking_functions_MS_Octagonal_Shape_double_2)).
 % 
