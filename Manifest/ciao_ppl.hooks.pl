@@ -35,7 +35,7 @@ m_bundle_foreign_config_tool(ciao_ppl, ppl, 'ppl-config').
 ]).
 
 third_party_preinstalled(ciao_ppl) :-
-	find_executable(~m_bundle_foreign_config_tool(ciao_ppl, ppl), _).
+    find_executable(~m_bundle_foreign_config_tool(ciao_ppl, ppl), _).
 
 % Specification of M4 (third-party component)
 :- def_third_party(m4, [
@@ -87,88 +87,88 @@ enabled := ~get_bundle_flag(ciao_ppl:enabled).
 auto_install := ~get_bundle_flag(ciao_ppl:auto_install).
 
 ppl_version(Version) :-
-	foreign_config_version(ciao_ppl, ppl, Version).
+    foreign_config_version(ciao_ppl, ppl, Version).
 
 '$builder_hook'(prepare_build_bin) :-
-	do_auto_install,
-	prepare_bindings.
+    do_auto_install,
+    prepare_bindings.
 
 :- use_module(ciaobld(third_party_install), [auto_install/2]).
 :- use_module(ciaobld(builder_aux), [add_rpath/3]).
 :- use_module(ciaobld(builder_aux), [update_file_from_clauses/3]).
 
 do_auto_install :-
-	( auto_install(yes) -> 
-	    % TODO: add dependencies between PPL and GMP
-	    % normal_message("auto-installing M4 (third party)", []),
-	    % third_party_install:auto_install(ciao_ppl, m4),
-	    normal_message("auto-installing GMP (third party)", []),
-	    third_party_install:auto_install(ciao_ppl, gmp),
-	    normal_message("auto-installing PPL (third party)", []),
-	    third_party_install:auto_install(ciao_ppl, ppl)
-	; true
-	).
+    ( auto_install(yes) -> 
+        % TODO: add dependencies between PPL and GMP
+        % normal_message("auto-installing M4 (third party)", []),
+        % third_party_install:auto_install(ciao_ppl, m4),
+        normal_message("auto-installing GMP (third party)", []),
+        third_party_install:auto_install(ciao_ppl, gmp),
+        normal_message("auto-installing PPL (third party)", []),
+        third_party_install:auto_install(ciao_ppl, ppl)
+    ; true
+    ).
 
 prepare_bindings :-
-	( enabled(yes) ->
-	    normal_message("configuring PPL interface", []),
- 	    foreign_config_atmlist(ciao_ppl, ppl, 'cppflags', CompilerOpts1),
- 	    foreign_config_atmlist(ciao_ppl, ppl, 'cxxflags', CompilerOpts2),
-	    append(CompilerOpts1, CompilerOpts2, CompilerOpts3),
- 	    foreign_config_atmlist(ciao_ppl, ppl, 'ldflags', LinkerOpts1),
-	    patch_arch_opts(CompilerOpts3, LinkerOpts1, CompilerOpts4, LinkerOpts2),
-	    remove_all_sublists(CompilerOpts4, ['-g'], CompilerOpts), % TODO: parse options and remove '-g' (it is safer)
-	    ( auto_install(yes) ->
-	        % If installed as a third party, add ./third-party/lib
-	        % to the runtime library search path
-	        add_rpath(local_third_party, LinkerOpts2, LinkerOpts3)
-	    ; LinkerOpts3 = LinkerOpts2
-	    ),
-	    add_rpath(executable_path, LinkerOpts3, LinkerOpts4),
-%	    LinkerOpts3 = LinkerOpts4,
-	    append(LinkerOpts4, ['-lstdc++'], LinkerOpts),
-%	    LinkerOpts = LinkerOpts4,
-	    % TODO: generalize, share with GSL
-	    update_file_from_clauses([
-		(:- extra_compiler_opts(CompilerOpts)),
-		(:- extra_linker_opts(LinkerOpts))
-              ], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_decl_auto.pl'), _),
-	    select_ppl_interface(VerDir),
-	    set_ppl_interface_version(VerDir)
-	; set_ppl_interface_version(none)
-	).
+    ( enabled(yes) ->
+        normal_message("configuring PPL interface", []),
+        foreign_config_atmlist(ciao_ppl, ppl, 'cppflags', CompilerOpts1),
+        foreign_config_atmlist(ciao_ppl, ppl, 'cxxflags', CompilerOpts2),
+        append(CompilerOpts1, CompilerOpts2, CompilerOpts3),
+        foreign_config_atmlist(ciao_ppl, ppl, 'ldflags', LinkerOpts1),
+        patch_arch_opts(CompilerOpts3, LinkerOpts1, CompilerOpts4, LinkerOpts2),
+        remove_all_sublists(CompilerOpts4, ['-g'], CompilerOpts), % TODO: parse options and remove '-g' (it is safer)
+        ( auto_install(yes) ->
+            % If installed as a third party, add ./third-party/lib
+            % to the runtime library search path
+            add_rpath(local_third_party, LinkerOpts2, LinkerOpts3)
+        ; LinkerOpts3 = LinkerOpts2
+        ),
+        add_rpath(executable_path, LinkerOpts3, LinkerOpts4),
+%           LinkerOpts3 = LinkerOpts4,
+        append(LinkerOpts4, ['-lstdc++'], LinkerOpts),
+%           LinkerOpts = LinkerOpts4,
+        % TODO: generalize, share with GSL
+        update_file_from_clauses([
+            (:- extra_compiler_opts(CompilerOpts)),
+            (:- extra_linker_opts(LinkerOpts))
+          ], ~bundle_path(ciao_ppl, 'lib/ppl/ppl_decl_auto.pl'), _),
+        select_ppl_interface(VerDir),
+        set_ppl_interface_version(VerDir)
+    ; set_ppl_interface_version(none)
+    ).
 
 select_ppl_interface(VerDir) :-
-	ppl_version(Version),
-	( Version @< [0, 9] -> fail
-	; Version @< [0, 10] -> VerDir = '0_9'
-	; Version @< [1, 0] -> VerDir = '0_10'
-	; Version @< [1, 2] -> VerDir = '1_0'
-	; Version @< [1, 3] -> VerDir = '1_2'
-	; VerDir = '1_3'
-	).
+    ppl_version(Version),
+    ( Version @< [0, 9] -> fail
+    ; Version @< [0, 10] -> VerDir = '0_9'
+    ; Version @< [1, 0] -> VerDir = '0_10'
+    ; Version @< [1, 2] -> VerDir = '1_0'
+    ; Version @< [1, 3] -> VerDir = '1_2'
+    ; VerDir = '1_3'
+    ).
 
 % Patch architecture specific options (for universal OSX binaries)
 patch_arch_opts(CompilerOpts0, LinkerOpts0, CompilerOpts, LinkerOpts) :-
-	( get_platform('DARWINi686') ->
-	    % Remove "-arch x86_64" option if ppl is an MacOS universal binary
-	    remove_all_sublists(CompilerOpts0, ['-arch', 'x86_64'], CompilerOpts),
-	    remove_all_sublists(LinkerOpts0, ['-arch', 'x86_64'], LinkerOpts)
-	; CompilerOpts = CompilerOpts0,
-	  LinkerOpts = LinkerOpts0
-	).
+    ( get_platform('DARWINi686') ->
+        % Remove "-arch x86_64" option if ppl is an MacOS universal binary
+        remove_all_sublists(CompilerOpts0, ['-arch', 'x86_64'], CompilerOpts),
+        remove_all_sublists(LinkerOpts0, ['-arch', 'x86_64'], LinkerOpts)
+    ; CompilerOpts = CompilerOpts0,
+      LinkerOpts = LinkerOpts0
+    ).
 
 remove_all_sublists(Input, Sub, Output):-
-	append(Sub, Postfix, Input), !,
-	remove_all_sublists(Postfix, Sub, Output).
+    append(Sub, Postfix, Input), !,
+    remove_all_sublists(Postfix, Sub, Output).
 remove_all_sublists([H|T1], Sub, [H|T2]):-
-	remove_all_sublists(T1, Sub, T2).
+    remove_all_sublists(T1, Sub, T2).
 remove_all_sublists([], _Sub, []).
 
 % This selects one of the versions
 set_ppl_interface_version(VerDir) :-
-	( VerDir = none -> Cl = []
-	; Cl = [(:- include(library(ppl/VerDir/ppl_ciao)))]
-	),
-	update_file_from_clauses(Cl, ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _).
+    ( VerDir = none -> Cl = []
+    ; Cl = [(:- include(library(ppl/VerDir/ppl_ciao)))]
+    ),
+    update_file_from_clauses(Cl, ~bundle_path(ciao_ppl, 'lib/ppl/ppl_auto.pl'), _).
 
