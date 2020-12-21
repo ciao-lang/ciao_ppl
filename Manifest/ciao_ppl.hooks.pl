@@ -48,9 +48,13 @@ third_party_preinstalled(ciao_ppl) :-
 
 % Specification of GMP (third-party component)
 :- def_third_party(gmp, [
-    version('5.0.5'),
-    source_url(tar('https://gmplib.org/download/gmp/gmp-5.0.5.tar.bz2')),
-    source_md5("041487d25e9c230b0c42b106361055fe"),
+    % version('5.0.5'),
+    % source_url(tar('https://gmplib.org/download/gmp/gmp-5.0.5.tar.bz2')),
+    % source_md5("041487d25e9c230b0c42b106361055fe"),
+    % 
+    version('6.2.1'),
+    source_url(tar('https://gmplib.org/download/gmp/gmp-6.2.1.tar.bz2')),
+    source_md5("28971fc21cf028042d4897f02fd355ea"),
     %
     build_system(gnu_build_system),
     option1('enable-cxx') % for PPL
